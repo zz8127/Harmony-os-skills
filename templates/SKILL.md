@@ -95,6 +95,12 @@ description: |
 
 ---
 
+## API 24 Beta1 变更追踪（2026-04-30）
+
+> HarmonyOS 6.1.1(24) Beta1 已发布，模板与组件库暂无重大变更。持续关注官方更新。
+
+---
+
 ## 使用建议
 
 1. **快速启动**：从 DevEco Studio Empty Ability 模板开始，按需添加功能

@@ -120,6 +120,12 @@ SymbolGlyph($r('sys.symbol.ohos_folder_badge_plus'))
 
 ---
 
+## API 24 Beta1 变更追踪（2026-04-30）
+
+> HarmonyOS 6.1.1(24) Beta1 已发布，设计规范暂无重大变更。持续关注官方更新。
+
+---
+
 ## 官方参考
 
 - 设计首页：https://developer.huawei.com/consumer/cn/design/
