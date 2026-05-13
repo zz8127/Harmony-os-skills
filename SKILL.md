@@ -119,6 +119,24 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 ---
 
+## API 24 Beta1 变更追踪（2026-04-30）
+
+> 以下为 HarmonyOS 6.1.1(24) Beta1 新增特性，待 API 24 正式发布后纳入正式文档。
+
+| 领域 | Kit | 变更 |
+|------|-----|------|
+| 应用框架 | Ability Kit | AbilityStage 上下文能力增强，支持动态加载资源 |
+| 应用框架 | ArkUI | 平行视界状态获取、自定义组件跨 Ability 迁移、动态布局容器 |
+| 应用框架 | ArkTS | 虚拟机维测能力增强、taskpool 任务超时设置 |
+| 应用框架 | ArkWeb | 下载任务回调增强、URL 白名单和安全控制接口 |
+| 开发工具 | DevEco Studio | Hot Reload 增强（支持 C++ 和资源文件）、AppFreeze 日志解析、ComMemory 模板 |
+| AI | FAST Kit | 并发哈希表、向量运算和滤波器 |
+| AI | Content Embed Kit | **全新 Kit** — 内容嵌入服务 |
+| 系统 | Performance Analysis Kit | 资源采集和崩溃日志分析增强 |
+| 系统 | Enterprise Threat Protection Kit | **全新 Kit** — 企业威胁防护服务 |
+
+---
+
 ## 文档中心链接
 
 - **文档首页**：https://developer.huawei.com/consumer/cn/doc/
