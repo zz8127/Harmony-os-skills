@@ -40,6 +40,13 @@ description: |
 - [Web开发](references/arkweb.md) — ArkWeb：WebView/JSBridge/安全控制
 - [应用架构与质量](references/architecture.md) — 分层架构/模块化/性能优化/安全编码
 - [其他参考](references/other.md) — 网络请求、数据存储、生命周期、常见问题
+- [PDF阅读](references/pdf-kit.md) — PDF Kit：PDF页面视图/文本获取/缩放
+- [实况窗](references/live-view-kit.md) — Live View Kit：地理围栏触发实况窗/API 23新增
+- [UI组件库](references/ui-design-kit.md) — UI Design Kit：官方UI组件库/底部页签/导航/材质效果
+- [卡片开发](references/form-kit.md) — Form Kit：ArkTS卡片/V2装饰器/待机屏保卡片/透明卡片
+- [手写笔](references/pen-kit.md) — Pen Kit：画布绘制/长画布滚动/API 23新增
+- [无障碍](references/accessibility-kit.md) — Accessibility Kit：屏幕朗读/无障碍扩展/分组聚合播报
+- [性能分析](references/performance-analysis-kit.md) — Performance Analysis Kit：HiAppEvent/HiDebug/AppFreeze
 
 ---
 
@@ -52,7 +59,7 @@ description: |
 | 5.0.2 | 14 | — | 稳定 | 2025.01 |
 | 5.0.4 | 16 | 5.0.4 Release | 稳定 | 2025.03.27 |
 | **6.0.2** | **22** | **6.0.2 Release** | **稳定** | **2026.01.21** |
-| **6.1.0** | **23** | **6.0.2（当前最新）** | **稳定（当前生产推荐）** | **2026.04.20** |
+| **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定（当前生产推荐）** | **2026.04.20** |
 | **6.1.1** | **24** | **6.1.1 Beta1** | **Beta（按需使用）** | **2026.04.30** |
 
 > ⚠️ **生产环境推荐 API 23**（HarmonyOS 6.1.0 稳定版）。API 22 仍可用，但新项目建议使用 API 23。
@@ -123,6 +130,27 @@ Bundle（应用包）
 - 默认右键菜单
 - 首屏渲染时间统计
 
+#### UI Design Kit 新增
+- 底部页签悬浮样式及迷你栏，支持动态折叠展开
+- 导航组件支持双栏分割线、右侧默认占位页、标题字号设置
+- 底部页签和导航组件新增沉浸式材质效果
+- 列表卡片新增无障碍能力
+- 新增材质模块，支持设置材质类型和等级
+
+#### ArkUI 增强（Beta2 补充）
+- 自定义键盘切换接续（不收回）
+- 跑马灯间距配置和滚动时间间隔
+- 滚动组件模拟拖拽功能
+- RichEditor 单行模式
+- PersistenceV2 globalConnect 支持集合类型持久化
+
+#### ArkWeb 增强（Beta1 补充）
+- 模拟点击检测
+- Cookies 全量获取和属性访问
+- 白屏插帧接口
+- 禁用 AI 识图能力
+- ConsoleMessage 日志来源获取
+
 #### Media Kit 全面升级
 - 新增支持 **20 余种媒体格式**
 - **系统级边播边缓存**：帮助开发者便捷实现流媒体缓存与起播控制
@@ -157,7 +185,7 @@ Bundle（应用包）
 
 ### 工具链
 
-- **IDE**：DevEco Studio **6.1.0**（推荐最新版）
+- **IDE**：DevEco Studio **6.1.0 Release（6.1.0.830）**（推荐最新版）
 - **语言**：ArkTS（主推）
 - **构建工具**：hvigor（基于TypeScript）
 - **SDK**：Public SDK（**API 23** 稳定版；可通过DevEco Studio切换其他版本）

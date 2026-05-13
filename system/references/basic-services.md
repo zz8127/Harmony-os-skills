@@ -1,4 +1,4 @@
-﻿# 基础服务（Basic Services Kit）
+# 基础服务（Basic Services Kit）
 
 > **适用版本**：HarmonyOS 6.1 / API 23（稳定）。兼容 API 14+。
 
@@ -221,6 +221,16 @@ display.off('change');
 | `ohos.permission.PASTEBOARD_READ` | 读取剪贴板 |
 | `ohos.permission.PASTEBOARD_WRITE` | 写入剪贴板 |
 | `ohos.permission.GET_WIFI_INFO` | 获取 Wi-Fi 信息（系统属性依赖） |
+
+## API 23 新增能力
+
+### API 注解（@SuppressWarnings）
+
+新增 `@SuppressWarnings` 注解，用于消除 API 产生的告警。在源码中用此注解后，编译时会根据配置的规则来抑制对应警告。
+
+### 免打扰状态查询
+
+新增支持查询免打扰相关功能的开启状态（`@ohos.intelligentscene`）。
 
 ---
 

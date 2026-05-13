@@ -1,4 +1,4 @@
-﻿# 瀵嗛挜绠＄悊锛圲niversal Keystore Kit锛?
+# 瀵嗛挜绠＄悊锛圲niversal Keystore Kit锛?
 > **閫傜敤鐗堟湰**锛欻armonyOS 6.1 / API 23锛堢ǔ瀹氾級銆傚吋瀹?API 14+銆?
 ## 姒傝堪
 
@@ -357,6 +357,14 @@ huks.generateKeyItem(secureKeyAlias, secureOptions, (err, data) => {
 | 鏉冮檺 | 璇存槑 |
 |------|------|
 | `ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS` | 璺ㄨ处鎴峰瘑閽ユ搷浣?|
+
+## 群组密钥（API 23 新增）
+
+HUKS 新增群组密钥功能，针对同一开发者开发的多个 HAP 应用提供跨应用密钥共享能力。
+
+适用场景：同一开发者的多个应用需要共享加密数据时，可通过群组密钥实现跨应用密钥访问。
+
+官方指南：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-group-key-overview
 
 ---
 

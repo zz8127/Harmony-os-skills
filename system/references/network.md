@@ -1,4 +1,4 @@
-﻿# 网络开发
+# 网络开发
 
 > **适用版本**：HarmonyOS 6.1 / API 23（稳定）；HarmonyOS 6.0 / API 22（稳定）。兼容 API 14+。
 
@@ -309,6 +309,46 @@ try {
   console.error('Upload error: ' + (err as BusinessError).message);
 }
 ```
+
+## API 23 新增能力
+
+### HTTP 请求增强
+
+HttpRequestOptions 新增配置项：
+
+| 参数 | 说明 |
+|------|------|
+| `customMethod` | 自定义请求方法 |
+| `maxRedirects` | 最大跳转次数 |
+| `sniHostName` | TLS 握手阶段声明目标域名 |
+| `pathPreference` | 指定特定激活网络 |
+
+### DNS 转码
+
+```typescript
+import { connection } from '@kit.NetworkKit';
+
+let ascii = connection.getDnsAscii('中文域名.中国');
+let unicode = connection.getDnsUnicode('xn--fiqs8s.xn--fiqs8s');
+```
+
+### VPN 应用 UID 查询
+
+```typescript
+let uid = connection.getConnectionOwnerUid();
+```
+
+### Remote Communication Kit（RCP）API 23 新增
+
+| 新增能力 | 说明 |
+|---------|------|
+| `Response.toJSON` BigInt 模式 | 支持大整数序列化 |
+| `OnAuthenticationChallenge` | 认证挑战回调 |
+| `DebugEvent.redirectCount` | 获取重定向次数 |
+| `ConnectionReusePolicy` | HTTP 管道复用策略 |
+| `network_config.json` | 配置 HTTP 明文请求禁用策略 |
+| `defaultSession` | 默认通信会话，便捷发起请求 |
+| `CookieRepository` | Cookie 管理器 |
 
 ## 网络权限
 

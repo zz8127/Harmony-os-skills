@@ -17,7 +17,8 @@ description: |
 | [相机开发](references/camera.md) | CameraKit：预览/拍照/录像/XComponent |
 | [音视频播放](references/avplayer.md) | AVPlayer：音频/视频播放控制 |
 | [媒体会话](references/avsession.md) | AVSessionKit：控制中心显示与控制 |
-| [音频管理](references/avsession.md) | AudioKit：音量/音频流/焦点管理（官方文档：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/audio-overview-V5） |
+| [音频管理](references/audio-kit.md) | AudioKit：音量/音频流/焦点管理/变声效果/系统音效 |
+| [编解码](references/avcodec-kit.md) | AVCodec Kit：音视频编解码/AV1/VP9软解/API 23新增 |
 | [相册访问](references/photo.md) | PhotoAccessHelper：图片/视频读写 |
 | [图形开发](references/graphics2d.md) | ArkGraphics 2D：Canvas/自定义绘图/模糊效果 |
 
@@ -33,6 +34,8 @@ description: |
 | AudioKit | `@kit.AudioKit` | 音量、音频流管理 |
 | MediaLibraryKit | `@kit.MediaLibraryKit` | 相册访问 |
 | ArkGraphics2D | `@kit.ArkGraphics2D` | Canvas 绘图、模糊效果、动态帧率 |
+| ImageKit | `@kit.ImageKit` | 图片处理、元数据读写 |
+| AVCodecKit | `@kit.AVCodecKit` | 音视频编解码（AV1/VP9软解） |
 
 ---
 

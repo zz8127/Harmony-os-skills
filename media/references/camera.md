@@ -128,3 +128,21 @@ let fetchResult = await phAccessHelper.getAssets(fetchOptions);
 | `ohos.permission.READ_MEDIA_IMAGES` | 读取图片 |
 | `ohos.permission.READ_MEDIA_VIDEO` | 读取视频 |
 | `ohos.permission.WRITE_MEDIA_IMAGES` | 写入图片 |
+
+---
+
+## API 23 新增能力
+
+### HDR 动态照片
+
+支持 HDR 动态照片拍摄，组成动态照片的静态图片与动态短视频均为高动态范围（HDR）内容。
+
+```typescript
+photoOutput.on('capturePhotoAvailable', (photo: camera.Photo): void => {
+  let fullQualityPhoto = photo;
+});
+```
+
+### 元数据检测类型实时增删
+
+新增 `addMetadataObjectTypes` 和 `removeMetadataObjectTypes`，支持针对检测类型进行实时增删，无需重新创建会话。

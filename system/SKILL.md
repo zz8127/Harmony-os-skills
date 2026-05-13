@@ -46,6 +46,11 @@ description: |
 | BasicServicesKit | `@kit.BasicServicesKit` | 窗口、剪贴板、系统属性 |
 | UniversalKeystoreKit | `@kit.UniversalKeystoreKit` | 密钥管理、加解密 |
 | DistributedKit | `@kit.DistributedKit` | 设备发现、迁移、数据同步 |
+| MapKit | `@kit.MapKit` | 地图、标记、导航 |
+| ScanKit | `@kit.ScanKit` | 扫码、码识别 |
+| ShareKit | `@kit.ShareKit` | 系统分享面板 |
+| TelephonyKit | `@kit.TelephonyKit` | 电话、蜂窝 |
+| CryptoArchitectureKit | `@kit.CryptoArchitectureKit` | 加密框架 |
 
 ---
 

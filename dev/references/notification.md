@@ -717,6 +717,20 @@ async function updateNotification(id: number, progress: number): Promise<void> {
 }
 ```
 
+## API 23 新增能力
+
+### 通知优先显示
+
+NotificationRequest 新增 `priorityNotificationType` 属性，支持设置通知优先显示。
+
+### 重叠图标
+
+NotificationRequest 新增 `overlayIcon` 属性，支持设置重叠图标。
+
+### 横幅和锁屏显示控制
+
+NotificationFlags 新增属性，支持应用调整通知是否在横幅和锁屏界面显示。
+
 ---
 
 ## 官方参考链接

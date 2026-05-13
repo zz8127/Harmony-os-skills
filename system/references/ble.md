@@ -103,6 +103,25 @@ ble.createGattClientDevice(deviceId).connect();
 
 ---
 
+## API 23 新增（HarmonyOS 6.1.0）
+
+### BLE 广播自定义名称
+
+AdvertiseData 新增 `advertiseName` 字段，支持应用自定义 BLE 广播名称。
+
+```typescript
+import { ble } from '@kit.ConnectivityKit'
+
+let advertiseData: ble.AdvertiseData = {
+  serviceUuids: ['0000180A-0000-1000-8000-00805F9B34FB'],
+  manufactureData: [],
+  serviceData: [],
+  advertiseName: 'MyBLEDevice'  // API 23+: 自定义广播名称
+}
+```
+
+---
+
 ## 官方参考
 
 - BLE 开发指南：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ble-development-guide-V5

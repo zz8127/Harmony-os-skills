@@ -256,3 +256,40 @@ let w = new worker.ThreadWorker('entry/ets/workers/MyWorker.ts')
 w.onmessage = (e) => console.info('Result: ' + e.data.result)
 w.postMessage({ type: 'start', payload: 1000 })
 ```
+
+---
+
+## API 23 新增（HarmonyOS 6.1.0）
+
+### Ability Kit 增强
+
+- **Native软件包独立签名**：module.json5 新增 `hnpPackages` 标签，支持对 Native 软件包（hnp）进行独立签名
+- **启动时间戳**：LaunchParam 新增 `launchUTCTime` 和 `launchUptime`，开发者可获取 UIAbility 开始启动的时间戳，用于精准计算启动耗时
+- **BundleInfo.buildVersion**：BundleInfo 新增 buildVersion 字段
+
+### module.json5 新增标签（API 23）
+
+```json
+{
+  "module": {
+    "hnpPackages": [
+      {
+        "name": "mynativepkg",
+        "src": "./libs/mynativepkg.hnp"
+      }
+    ]
+  }
+}
+```
+
+### 启动时间戳用法
+
+```typescript
+import { AbilityConstant } from '@kit.AbilityKit'
+
+onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  // API 23+: 获取启动时间戳
+  console.info('Launch UTC time: ' + launchParam.launchUTCTime)
+  console.info('Launch uptime: ' + launchParam.launchUptime)
+}
+```

@@ -59,6 +59,23 @@ async function writeNdef() {
 
 ---
 
+## API 23 新增（HarmonyOS 6.1.0）
+
+### NFC Tag 读卡事件订阅增强
+
+新增 `tagon23` 接口，支持带有卡在位状态周期性检测的 NFC Tag 读卡事件订阅能力。
+
+```typescript
+import { tag } from '@kit.ConnectivityKit'
+
+// API 23+: 带卡在位检测的Tag读卡事件订阅
+tag.on('tagOn', {
+  periodicDetection: true
+})
+```
+
+---
+
 ## 官方参考
 
 - NFC 开发概述：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/nfc-overview-V5
