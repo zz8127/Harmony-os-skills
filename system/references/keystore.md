@@ -1,378 +1,88 @@
-# 瀵嗛挜绠＄悊锛圲niversal Keystore Kit锛?
-> **閫傜敤鐗堟湰**锛欻armonyOS 6.1 / API 23锛堢ǔ瀹氾級銆傚吋瀹?API 14+銆?
-## 姒傝堪
-
-UniversalKeystoreKit锛圚UKS锛夋彁渚涘瘑閽ュ叏鐢熷懡鍛ㄦ湡绠＄悊鑳藉姏锛屽寘鎷瘑閽ョ敓鎴愩€佸鍏?瀵煎嚭銆佺鍚?楠岀銆佸姞瑙ｅ瘑銆佸瘑閽ヨ璇佸拰瀹夊叏瀛樺偍銆傚瘑閽ユ潗鏂欑敱 TEE锛堝彲淇℃墽琛岀幆澧冿級淇濇姢锛屽簲鐢ㄦ棤娉曠洿鎺ヨ幏鍙栨槑鏂囧瘑閽ャ€?
-## 瀵嗛挜鐢熸垚
-
-```typescript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-let keyAlias = 'my_aes_key';
-
-let properties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_AES },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_SIZE, value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256 },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT |
-    huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_PKCS7 },
-  { tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE, value: huks.HuksCipherMode.HUKS_MODE_CBC }
-];
-
-let options: huks.HuksOptions = {
-  properties: properties,
-  inData: new Uint8Array(0)
-};
-
-huks.generateKeyItem(keyAlias, options, (err, data) => {
-  if (err) {
-    console.error('Generate key failed: ' + err.message);
-    return;
-  }
-  console.info('Generate key succeeded.');
-});
-```
-
-### RSA 瀵嗛挜瀵圭敓鎴?
-```typescript
-let rsaKeyAlias = 'my_rsa_key';
-
-let rsaProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_RSA },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_SIZE, value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048 },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN |
-    huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY },
-  { tag: huks.HuksTag.HUKS_TAG_DIGEST, value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256 },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_PSS }
-];
-
-let rsaOptions: huks.HuksOptions = {
-  properties: rsaProperties,
-  inData: new Uint8Array(0)
-};
-
-huks.generateKeyItem(rsaKeyAlias, rsaOptions, (err, data) => {
-  if (err) {
-    console.error('RSA key generation failed: ' + err.message);
-    return;
-  }
-  console.info('RSA key generation succeeded.');
-});
-```
-
-## 瀵嗛挜瀵煎叆涓庡鍑?
-### 瀵煎叆鍏挜
-
-```typescript
-let importKeyAlias = 'imported_rsa_key';
-
-let importProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_RSA },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_SIZE, value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048 },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY },
-  { tag: huks.HuksTag.HUKS_TAG_DIGEST, value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256 },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_PSS }
-];
-
-let publicKey = new Uint8Array([0x30, 0x82, 0x01, 0x22]);
-
-let importOptions: huks.HuksOptions = {
-  properties: importProperties,
-  inData: publicKey
-};
-
-huks.importKeyItem(importKeyAlias, importOptions, (err, data) => {
-  if (err) {
-    console.error('Import key failed: ' + err.message);
-    return;
-  }
-  console.info('Import key succeeded.');
-});
-```
-
-### 瀵煎嚭鍏挜
-
-```typescript
-huks.exportKeyItem(rsaKeyAlias, { properties: [], inData: new Uint8Array(0) }, (err, data) => {
-  if (err) {
-    console.error('Export key failed: ' + err.message);
-    return;
-  }
-  console.info('Exported public key length: ' + data.outData.length);
-});
-```
-
-### 瀹夊叏瀵煎叆瀵嗛挜锛堝瘑鏂囧鍏ワ級
-
-```typescript
-let secureImportAlias = 'secure_imported_key';
-
-let secureImportProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_AES },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_SIZE, value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256 },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT |
-    huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_NONE },
-  { tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE, value: huks.HuksCipherMode.HUKS_MODE_GCM },
-  { tag: huks.HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, value: huks.HuksUnwrapSuite.HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING }
-];
-
-let secureImportOptions: huks.HuksOptions = {
-  properties: secureImportProperties,
-  inData: new Uint8Array(0)
-};
-
-huks.importWrappedKeyItem(secureImportAlias, 'wrapping_key_alias', secureImportOptions, (err, data) => {
-  if (err) {
-    console.error('Import wrapped key failed: ' + err.message);
-    return;
-  }
-  console.info('Import wrapped key succeeded.');
-});
-```
-
-## 绛惧悕涓庨獙绛?
-### 绛惧悕
-
-```typescript
-let signProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_RSA },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN },
-  { tag: huks.HuksTag.HUKS_TAG_DIGEST, value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256 },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_PSS }
-];
-
-let signOptions: huks.HuksOptions = {
-  properties: signProperties,
-  inData: new Uint8Array([0x01, 0x02, 0x03, 0x04])
-};
-
-huks.initSession(rsaKeyAlias, signOptions, (err, data) => {
-  if (err) {
-    console.error('Init sign session failed: ' + err.message);
-    return;
-  }
-  let handle = data.handle;
-
-  huks.finishSession(handle, signOptions, (err, data) => {
-    if (err) {
-      console.error('Finish sign failed: ' + err.message);
-      return;
-    }
-    console.info('Signature length: ' + data.outData.length);
-  });
-});
-```
-
-### 楠岀
-
-```typescript
-let verifyProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_RSA },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY },
-  { tag: huks.HuksTag.HUKS_TAG_DIGEST, value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256 },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_PSS }
-];
-
-let signatureData = new Uint8Array(256);
-
-let verifyOptions: huks.HuksOptions = {
-  properties: verifyProperties,
-  inData: new Uint8Array([0x01, 0x02, 0x03, 0x04])
-};
-
-huks.initSession(rsaKeyAlias, verifyOptions, (err, data) => {
-  if (err) {
-    console.error('Init verify session failed: ' + err.message);
-    return;
-  }
-  let handle = data.handle;
-
-  let finishOptions: huks.HuksOptions = {
-    properties: verifyProperties,
-    inData: signatureData
-  };
-
-  huks.finishSession(handle, finishOptions, (err, data) => {
-    if (err) {
-      console.error('Verify failed: ' + err.message);
-      return;
-    }
-    console.info('Verify succeeded.');
-  });
-});
-```
-
-## 鍔犲瘑涓庤В瀵?
-### AES 鍔犲瘑
-
-```typescript
-let aesKeyAlias = 'my_aes_key';
-
-let encryptProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_AES },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_SIZE, value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256 },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_PKCS7 },
-  { tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE, value: huks.HuksCipherMode.HUKS_MODE_CBC },
-  { tag: huks.HuksTag.HUKS_TAG_IV, value: new Uint8Array(16) }
-];
-
-let plainText = new Uint8Array([0x48, 0x65, 0x6c, 0x6c, 0x6f]);
-
-let encryptOptions: huks.HuksOptions = {
-  properties: encryptProperties,
-  inData: plainText
-};
-
-huks.initSession(aesKeyAlias, encryptOptions, (err, data) => {
-  if (err) {
-    console.error('Init encrypt session failed: ' + err.message);
-    return;
-  }
-  let handle = data.handle;
-
-  huks.finishSession(handle, encryptOptions, (err, data) => {
-    if (err) {
-      console.error('Encrypt failed: ' + err.message);
-      return;
-    }
-    console.info('Encrypted data length: ' + data.outData.length);
-  });
-});
-```
-
-### AES 瑙ｅ瘑
-
-```typescript
-let decryptProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_AES },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_SIZE, value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256 },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_PKCS7 },
-  { tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE, value: huks.HuksCipherMode.HUKS_MODE_CBC },
-  { tag: huks.HuksTag.HUKS_TAG_IV, value: new Uint8Array(16) }
-];
-
-let cipherText = new Uint8Array(32);
-
-let decryptOptions: huks.HuksOptions = {
-  properties: decryptProperties,
-  inData: cipherText
-};
-
-huks.initSession(aesKeyAlias, decryptOptions, (err, data) => {
-  if (err) {
-    console.error('Init decrypt session failed: ' + err.message);
-    return;
-  }
-  let handle = data.handle;
-
-  huks.finishSession(handle, decryptOptions, (err, data) => {
-    if (err) {
-      console.error('Decrypt failed: ' + err.message);
-      return;
-    }
-    console.info('Decrypted data length: ' + data.outData.length);
-  });
-});
-```
-
-## 瀵嗛挜璁よ瘉锛圓ttestation锛?
-```typescript
-let attestKeyAlias = 'attest_key';
-
-let attestProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO, value: new Uint8Array(8) },
-  { tag: huks.HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, value: new Uint8Array(32) },
-  { tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_VERSION, value: new Uint8Array(4) }
-];
-
-let attestOptions: huks.HuksOptions = {
-  properties: attestProperties,
-  inData: new Uint8Array(0)
-};
-
-huks.attestKeyItem(attestKeyAlias, attestOptions, (err, data) => {
-  if (err) {
-    console.error('Attest key failed: ' + err.message);
-    return;
-  }
-  console.info('Attestation cert chain length: ' + data.certChains.length);
-});
-```
-
-## 瀵嗛挜鏌ヨ涓庡垹闄?
-```typescript
-huks.getKeyProperties(keyAlias, { properties: [], inData: new Uint8Array(0) }, (err, data) => {
-  if (err) {
-    console.error('Key does not exist: ' + err.message);
-    return;
-  }
-  console.info('Key properties: ' + JSON.stringify(data));
-});
-
-huks.deleteKeyItem(keyAlias, { properties: [], inData: new Uint8Array(0) }, (err, data) => {
-  if (err) {
-    console.error('Delete key failed: ' + err.message);
-    return;
-  }
-  console.info('Delete key succeeded.');
-});
-```
-
-## 瀹夊叏瀛樺偍锛堝瘑閽ヨ闂帶鍒讹級
-
-```typescript
-let secureKeyAlias = 'secure_key_with_auth';
-
-let secureProperties: Array<huks.HuksParam> = [
-  { tag: huks.HuksTag.HUKS_TAG_ALGORITHM, value: huks.HuksKeyAlg.HUKS_ALG_AES },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_SIZE, value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256 },
-  { tag: huks.HuksTag.HUKS_TAG_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT |
-    huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT },
-  { tag: huks.HuksTag.HUKS_TAG_PADDING, value: huks.HuksKeyPadding.HUKS_PADDING_NONE },
-  { tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE, value: huks.HuksCipherMode.HUKS_MODE_GCM },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT },
-  { tag: huks.HuksTag.HUKS_TAG_USER_AUTH_TYPE, value: huks.HuksUserAuthType.HUKS_USER_AUTH_TYPE_FINGERPRINT },
-  { tag: huks.HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, value: huks.HuksAuthAccessType.HUKS_AUTH_ACCESS_INVALID_NEW_BIOMETRIC }
-];
-
-let secureOptions: huks.HuksOptions = {
-  properties: secureProperties,
-  inData: new Uint8Array(0)
-};
-
-huks.generateKeyItem(secureKeyAlias, secureOptions, (err, data) => {
-  if (err) {
-    console.error('Generate secure key failed: ' + err.message);
-    return;
-  }
-  console.info('Generate secure key with auth control succeeded.');
-});
-```
-
-## 鏉冮檺
-
-| 鏉冮檺 | 璇存槑 |
-|------|------|
-| `ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS` | 璺ㄨ处鎴峰瘑閽ユ搷浣?|
-
-## 群组密钥（API 23 新增）
-
-HUKS 新增群组密钥功能，针对同一开发者开发的多个 HAP 应用提供跨应用密钥共享能力。
-
-适用场景：同一开发者的多个应用需要共享加密数据时，可通过群组密钥实现跨应用密钥访问。
-
-官方指南：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-group-key-overview
-
----
-
-## 瀹樻柟鍙傝€?
-- HUKS 寮€鍙戞寚瀵硷細https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-overview-V5
-- 瀵嗛挜鐢熸垚锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-generation-V5
-- 瀵嗛挜瀵煎叆锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-import-V5
-- 瀵嗛挜绛惧悕楠岀锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-sign-verify-V5
-- 瀵嗛挜鍔犺В瀵嗭細https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-encrypt-decrypt-V5
-- 瀵嗛挜璁よ瘉锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-attestation-V5
-- HUKS ArkTS API锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-huks-V5
+# Universal Keystore Kit (HUKS)
+
+## 概述
+
+Universal Keystore Kit（密钥管理服务，简称HUKS）向业务/应用提供各类密钥的统一安全操作能力，包括密钥管理（密钥生成/销毁、密钥导入、密钥证明、密钥协商、密钥派生）及密钥使用（加密/解密、签名/验签、访问控制）等功能。
+
+HUKS管理的密钥可以由业务/应用导入或调用HUKS接口生成。HUKS提供密钥访问控制能力，确保存储在HUKS中的密钥被合法正确地访问。
+
+## 整体架构
+
+HUKS模块分为三大部分：
+
+- SDK：提供密钥管理接口供开发者调用，支持ArkTS和C API
+- HUKS服务层：实现密钥会话管理及存储管理
+- HUKS核心层：承载核心功能，包括密钥密码学运算、明文密钥加解密、密钥访问控制
+
+对于具备安全环境（TEE）的系统/设备，HUKS核心层运行在安全环境内，密钥明文仅在安全环境中访问，不会传递出安全环境。
+
+## 核心能力
+
+### 密钥生成
+
+| 功能 | 说明 |
+|---|---|
+| 密钥生成 | 随机生成密钥，全生命周期内明文仅在安全环境中访问 |
+| 密钥导入 | 将外部生成的密钥导入HUKS进行管理 |
+
+### 密钥使用
+
+| 功能 | 说明 |
+|---|---|
+| 加密/解密 | 使用密钥将数据加密为密文，或解密为明文 |
+| 签名/验签 | 认证消息内容及发送者身份真实性 |
+| 密钥协商 | 两个或多个实体共同建立会话密钥 |
+| 密钥派生 | 从现有密钥派生一个或多个新密钥 |
+| 访问控制 | 确保密钥不会被越权访问 |
+
+### 密钥删除
+
+| 功能 | 说明 |
+|---|---|
+| 密钥删除 | 安全地删除存储在HUKS中的密钥数据 |
+
+### 密钥证明
+
+| 功能 | 说明 |
+|---|---|
+| 密钥证明 | 为非对称密钥对中的公钥签发证书，证明密钥合法性 |
+
+## npm 包名
+
+@ohos.security.huks
+
+## 关键 API
+
+| API | 说明 |
+|---|---|
+| huks.generateKeyItem() | 生成密钥 |
+| huks.importKeyItem() | 导入明文密钥 |
+| huks.importWrappedKeyItem() | 导入加密包装的密钥 |
+| huks.exportKeyItem() | 导出公钥 |
+| huks.deleteKeyItem() | 删除密钥 |
+| huks.encrypt() | 加密 |
+| huks.decrypt() | 解密 |
+| huks.sign() | 签名 |
+| huks.verify() | 验签 |
+| huks.agreeKey() | 密钥协商 |
+| huks.deriveKeyItem() | 密钥派生 |
+| huks.attestKeyItem() | 密钥证明 |
+| huks.initSession() | 初始化密钥会话 |
+| huks.updateSession() | 更新密钥会话数据 |
+| huks.finishSession() | 结束密钥会话 |
+
+## 权限要求
+
+HUKS本身不需要额外权限声明，但基于用户身份认证的密钥访问控制依赖于User Authentication Kit。
+
+## 与相关Kit的关系
+
+- User Authentication Kit（用户身份认证）：提供基于用户身份认证的密钥访问控制
+- Crypto Architecture Kit（加解密算法库框架）：提供轻量级加解密能力
+
+## 官方链接
+
+- HUKS简介：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-overview
+- HUKS API参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-huks
+- 密钥生成算法规格：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-generation-overview
+- 加密/解密算法规格：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-encryption-decryption-overview

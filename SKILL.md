@@ -17,11 +17,11 @@ description: |
 
 | 技能 | 路径 | 覆盖内容 |
 |------|------|---------|
-| **开发规范** | `dev/SKILL.md` | Stage模型、ArkUI、ArkTS、权限、发布、NDK、行业实践、应用质量 |
-| **系统能力** | `system/SKILL.md` | 蓝牙/Wi-Fi/NFC/定位/传感器/安全/车机/星闪/企业管理/穿戴 |
-| **媒体服务** | `media/SKILL.md` | CameraKit/AVPlayer/AVSession/DRM/3D图形/铃声/编解码 |
-| **AI与元服务** | `ai-meta/SKILL.md` | IntentsKit/SpeechKit/MLKit/基础AI/推理运行时/元服务/服务流转 |
-| **设计规范** | `design/SKILL.md` | 设计原则/色彩/字体/图标/布局/动效/人机交互/UX最佳实践 |
+| **开发规范** | `dev/SKILL.md` | Stage模型、ArkUI、ArkTS、权限、发布、NDK、行业实践、应用质量、最佳实践、FAQ |
+| **系统能力** | `system/SKILL.md` | 蓝牙/Wi-Fi/NFC/定位/传感器/安全/车机/星闪/企业管理/穿戴/协同/测试/健康/天气 |
+| **媒体服务** | `media/SKILL.md` | CameraKit/AVPlayer/AVSession/DRM/3D图形/铃声/编解码/2D绘制 |
+| **AI与元服务** | `ai-meta/SKILL.md` | IntentsKit/SpeechKit/MLKit/基础AI/推理运行时/元服务/服务流转/智能体 |
+| **设计规范** | `design/SKILL.md` | 设计原则/色彩/字体/图标/布局/动效/人机交互/UX最佳实践/控件/多设备 |
 | **示例代码** | `samples/SKILL.md` | 官方示例代码/Gitee仓/按Kit分类索引 |
 | **模板组件** | `templates/SKILL.md` | DevEco Studio模板/生态市场模板/主题图标资源 |
 | **AGC 服务** | `agc/SKILL.md` | 应用分发/云开发/认证/增长/质量/变现/分析/游戏服务 |
@@ -34,8 +34,8 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | 领域 | 覆盖 Kit | 核心能力 |
 |------|---------|---------|
-| 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔 |
-| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式 |
+| 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit、AccountKit、FileManagerServiceKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔、华为账号、文件管理服务 |
+| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气 |
 | 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册 |
 | 图形 | ArkGraphics 2D、ArkGraphics 3D、SpatialReconKit、GraphicsAccelerateKit、XEngineKit、AREngine | 2D/3D绘制、空间建模、图形加速、GPU引擎、AR |
 | 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ScanKit、ShareKit、NotificationKit、TelephonyKit、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、扫码、分享、通知、电话、健康、天气、游戏 |
@@ -128,6 +128,22 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 行业实践/架构参考 | `dev/references/industry-practices.md` |
 | 元服务设计/UX最佳实践 | `design/SKILL.md` |
 | 分析服务/行业风向标 | `agc/references/analytics.md` |
+| ArkTS语言/状态管理/并发 | `dev/references/arkts.md` |
+| 文件基础服务/文件沙箱 | `dev/references/core-file-kit.md` |
+| 华为账号/一键登录 | `dev/references/account-kit.md` |
+| 文件管理服务/回收站 | `dev/references/file-manager-service-kit.md` |
+| 最佳实践/架构设计 | `dev/references/best-practices.md` |
+| 应用开发FAQ | `dev/references/app-faq.md` |
+| ohpm-repo私仓 | `dev/references/deveco-service.md` |
+| 协同服务/跨设备 | `system/references/service-collaboration-kit.md` |
+| 应用测试/单元测试/UI测试 | `system/references/test-kit.md` |
+| 企业威胁防护/杀毒 | `system/references/enterprise-threat-protection-kit.md` |
+| 算法加速/数据结构 | `system/references/fast-kit.md` |
+| 运动健康/步数心率 | `system/references/health-service-kit.md` |
+| 天气服务/预报预警 | `system/references/weather-service-kit.md` |
+| 控件设计规范 | `design/references/controls.md` |
+| 多设备设计规范 | `design/references/multi-device-design.md` |
+| 设计规范变更 | `design/references/design-changes.md` |
 
 ---
 

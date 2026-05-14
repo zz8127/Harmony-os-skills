@@ -32,6 +32,9 @@ description: |
 - [人机交互与系统特性](references/hmi-system-features.md) — 交互方式/导航条/通知/实况窗/多窗口/画中画/深色模式
 - [元服务设计](references/atomic-service-design.md) — 免安装轻量服务/8大入口/分发方式
 - [UX最佳实践](references/ux-best-practices.md) — 响应式布局/沉浸体验/折叠屏/UX体验标准
+- [控件设计](references/controls.md) — 41个控件分类设计规范：导航/展示/操作/输入/选择/容器
+- [多设备设计](references/multi-device-design.md) — 不同屏幕尺寸和设备类型的设计规范
+- [设计变更](references/design-changes.md) — 设计规范阶段性变更说明
 
 ---
 

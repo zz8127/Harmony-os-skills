@@ -1,253 +1,85 @@
-﻿# 鍒嗗竷寮忚兘鍔涳紙Distributed Kit锛?
-> **閫傜敤鐗堟湰**锛欻armonyOS 6.1 / API 23锛堢ǔ瀹氾級銆傚吋瀹?API 14+銆?
-## 姒傝堪
+# Distributed Service Kit
 
-DistributedKit 鎻愪緵璁惧鍙戠幇銆佽澶囪縼绉伙紙Continuation锛夈€佽法璁惧鍓创鏉裤€佽法璁惧鎷栨嫿銆佸垎甯冨紡鏁版嵁鍚屾绛夎兘鍔涳紝鏄疄鐜?HarmonyOS "1+8+N" 鍏ㄥ満鏅崗鍚岀殑鏍稿績宸ュ叿闆嗐€?
-## 璁惧鍙戠幇
+## 概述
 
-### 璁惧绠＄悊
+Distributed Service Kit（分布式管理服务）实现了分布式设备管理、分布式硬件管理、分布式键鼠穿越、分布式组件管理等能力。该Kit是分布式业务的入口功能，只有完成认证后的设备之间才可以进行分布式业务。
 
-```typescript
-import { deviceManager } from '@kit.DistributedKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+## 核心能力
 
-let dmInstance: deviceManager.DeviceManager | undefined = undefined;
+### 分布式设备管理
 
-deviceManager.createDeviceManager('com.example.myapp', (err, data) => {
-  if (err) {
-    console.error('Create device manager failed: ' + err.message);
-    return;
-  }
-  dmInstance = data;
-  console.info('Device manager created.');
-});
-```
+- 周边设备发现
+- 设备认证
+- 设备信息查询
+- 设备状态监听
 
-### 鑾峰彇鍙俊璁惧鍒楄〃
+分布式设备管理作为系统基础服务，需要应用在业务场景中向系统主动发起请求，完成设备间的发现、认证、查询、监听等功能。
 
-```typescript
-if (dmInstance) {
-  let deviceList: Array<deviceManager.DeviceInfo> = dmInstance.getTrustedDeviceListSync();
-  deviceList.forEach(device => {
-    console.info('Device: ' + device.deviceName + ', ID: ' + device.deviceId + ', Type: ' + device.deviceType);
-  });
-}
-```
+### 分布式硬件管理
 
-### 鍙戠幇鍛ㄨ竟璁惧
+- 跨设备硬件资源访问
+- 分布式相机、扫描、图库等硬件能力共享
 
-```typescript
-if (dmInstance) {
-  dmInstance.on('deviceFound', (data: deviceManager.DeviceDiscoverEvent) => {
-    console.info('Found device: ' + data.device.deviceName);
-  });
+### 分布式键鼠穿越
 
-  dmInstance.on('discoverFail', (data: deviceManager.DiscoverFailEvent) => {
-    console.error('Discover failed: ' + data.reason);
-  });
+- 跨设备键鼠共享
+- 支持平板或2in1设备间键鼠操作
 
-  let discoverParam: Record<string, string> = {
-    'discoverTargetType': '1'
-  };
-  let filterOptions: Record<string, string> = {
-    'targetType': '1',
-    'availableStatus': '0'
-  };
+### 跨设备连接UIAbility
 
-  dmInstance.startDiscovering(discoverParam, filterOptions);
-}
-```
+设备间登录同账号并组网成功后，应用可以跨设备拉起同应用的UIAbility，实现信息、字节流、图片和传输流的交互。
 
-### 鍋滄鍙戠幇
+## 自由流转
 
-```typescript
-if (dmInstance) {
-  dmInstance.stopDiscovering();
-  dmInstance.off('deviceFound');
-  dmInstance.off('discoverFail');
-}
-```
+在HarmonyOS中，跨多设备的分布式操作统称为流转，分为跨端迁移和多端协同两种场景。
 
-## 璁惧杩佺Щ锛圕ontinuation锛?
-### 澹版槑杩佺Щ鑳藉姏
+### 跨端迁移
 
-```json5
-// module.json5
-{
-  "module": {
-    "abilities": [
-      {
-        "name": "EntryAbility",
-        "continuable": true
-      }
-    ]
-  }
-}
-```
+当使用情境发生变化时，用户可以选择新设备继续当前任务，原设备可按需退出。在应用开发层面，A端运行的UIAbility迁移到B端，B端继续任务，A端可按需退出。
 
-### 鍙戣捣杩佺Щ
+| 特性 | 说明 |
+|---|---|
+| 应用接续 | 在另一个设备的同一个应用中快速切换，无缝衔接上一个设备的应用体验 |
 
-```typescript
-import { AbilityConstant, UIAbility } from '@kit.AbilityKit';
-import { deviceManager } from '@kit.DistributedKit';
+### 多端协同
 
-class EntryAbility extends UIAbility {
-  onContinue(wantParam: Record<string, Object>): AbilityConstant.OnContinueResult {
-    let userData: Record<string, string> = {
-      'currentPage': 'detail',
-      'itemId': '12345'
-    };
-    wantParam['userData'] = JSON.stringify(userData);
-    console.info('onContinue called.');
-    return AbilityConstant.OnContinueResult.AGREE;
-  }
+多个设备作为整体，提供比单设备更高效、沉浸的体验。多端上的不同UIAbility/ServiceExtensionAbility同时运行或交替运行实现完整业务。
 
-  onCreate(want, launchParam): void {
-    if (launchParam.launchReason === AbilityConstant.LaunchReason.CONTINUATION) {
-      let userData = JSON.parse(wantParam['userData'] as string);
-      console.info('Restored page: ' + userData.currentPage);
-    }
-  }
-}
-```
+| 特性 | 说明 |
+|---|---|
+| 跨设备拖拽 | 支持平板或2in1设备间拖拽文件、文本 |
+| 跨设备剪贴板 | A设备复制文本，B设备粘贴 |
+| 跨设备互通 | 跨设备相机、扫描、图库访问 |
+| 投屏 | 扩展屏模式投播，双屏协作 |
+| 投播 | 音频/视频投放到其他HarmonyOS设备播放 |
+| 隔空传送 | 通过"一抓一放"实现跨端传输 |
+| 碰一碰分享 | 碰一碰发起跨端分享，传输图片、共享Wi-Fi等 |
 
-### 杩佺Щ瀹屾垚鍥炶皟
+## npm 包名
 
-```typescript
-class EntryAbility extends UIAbility {
-  onContinue(wantParam: Record<string, Object>): AbilityConstant.OnContinueResult {
-    wantParam['userData'] = JSON.stringify({ key: 'value' });
-    return AbilityConstant.OnContinueResult.AGREE;
-  }
+@ohos.distributedDeviceManager（分布式设备管理）
+@ohos.distributedHardwareManager（分布式硬件管理）
 
-  onRestoreData(wantParam: Record<string, Object>): void {
-    let restoredData = JSON.parse(wantParam['userData'] as string);
-    console.info('Restore data: ' + JSON.stringify(restoredData));
-  }
-}
-```
+## 关键 API
 
-## 璺ㄨ澶囧壀璐存澘
+| API | 说明 |
+|---|---|
+| deviceManager.createDeviceManager() | 创建设备管理实例 |
+| DeviceManager.discoverNewDevices() | 发现周边设备 |
+| DeviceManager.authenticateDevice() | 设备认证 |
+| DeviceManager.getTrustedDeviceList() | 获取可信设备列表 |
+| UIAbility.onContinue() | 跨端迁移回调 |
+| UIAbility.onConnect() | 多端协同连接回调 |
 
-```typescript
-import { pasteboard } from '@kit.BasicServicesKit';
-import { distributedDeviceManager } from '@kit.DistributedKit';
+## 权限要求
 
-let systemPasteboard = pasteboard.getSystemPasteboard();
+- ohos.permission.DISTRIBUTED_DATASYNC：分布式数据同步
+- ohos.permission.ACCESS_SERVICE_DM：分布式设备管理访问
+- 使用分布式设备管理需要用户进行相关权限申请
 
-let pasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'Cross-device text');
+## 官方链接
 
-let property: pasteboard.PasteDataProperty = {
-  localOnly: false
-};
-pasteData.setProperty(property);
-
-systemPasteboard.setData(pasteData, (err) => {
-  if (err) {
-    console.error('Set cross-device pasteboard failed: ' + err.message);
-    return;
-  }
-  console.info('Cross-device pasteboard data set.');
-});
-```
-
-## 璺ㄨ澶囨嫋鎷?
-```typescript
-import { UDMF } from '@kit.UnifiedDataManagementKit';
-import { distributedDeviceManager } from '@kit.DistributedKit';
-
-let unifiedData = new UDMF.UnifiedData();
-let plainText = new UMDF.PlainText();
-plainText.textContent = 'Drag across devices';
-unifiedData.addRecord(plainText);
-
-let dragInfo: DragInfo = {
-  data: unifiedData,
-  targetDevices: ['remote_device_id_1']
-};
-```
-
-## 鍒嗗竷寮忔暟鎹悓姝?
-### 鍒嗗竷寮忛敭鍊兼暟鎹簱
-
-```typescript
-import { distributedKVStore } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let kvManager: distributedKVStore.KVManager | undefined = undefined;
-
-let kvManagerConfig: distributedKVStore.KVManagerConfig = {
-  bundleName: 'com.example.myapp',
-  context: getContext(this)
-};
-
-kvManager = distributedKVStore.createKVManager(kvManagerConfig);
-
-let kvStore: distributedKVStore.SingleKVStore | undefined = undefined;
-
-let storeOptions: distributedKVStore.Options = {
-  createIfMissing: true,
-  encrypt: false,
-  backup: false,
-  autoSync: true,
-  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
-  securityLevel: distributedKVStore.SecurityLevel.S2
-};
-
-kvManager.getKVStore('distributed_store', storeOptions, (err, store) => {
-  if (err) {
-    console.error('Get KV store failed: ' + err.message);
-    return;
-  }
-  kvStore = store;
-  console.info('KV store created.');
-});
-```
-
-### 鍐欏叆涓庡悓姝ユ暟鎹?
-```typescript
-if (kvStore) {
-  kvStore.put('sync_key', 'sync_value', (err) => {
-    if (err) {
-      console.error('Put data failed: ' + err.message);
-      return;
-    }
-    console.info('Put data succeeded.');
-  });
-
-  kvStore.on('dataChange', distributedKVStore.ChangeType.SUBSCRIBE_TYPE_ALL, (data) => {
-    console.info('Data changed: ' + JSON.stringify(data));
-  });
-}
-```
-
-### 鎵嬪姩鍚屾
-
-```typescript
-import { deviceManager } from '@kit.DistributedKit';
-
-if (kvStore) {
-  let deviceList = dmInstance.getTrustedDeviceListSync();
-  let deviceIds = deviceList.map(device => device.deviceId);
-
-  kvStore.sync(deviceIds, distributedKVStore.SyncMode.PUSH_PULL, 1000);
-}
-```
-
-## 鏉冮檺
-
-| 鏉冮檺 | 璇存槑 |
-|------|------|
-| `ohos.permission.DISTRIBUTED_DATASYNC` | 鍒嗗竷寮忔暟鎹悓姝?|
-| `ohos.permission.ACCESS_SERVICE_DM` | 璁惧绠＄悊 |
-| `ohos.permission.DISTRIBUTED_SOFTBUS_CENTER` | 鍒嗗竷寮忚蒋鎬荤嚎 |
-
----
-
-## 瀹樻柟鍙傝€?
-- 鍒嗗竷寮忚兘鍔涙杩帮細https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributed-overview-V5
-- 璁惧鍙戠幇锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-guides/device-discovery-V5
-- 璁惧杩佺Щ锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-guides/continuation-V5
-- 鍒嗗竷寮忔暟鎹悓姝ワ細https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributed-data-sync-V5
-- deviceManager API锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-device-manager-V5
-- distributedKVStore API锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-distributedkvstore-V5
+- Distributed Service Kit简介：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributedservice-kit-intro
+- 自由流转概述：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributed-overview
+- 分布式设备管理开发指南：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/devicemanager-guidelines
+- 跨设备连接UIAbility：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/abilityconnectmanager-guidelines

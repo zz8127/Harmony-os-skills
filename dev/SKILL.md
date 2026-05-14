@@ -55,6 +55,13 @@ description: |
 - [应用质量](references/app-quality.md) — 质量体验建议：稳定性/性能/功耗/安全隐私/兼容性
 - [应用服务Kit](references/app-service-kits.md) — Calendar+Contacts+Preview+Reader+ScenarioFusion+CallService
 - [行业实践](references/industry-practices.md) — 16个行业实践分类索引/公共关键技术方案
+- [ArkTS语言](references/arkts.md) — ArkTS：TypeScript超集/声明式UI/状态管理/并发
+- [文件基础服务](references/core-file-kit.md) — Core File Kit：应用文件/用户文件/文件沙箱/分享
+- [华为账号](references/account-kit.md) — Account Kit：一键登录/静默登录/头像昵称/手机号
+- [文件管理服务](references/file-manager-service-kit.md) — File Manager Service Kit：回收站/文件图标/快捷方式
+- [最佳实践](references/best-practices.md) — 官方最佳实践专题：架构/UI/功能/多设备/AI/安全/质量
+- [应用FAQ](references/app-faq.md) — 应用开发常见问题：框架/ArkTS/NDK/UI/数据/无障碍/Web
+- [DevEco Service](references/deveco-service.md) — ohpm-repo私仓搭建/缓存/部署
 
 ---
 
