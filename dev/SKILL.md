@@ -47,6 +47,14 @@ description: |
 - [手写笔](references/pen-kit.md) — Pen Kit：画布绘制/长画布滚动/API 23新增
 - [无障碍](references/accessibility-kit.md) — Accessibility Kit：屏幕朗读/无障碍扩展/分组聚合播报
 - [性能分析](references/performance-analysis-kit.md) — Performance Analysis Kit：HiAppEvent/HiDebug/AppFreeze
+- [数据增强](references/data-augmentation-kit.md) — Data Augmentation Kit：知识库/知识检索/端侧问答/RAG
+- [输入法](references/ime-kit.md) — IME Kit：输入法框架/编辑框通信/输入法应用
+- [进程间通信](references/ipc-kit.md) — IPC Kit：跨进程通信/Binder/RPC
+- [国际化本地化](references/localization-kit.md) — Localization Kit：I18n/L10n/多语言
+- [NDK开发](references/ndk-development.md) — NDK：C/C++原生开发/交叉编译
+- [应用质量](references/app-quality.md) — 质量体验建议：稳定性/性能/功耗/安全隐私/兼容性
+- [应用服务Kit](references/app-service-kits.md) — Calendar+Contacts+Preview+Reader+ScenarioFusion+CallService
+- [行业实践](references/industry-practices.md) — 16个行业实践分类索引/公共关键技术方案
 
 ---
 

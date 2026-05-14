@@ -17,14 +17,14 @@ description: |
 
 | 技能 | 路径 | 覆盖内容 |
 |------|------|---------|
-| **开发规范** | `dev/SKILL.md` | Stage模型、ArkUI、ArkTS、权限、发布（HarmonyOS 6.1 API 23） |
-| **系统能力** | `system/SKILL.md` | 蓝牙BLE/Wi-Fi/NFC/定位/传感器/电源/安全 |
-| **媒体服务** | `media/SKILL.md` | CameraKit/AVPlayer/AVSession/PhotoAccessHelper |
-| **AI与元服务** | `ai-meta/SKILL.md` | IntentsKit/SpeechKit/MLKit/元服务/服务流转 |
-| **设计规范** | `design/SKILL.md` | 设计原则/色彩/字体/图标/布局/动效 |
+| **开发规范** | `dev/SKILL.md` | Stage模型、ArkUI、ArkTS、权限、发布、NDK、行业实践、应用质量 |
+| **系统能力** | `system/SKILL.md` | 蓝牙/Wi-Fi/NFC/定位/传感器/安全/车机/星闪/企业管理/穿戴 |
+| **媒体服务** | `media/SKILL.md` | CameraKit/AVPlayer/AVSession/DRM/3D图形/铃声/编解码 |
+| **AI与元服务** | `ai-meta/SKILL.md` | IntentsKit/SpeechKit/MLKit/基础AI/推理运行时/元服务/服务流转 |
+| **设计规范** | `design/SKILL.md` | 设计原则/色彩/字体/图标/布局/动效/人机交互/UX最佳实践 |
 | **示例代码** | `samples/SKILL.md` | 官方示例代码/Gitee仓/按Kit分类索引 |
 | **模板组件** | `templates/SKILL.md` | DevEco Studio模板/生态市场模板/主题图标资源 |
-| **AGC 服务** | `agc/SKILL.md` | 应用分发/云开发/认证/增长(推送/App Linking/应用内消息/素材管理)/质量(崩溃/性能/云测试/云调试)/变现 |
+| **AGC 服务** | `agc/SKILL.md` | 应用分发/云开发/认证/增长/质量/变现/分析/游戏服务 |
 
 ---
 
@@ -34,12 +34,12 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | 领域 | 覆盖 Kit | 核心能力 |
 |------|---------|---------|
-| 应用框架 | AbilityKit、ArkUI | Stage模型、UIAbility、ArkTS声明式UI |
-| 系统 | ConnectivityKit、LocationKit、SensorServiceKit | 蓝牙Wi-FiNFC、定位、传感器 |
-| 媒体 | CameraKit、AVSessionKit、MediaKit | 相机、音频、播控、相册 |
-| 图形 | ArkGraphics 2D、@ohos.graphics.drawing | 2D绘制、Canvas、自定义渲染 |
-| 应用服务 | PushKit、AVSessionKit、广告、分析等 | 推送、支付、增长变现 |
-| AI | IntentsKit、SpeechKit、MLKit、VisionKit | 意图分发、语音、端侧AI |
+| 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔 |
+| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式 |
+| 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册 |
+| 图形 | ArkGraphics 2D、ArkGraphics 3D、SpatialReconKit、GraphicsAccelerateKit、XEngineKit、AREngine | 2D/3D绘制、空间建模、图形加速、GPU引擎、AR |
+| 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ScanKit、ShareKit、NotificationKit、TelephonyKit、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、扫码、分享、通知、电话、健康、天气、游戏 |
+| AI | IntentsKit、SpeechKit、MLKit、VisionKit、CoreSpeechKit、CoreVisionKit、NaturalLanguageKit、CANNKit、MindSporeLiteKit、NeuralNetworkRuntimeKit、AgentFrameworkKit、FASTKit | 意图分发、语音、端侧AI、视觉、基础语音/视觉/NLP、NPU加速、推理框架、智能体 |
 
 ---
 
@@ -103,11 +103,11 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 需要做什么 | 去哪个 skill |
 |-----------|-------------|
 | Stage/UIAbility/ArkUI 基础开发 | `dev/` |
-| 蓝牙/Wi-Fi/NFC/定位开发 | `system/` |
-| 相机/音视频/相册开发 | `media/` |
+| 蓝牙/Wi-Fi/NFC/定位/星闪开发 | `system/` |
+| 相机/音视频/相册/3D图形开发 | `media/` |
 | 意图分发/语音合成/AI模型 | `ai-meta/` |
 | 服务卡片/免安装应用 | `ai-meta/` |
-| UI 设计/配色/字体/动效 | `design/SKILL.md` |
+| UI 设计/配色/字体/动效/人机交互 | `design/SKILL.md` |
 | 参考官方示例代码 | `samples/SKILL.md` |
 | 新建工程选模板/找设计资源 | `templates/SKILL.md` |
 | 应用发布/AppGallery 上架 | `dev/` |
@@ -116,6 +116,18 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | AGC 云函数/云数据库/云存储/云托管 | `agc/references/cloud-development.md` |
 | App Linking/应用内消息/素材管理 | `agc/references/growth.md` |
 | 云测试/云调试/接入检测 | `agc/references/quality.md` |
+| 输入法/IPC/国际化/NDK | `dev/` |
+| 数据增强/RAG/端侧问答 | `dev/references/data-augmentation-kit.md` |
+| 车机/星闪/穿戴/驱动开发 | `system/` |
+| 安全存储/DLP/用户认证 | `system/references/security-kits.md` |
+| 企业管理/MDM/数据保护 | `system/references/enterprise-kits.md` |
+| DRM版权保护/铃声设置 | `media/references/drm-ringtone-kit.md` |
+| 3D图形/空间建模/GPU加速 | `media/references/arkgraphics-3d.md` |
+| 基础AI/OCR/NLP/推理引擎 | `ai-meta/` |
+| 应用质量/稳定性/功耗/安全隐私 | `dev/references/app-quality.md` |
+| 行业实践/架构参考 | `dev/references/industry-practices.md` |
+| 元服务设计/UX最佳实践 | `design/SKILL.md` |
+| 分析服务/行业风向标 | `agc/references/analytics.md` |
 
 ---
 
