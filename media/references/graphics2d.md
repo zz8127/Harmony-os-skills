@@ -1,298 +1,96 @@
-﻿# 鍥惧舰寮€鍙戯紙ArkGraphics 2D锛?
-> **閫傜敤鐗堟湰**锛欻armonyOS 6.1 / API 23锛堢ǔ瀹氾級銆傚吋瀹?API 14+銆?
-## 姒傝堪
+# ArkGraphics 2D
 
-ArkGraphics 2D 鎻愪緵 Canvas 缁樺埗銆佽嚜瀹氫箟娓叉煋銆佹ā绯婃晥鏋溿€佸姩鎬佸抚鐜囥€丏rawing 缁勪欢绛?2D 鍥惧舰鑳藉姏锛屾槸搴旂敤瀹炵幇鑷畾涔?UI 缁樺埗鍜岃瑙夋晥鏋滅殑鏍稿績宸ュ叿闆嗐€?
-## Canvas 缁樺埗
+## 概述
 
-### Canvas 鍩虹鐢ㄦ硶
+ArkGraphics 2D（方舟2D图形服务）主要提供图形绘制与显示相关的能力。开发者可以基于一套统一的图形接口进行应用开发，使应用开发更简单、高效。
 
-```typescript
-@Entry
-@Component
-struct CanvasPage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+## 核心能力
 
-  build() {
-    Column() {
-      Canvas(this.context)
-        .width('100%')
-        .height(400)
-        .onReady(() => {
-          this.context.fillStyle = '#FF0000';
-          this.context.fillRect(50, 50, 200, 100);
+### 图像效果处理
 
-          this.context.strokeStyle = '#0000FF';
-          this.context.lineWidth = 3;
-          this.context.strokeRect(50, 200, 200, 100);
-        })
-    }
-  }
-}
-```
+提供图像处理基本能力，包括亮度调节、模糊化、灰度调节、智能取色等。
 
-### 璺緞缁樺埗
+对应API：@ohos.effectKit（图像效果）
 
-```typescript
-this.context.beginPath();
-this.context.moveTo(100, 100);
-this.context.lineTo(200, 100);
-this.context.lineTo(150, 50);
-this.context.closePath();
-this.context.fillStyle = '#00FF00';
-this.context.fill();
-this.context.stroke();
-```
+### 色彩管理
 
-### 鍦嗗姬涓庤礉濉炲皵鏇茬嚎
+提供管理抽象化色域对象的基础能力，包括色域创建、色域基础属性获取等。
 
-```typescript
-this.context.beginPath();
-this.context.arc(150, 150, 80, 0, Math.PI * 2);
-this.context.stroke();
+对应API：
+- @ohos.graphics.colorSpaceManager（色彩管理）
+- @ohos.graphics.sendableColorSpaceManager（可共享的色彩管理）
 
-this.context.beginPath();
-this.context.moveTo(50, 300);
-this.context.bezierCurveTo(100, 200, 200, 400, 250, 300);
-this.context.stroke();
+### 可变帧率
 
-this.context.beginPath();
-this.context.moveTo(50, 350);
-this.context.quadraticCurveTo(150, 250, 250, 350);
-this.context.stroke();
-```
+提供针对不同形式内容指定帧率的能力，可用于开发者自绘制内容。
 
-### 娓愬彉濉厖
+对应指南：可变帧率简介
 
-```typescript
-let linearGradient = this.context.createLinearGradient(0, 0, 300, 0);
-linearGradient.addColorStop(0, '#FF0000');
-linearGradient.addColorStop(0.5, '#00FF00');
-linearGradient.addColorStop(1, '#0000FF');
-this.context.fillStyle = linearGradient;
-this.context.fillRect(0, 0, 300, 200);
+### HDR高动态显示
 
-let radialGradient = this.context.createRadialGradient(150, 150, 10, 150, 150, 100);
-radialGradient.addColorStop(0, '#FFFFFF');
-radialGradient.addColorStop(1, '#000000');
-this.context.fillStyle = radialGradient;
-this.context.fillRect(0, 200, 300, 200);
-```
+提供高动态显示相关能力。
 
-### 鏂囧瓧缁樺埗
+对应API：@ohos.graphics.hdrCapability（HDR能力）
 
-```typescript
-this.context.font = '30px sans-serif';
-this.context.fillStyle = '#333333';
-this.context.textAlign = 'center';
-this.context.textBaseline = 'middle';
-this.context.fillText('Hello HarmonyOS', 150, 150);
+### 自绘制（Drawing模块）
 
-this.context.strokeStyle = '#FF0000';
-this.context.strokeText('Outline Text', 150, 200);
-```
+提供自绘制能力，开发者可自定义绘制实现UI效果，包括基础形状、文本、图片等。
 
-### 鍥剧墖缁樺埗
+对应API：@ohos.graphics.drawing（绘制模块）
 
-```typescript
-let img = new ImageBitmap('common/icon.png');
+### Native图形能力
 
-this.context.drawImage(img, 10, 10);
-this.context.drawImage(img, 10, 10, 100, 100);
-this.context.drawImage(img, 0, 0, 100, 100, 10, 10, 200, 200);
-```
+提供图形绘制与显示相关的Native能力，包括：
 
-### 鍙樻崲鎿嶄綔
+- NativeWindow：原生窗口管理
+- NativeBuffer：原生缓冲区管理
+- NativeImage：原生图像管理
+- NativeVsync：原生垂直同步
+- Drawing（Native）：Native绘制模块
 
-```typescript
-this.context.save();
+## 使用场景
 
-this.context.translate(150, 150);
-this.context.rotate(Math.PI / 4);
-this.context.scale(1.5, 1.5);
+- 图像效果处理：使用effectKit模块实现图像效果处理，提升用户浏览体验
+- 设置图像色域：根据设计需求设置色域信息，实现广色域效果的绘制和显示
+- 定制帧率场景：根据不同内容和需要定制帧率，如不同游戏场景设置不同帧率，平衡体验与功耗
+- 自绘制场景：使用Drawing等模块实现ArkUI组件外的自定义组件或自定义UI效果
 
-this.context.fillStyle = '#FF6600';
-this.context.fillRect(-50, -50, 100, 100);
+## 亮点特征
 
-this.context.restore();
-```
+- 同个窗口支持多个帧率：为同个窗口不同内容定制不同绘制帧率，独立运行
+- 帧率动态配置：支持三方框架根据UI场景动态请求绘制帧率，兼顾流畅体验与功耗
+- 录制回放机制：支持录制命令缓存，对绘制指令回放，提升UI绘制跟手性
+- 多种渲染后端：一次开发支持多种渲染绘制后端，降低多端适配成本
 
-### 闃村奖鏁堟灉
+## npm 包名
 
-```typescript
-this.context.shadowBlur = 15;
-this.context.shadowColor = '#000000';
-this.context.shadowOffsetX = 5;
-this.context.shadowOffsetY = 5;
-this.context.fillStyle = '#FF9900';
-this.context.fillRect(50, 50, 150, 100);
-```
+@ohos.effectKit（图像效果）
+@ohos.graphics.colorSpaceManager（色彩管理）
+@ohos.graphics.drawing（绘制模块）
+@ohos.graphics.hdrCapability（HDR能力）
 
-## 鑷畾涔夋覆鏌?
-### 绂诲睆 Canvas
+## 关键 API
 
-```typescript
-let offscreen = new OffscreenCanvas(300, 300);
-let offCtx = offscreen.getContext('2d');
+| API | 说明 |
+|---|---|
+| effectKit.createEffect() | 创建图像效果处理源 |
+| effectKit.createBlur() | 创建模糊效果 |
+| colorSpaceManager.create() | 创建色域对象 |
+| drawing.Canvas | 画布对象，承载绘制操作 |
+| drawing.Pen | 画笔对象，描述绘制轮廓样式 |
+| drawing.Brush | 画刷对象，描述填充样式 |
+| drawing.Path | 路径对象，描述几何形状 |
+| drawing.Typeface | 字体对象 |
+| drawing.Image | 图片对象 |
 
-offCtx.fillStyle = '#4488FF';
-offCtx.fillRect(0, 0, 150, 150);
+## 权限要求
 
-offCtx.fillStyle = '#FF8844';
-offCtx.fillRect(150, 150, 150, 150);
+ArkGraphics 2D不需要额外权限声明。
 
-let imageBitmap = offscreen.transferToImageBitmap();
-this.context.drawImage(imageBitmap, 0, 0);
-```
+## 官方链接
 
-### 鍍忕礌鎿嶄綔
-
-```typescript
-let imageData = this.context.getImageData(0, 0, 100, 100);
-
-for (let i = 0; i < imageData.data.length; i += 4) {
-  imageData.data[i] = 255 - imageData.data[i];
-  imageData.data[i + 1] = 255 - imageData.data[i + 1];
-  imageData.data[i + 2] = 255 - imageData.data[i + 2];
-}
-
-this.context.putImageData(imageData, 0, 0);
-```
-
-## 妯＄硦鏁堟灉
-
-### 鑳屾櫙妯＄硦
-
-```typescript
-@Entry
-@Component
-struct BlurPage {
-  build() {
-    Stack() {
-      Image($r('app.media.background'))
-        .width('100%')
-        .height('100%')
-
-      Column() {
-        Text('Blur Effect')
-          .fontSize(24)
-          .fontColor(Color.White)
-      }
-      .width(200)
-      .height(200)
-      .backgroundColor('#80FFFFFF')
-      .blur(20)
-    }
-  }
-}
-```
-
-### 鍓嶆櫙妯＄硦
-
-```typescript
-Image($r('app.media.photo'))
-  .width(300)
-  .height(300)
-  .blur(10, BlurType.THIN)
-```
-
-## 鍔ㄦ€佸抚鐜?
-```typescript
-import { display } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct FrameRatePage {
-  build() {
-    List() {
-      ListItem() {
-        Text('Dynamic Frame Rate Item')
-      }
-    }
-    .frameRateRange({
-      expected: 60,
-      min: 30,
-      max: 120
-    })
-  }
-}
-```
-
-## Drawing 缁勪欢
-
-### Shape 涓?Path
-
-```typescript
-@Entry
-@Component
-struct DrawingPage {
-  build() {
-    Column() {
-      Shape() {
-        Path()
-          .commands('M100 0 L200 100 L0 100 Z')
-          .fill(Color.Orange)
-          .stroke(Color.Red)
-          .strokeWidth(2)
-      }
-      .width(200)
-      .height(200)
-      .viewPort({ x: 0, y: 0, width: 200, height: 200 })
-
-      Shape() {
-        Circle({ width: 100, height: 100 })
-          .fill(Color.Blue)
-          .stroke(Color.White)
-      }
-      .width(120)
-      .height(120)
-    }
-  }
-}
-```
-
-### 鍩虹鍥惧舰缁勪欢
-
-```typescript
-Column() {
-  Circle({ width: 80, height: 80 })
-    .fill(Color.Red)
-
-  Ellipse({ width: 120, height: 60 })
-    .fill(Color.Green)
-
-  Rect({ width: 100, height: 60 })
-    .radius(10)
-    .fill(Color.Blue)
-
-  Line()
-    .width(200)
-    .height(2)
-    .backgroundColor(Color.Black)
-
-  Polyline()
-    .points([[0, 0], [50, 50], [100, 0]])
-    .fill(Color.Transparent)
-    .stroke(Color.Purple)
-    .strokeWidth(2)
-
-  Polygon()
-    .points([[50, 0], [100, 40], [80, 100], [20, 100], [0, 40]])
-    .fill(Color.Yellow)
-    .stroke(Color.Orange)
-}
-```
-
-## 鏉冮檺
-
-鏈?Kit 鏃犻渶鐗规畩鏉冮檺澹版槑銆?
----
-
-## 瀹樻柟鍙傝€?
-- Canvas 缁樺埗锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-canvas-V5
-- Canvas API锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-canvasrenderingcontext2d-V5
-- Drawing 缁勪欢锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-graphics-drawing-V5
-- 妯＄硦鏁堟灉锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-universal-attributes-blur-V5
-- 鍔ㄦ€佸抚鐜囷細https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-frame-rate-V5
-- Shape 缁勪欢锛歨ttps://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-drawing-components-shape-V5
+- ArkGraphics 2D简介：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkgraphics2d-introduction
+- 图形绘制与显示开发概述：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/graphic-drawing-overview
+- Drawing模块API参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-graphics-drawing
+- effectKit API参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-effectkit
+- 可变帧率简介：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/displaysync-overview

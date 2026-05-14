@@ -44,6 +44,12 @@ description: |
 | 分享 | [分享服务](references/share-kit.md) | ShareKit：系统分享面板 |
 | 通信 | [电话蜂窝](references/telephony-kit.md) | TelephonyKit：电话/蜂窝通信 |
 | 安全 | [加密框架](references/crypto-architecture.md) | CryptoArchitectureKit：加解密/签名 |
+| 协同 | [协同服务](references/service-collaboration-kit.md) | ServiceCollaborationKit：跨设备协同/跨端拍照/文档扫描 |
+| 测试 | [应用测试](references/test-kit.md) | TestKit：单元测试/UITest/白盒性能 |
+| 安全 | [企业威胁防护](references/enterprise-threat-protection-kit.md) | EnterpriseThreatProtectionKit：文件扫描/隔离/恢复/删除 |
+| 算法 | [算法加速](references/fast-kit.md) | FASTKit：高阶数据结构/规划求解/数字信号处理 |
+| 健康 | [运动健康](references/health-service-kit.md) | HealthServiceKit：步数/心率/运动联动/训练负荷 |
+| 天气 | [天气服务](references/weather-service-kit.md) | WeatherServiceKit：天气预报/降水/预警/指数 |
 
 ---
 
@@ -72,6 +78,12 @@ description: |
 | NearLinkKit | `@kit.NearLinkKit` | 星闪通信 |
 | DriverDevelopmentKit | `@kit.DriverDevelopmentKit` | 驱动开发 |
 | WearEngineKit | `@kit.WearEngineKit` | 穿戴设备 |
+| ServiceCollaborationKit | `@kit.ServiceCollaborationKit` | 跨设备协同 |
+| TestKit | `@kit.TestKit` | 应用测试框架 |
+| EnterpriseThreatProtectionKit | `@kit.EnterpriseThreatProtectionKit` | 企业威胁防护 |
+| FASTKit | `@kit.FASTKit` | 算法加速 |
+| HealthServiceKit | `@kit.HealthServiceKit` | 运动健康数据 |
+| WeatherServiceKit | `@kit.WeatherServiceKit` | 天气数据服务 |
 
 ---
 
