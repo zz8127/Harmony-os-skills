@@ -21,6 +21,8 @@ description: |
 | [编解码](references/avcodec-kit.md) | AVCodec Kit：音视频编解码/AV1/VP9软解/API 23新增 |
 | [相册访问](references/photo.md) | PhotoAccessHelper：图片/视频读写 |
 | [图形开发](references/graphics2d.md) | ArkGraphics 2D：Canvas/自定义绘图/模糊效果 |
+| [DRM+铃声](references/drm-ringtone-kit.md) | DRM Kit：数字版权保护 + Ringtone Kit：铃声设置 |
+| [3D图形](references/arkgraphics-3d.md) | ArkGraphics 3D + SpatialRecon + GraphicsAccelerate + XEngine |
 
 ---
 
@@ -36,6 +38,12 @@ description: |
 | ArkGraphics2D | `@kit.ArkGraphics2D` | Canvas 绘图、模糊效果、动态帧率 |
 | ImageKit | `@kit.ImageKit` | 图片处理、元数据读写 |
 | AVCodecKit | `@kit.AVCodecKit` | 音视频编解码（AV1/VP9软解） |
+| DRMKit | `@kit.DRMKit` | 数字版权保护 |
+| RingtoneKit | `@kit.RingtoneKit` | 铃声设置 |
+| ArkGraphics3D | `@kit.ArkGraphics3D` | 3D场景绘制、模型加载 |
+| SpatialReconKit | `@kit.SpatialReconKit` | 3D空间建模 |
+| GraphicsAccelerateKit | `@kit.GraphicsAccelerateKit` | 图形加速、超帧 |
+| XEngineKit | `@kit.XEngineKit` | GPU加速引擎 |
 
 ---
 

@@ -29,6 +29,16 @@ description: |
 | 基础服务 | [基础服务](references/basic-services.md) | 窗口管理/剪贴板/屏幕亮度 |
 | 安全 | [密钥管理](references/keystore.md) | HUKS密钥/证书/加解密 |
 | 分布式 | [分布式能力](references/distributed.md) | 设备迁移/跨设备剪贴板/数据同步 |
+| 安全 | [关键资产存储](references/asset-store-kit.md) | 关键资产安全存储/加密管理 |
+| 车载 | [车服务](references/car-kit.md) | 车机出行/HiCar互联/导航流转 |
+| 安全 | [安全类Kit](references/security-kits.md) | DLP/设备证书/在线认证/用户认证 |
+| 并发 | [并发调度](references/ffrt-kit.md) | FFRT数据依赖异步并发任务 |
+| 输入 | [多模输入+融合感知](references/input-multimodal-kit.md) | 多输入设备/传感器融合感知 |
+| 通信 | [星闪](references/nearlink-kit.md) | NearLink低功耗高速短距通信 |
+| 网络 | [网络加速+远场通信](references/network-boost-remote-kit.md) | 网络加速/感知/HTTP/RPC |
+| 企业 | [企业管理Kit](references/enterprise-kits.md) | MDM/数据保护/状态栏/空间管控/屏幕时间 |
+| 驱动 | [驱动开发](references/driver-kit.md) | 外设驱动/DriverExtension/USB/HID |
+| 穿戴 | [穿戴服务](references/wear-engine-kit.md) | 华为穿戴设备开放能力 |
 
 ---
 
@@ -51,6 +61,12 @@ description: |
 | ShareKit | `@kit.ShareKit` | 系统分享面板 |
 | TelephonyKit | `@kit.TelephonyKit` | 电话、蜂窝 |
 | CryptoArchitectureKit | `@kit.CryptoArchitectureKit` | 加密框架 |
+| AssetStoreKit | `@kit.AssetStoreKit` | 关键资产安全存储 |
+| CarKit | `@kit.CarKit` | 车服务 |
+| FfrtKit | `@kit.FfrtKit` | 并发调度 |
+| NearLinkKit | `@kit.NearLinkKit` | 星闪通信 |
+| DriverDevelopmentKit | `@kit.DriverDevelopmentKit` | 驱动开发 |
+| WearEngineKit | `@kit.WearEngineKit` | 穿戴设备 |
 
 ---
 

@@ -20,6 +20,8 @@ description: |
 | [服务流转](references/meta-service.md) | 设备间服务无缝迁移 |
 | [异构计算](references/cann-kit.md) | CANN Kit：NPU 推理加速/模型部署 |
 | [智能体框架](references/agent-framework.md) | Agent Framework Kit：Agent 创建/Tool/多 Agent 协作 |
+| [基础AI能力](references/core-ai-kits.md) | CoreSpeech+CoreVision+NaturalLanguage：基础语音/视觉/NLP |
+| [推理运行时](references/mindspore-nnrt-kit.md) | MindSporeLite+NeuralNetworkRuntime：端侧推理/NPU加速 |
 
 ---
 
@@ -33,6 +35,11 @@ description: |
 | MLKit | @kit.MLKit | 端侧 AI 模型推理 |
 | CANNKit | @kit.CANNKit | NPU 异构计算，推理加速 |
 | AgentFrameworkKit | @kit.AgentFrameworkKit | 智能体框架，多 Agent 协作（API 23 新增） |
+| CoreSpeechKit | `@kit.CoreSpeechKit` | 基础语音：TTS/ASR |
+| CoreVisionKit | `@kit.CoreVisionKit` | 基础视觉：OCR/人脸检测/主体分割 |
+| NaturalLanguageKit | `@kit.NaturalLanguageKit` | 自然语言理解：分词/实体抽取 |
+| MindSporeLiteKit | `@kit.MindSporeLiteKit` | 昇思推理框架，轻量化AI引擎 |
+| NeuralNetworkRuntimeKit | `@kit.NeuralNetworkRuntimeKit` | 神经网络运行时，跨芯片推理 |
 
 ---
 

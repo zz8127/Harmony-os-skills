@@ -29,6 +29,9 @@ description: |
 - [动效规范](references/animation.md) — 时长曲线、转场动效、微动效
 - [多设备设计](references/multi-device.md) — 手机/平板/智慧屏/手表/车机适配
 - [设计资源](references/resources.md) — 图标库、色板、字体、模板下载
+- [人机交互与系统特性](references/hmi-system-features.md) — 交互方式/导航条/通知/实况窗/多窗口/画中画/深色模式
+- [元服务设计](references/atomic-service-design.md) — 免安装轻量服务/8大入口/分发方式
+- [UX最佳实践](references/ux-best-practices.md) — 响应式布局/沉浸体验/折叠屏/UX体验标准
 
 ---
 
