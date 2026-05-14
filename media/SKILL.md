@@ -23,6 +23,7 @@ description: |
 | [图形开发](references/graphics2d.md) | ArkGraphics 2D：Canvas/自定义绘图/模糊效果 |
 | [DRM+铃声](references/drm-ringtone-kit.md) | DRM Kit：数字版权保护 + Ringtone Kit：铃声设置 |
 | [3D图形](references/arkgraphics-3d.md) | ArkGraphics 3D + SpatialRecon + GraphicsAccelerate + XEngine |
+| [图片处理](references/image-kit.md) | Image Kit：图片编解码/元数据读写/图片效果 |
 
 ---
 

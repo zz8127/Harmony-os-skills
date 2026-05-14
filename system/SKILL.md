@@ -39,6 +39,11 @@ description: |
 | 企业 | [企业管理Kit](references/enterprise-kits.md) | MDM/数据保护/状态栏/空间管控/屏幕时间 |
 | 驱动 | [驱动开发](references/driver-kit.md) | 外设驱动/DriverExtension/USB/HID |
 | 穿戴 | [穿戴服务](references/wear-engine-kit.md) | 华为穿戴设备开放能力 |
+| 地图 | [地图服务](references/map-kit.md) | MapKit：地图/标记/导航 |
+| 扫码 | [扫码服务](references/scan-kit.md) | ScanKit：扫码/码识别/直达服务 |
+| 分享 | [分享服务](references/share-kit.md) | ShareKit：系统分享面板 |
+| 通信 | [电话蜂窝](references/telephony-kit.md) | TelephonyKit：电话/蜂窝通信 |
+| 安全 | [加密框架](references/crypto-architecture.md) | CryptoArchitectureKit：加解密/签名 |
 
 ---
 
