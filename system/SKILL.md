@@ -33,7 +33,14 @@ description: |
 | 车载 | [车服务](references/car-kit.md) | 车机出行/HiCar互联/导航流转 |
 | 安全 | [安全类Kit](references/security-kits.md) | DLP/设备证书/在线认证/用户认证 |
 | 并发 | [并发调度](references/ffrt-kit.md) | FFRT数据依赖异步并发任务 |
-| 输入 | [多模输入+融合感知](references/input-multimodal-kit.md) | 多输入设备/传感器融合感知 |
+| 输入 | [多模输入](references/input-kit.md) | 触控板/触摸屏/鼠标/键盘等输入设备 |
+| 输入 | [多模态融合感知](references/multimodal-awareness-kit.md) | 传感器融合/设备状态/姿态识别 |
+| 企业 | [MDM企业设备管理](references/mdm-kit.md) | 企业设备管理/远程配置/策略管控 |
+| 企业 | [企业数据保护](references/enterprise-data-guard-kit.md) | 文件分级/外发管控/水印保护 |
+| 企业 | [企业数字空间](references/enterprise-space-kit.md) | 空间互传/策略管控/灵活配置 |
+| 安全 | [数据防泄漏](references/data-loss-prevention-kit.md) | 文件权限/加密存储/授权访问 |
+| 安全 | [设备证书](references/device-certificate-kit.md) | 证书解析/验证/管理 |
+| 安全 | [在线认证](references/online-authentication-kit.md) | FIDO/通行密钥/免密认证 |
 | 通信 | [星闪](references/nearlink-kit.md) | NearLink低功耗高速短距通信 |
 | 网络 | [网络加速+远场通信](references/network-boost-remote-kit.md) | 网络加速/感知/HTTP/RPC |
 | 企业 | [企业管理Kit](references/enterprise-kits.md) | MDM/数据保护/状态栏/空间管控/屏幕时间 |
@@ -84,6 +91,15 @@ description: |
 | FASTKit | `@kit.FASTKit` | 算法加速 |
 | HealthServiceKit | `@kit.HealthServiceKit` | 运动健康数据 |
 | WeatherServiceKit | `@kit.WeatherServiceKit` | 天气数据服务 |
+| InputKit | `@kit.InputKit` | 多模输入 |
+| MultimodalAwarenessKit | `@kit.MultimodalAwarenessKit` | 多模态融合感知 |
+| MDMKit | `@kit.MDMKit` | 企业设备管理 |
+| DataLossPreventionKit | `@kit.DataLossPreventionKit` | 数据防泄漏 |
+| DeviceCertificateKit | `@kit.DeviceCertificateKit` | 设备证书 |
+| OnlineAuthenticationKit | `@kit.OnlineAuthenticationKit` | 在线认证 |
+| RemoteCommunicationKit | `@kit.RemoteCommunicationKit` | 远场通信 |
+| EnterpriseDataGuardKit | `@kit.EnterpriseDataGuardKit` | 企业数据保护 |
+| EnterpriseSpaceKit | `@kit.EnterpriseSpaceKit` | 企业数字空间 |
 
 ---
 
@@ -109,6 +125,9 @@ description: |
 |-----|------|
 | Performance Analysis Kit | 资源采集和崩溃日志分析增强 |
 | Enterprise Threat Protection Kit | **全新 Kit** — 企业威胁防护服务 |
+| Camera Kit | 延迟预览输出、影随人动能力 |
+| Audio Kit | MIDI C API 支持外接设备 |
+| FAST Kit | 并发哈希表、向量运算和滤波器 |
 
 ---
 

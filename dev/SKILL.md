@@ -8,9 +8,9 @@ description: |
 
 # HarmonyOS 6 应用开发规范
 
-> **版本说明**：本文档基于 **HarmonyOS 6.1**（API 23 稳定）编写，兼容 API 14+。
-> HarmonyOS 6 于 2025年10月22日 HDC2025 正式发布（首批消费者版本基于 API 22）。
-> 2026年1月21日发布稳定版 API 22（DevEco Studio 6.0.2）；2026年4月20日 HarmonyOS 6.1 正式发布（API 23 稳定）。
+> **版本说明**：本文档基于 **HarmonyOS 6.1.1**（API 24 Beta1）编写，生产推荐 API 23。
+> HarmonyOS 6 于 2025年9月25日发布（API 20）；2026年4月20日 HarmonyOS 6.1 正式发布（API 23 稳定）。
+> 2026年4月30日 HarmonyOS 6.1.1 Beta1 发布（API 24 Beta）。
 > 历史版本：HarmonyOS 5.x = API 12/13/14/16。
 
 ## 扩展技能（独立 Skill）
@@ -62,6 +62,7 @@ description: |
 - [最佳实践](references/best-practices.md) — 官方最佳实践专题：架构/UI/功能/多设备/AI/安全/质量
 - [应用FAQ](references/app-faq.md) — 应用开发常见问题：框架/ArkTS/NDK/UI/数据/无障碍/Web
 - [DevEco Service](references/deveco-service.md) — ohpm-repo私仓搭建/缓存/部署
+- [桌面拓展](references/desktop-extension-kit.md) — Desktop Extension Kit：状态栏/快捷栏接入/PC桌面拓展
 
 ---
 
