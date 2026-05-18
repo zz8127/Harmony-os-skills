@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 6.1.0 / API 23（稳定，2026-04-20）；HarmonyOS 6.0 / API 22（稳定，2026-01-21）
-> **更新时间**：2026-04-25
+> **版本**：HarmonyOS 6.1.1 / API 24（Beta1，2026-04-30）；HarmonyOS 6.1.0 / API 23（稳定，2026-04-20）
+> **更新时间**：2026-05-18
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -34,12 +34,12 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | 领域 | 覆盖 Kit | 核心能力 |
 |------|---------|---------|
-| 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit、AccountKit、FileManagerServiceKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔、华为账号、文件管理服务 |
-| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气 |
+| 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit、AccountKit、FileManagerServiceKit、DesktopExtensionKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔、华为账号、文件管理服务、桌面拓展 |
+| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间** |
 | 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册 |
 | 图形 | ArkGraphics 2D、ArkGraphics 3D、SpatialReconKit、GraphicsAccelerateKit、XEngineKit、AREngine | 2D/3D绘制、空间建模、图形加速、GPU引擎、AR |
 | 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ScanKit、ShareKit、NotificationKit、TelephonyKit、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、扫码、分享、通知、电话、健康、天气、游戏 |
-| AI | IntentsKit、SpeechKit、MLKit、VisionKit、CoreSpeechKit、CoreVisionKit、NaturalLanguageKit、CANNKit、MindSporeLiteKit、NeuralNetworkRuntimeKit、AgentFrameworkKit、FASTKit | 意图分发、语音、端侧AI、视觉、基础语音/视觉/NLP、NPU加速、推理框架、智能体 |
+| AI | IntentsKit、SpeechKit、MLKit、VisionKit、CoreSpeechKit、CoreVisionKit、NaturalLanguageKit、CANNKit、MindSporeLiteKit、NeuralNetworkRuntimeKit、AgentFrameworkKit、FASTKit、**ContentEmbedKit** | 意图分发、语音、端侧AI、视觉、基础语音/视觉/NLP、NPU加速、推理框架、智能体、**内容嵌入** |
 
 ---
 
@@ -47,12 +47,51 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
+| **6.1.1** | **24** | **6.1.1 Beta1（6.1.1.268）** | **Beta（尝鲜）** | **2026.04.30** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定（当前生产推荐）** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 | 稳定 | 2026.01.21 |
-| 6.0.0 | 22 | 6.0.0 | 稳定 | 2025.10.22 |
-| 5.0.2 | 14 | 5.0.4 | 稳定 | 2025.01.15 |
+| 6.0.1 | 21 | 6.0.1 | 稳定 | 2025.11.20 |
+| 6.0.0 | 20 | 6.0.0 Release | 稳定 | 2025.09.25 |
+| 5.1.1 | 19 | 5.1.1 | 稳定 | 2025.06.30 |
+| 5.0.5 | 17 | 5.0.5 | 稳定 | 2025.05.14 |
+| 5.0.4 | 16 | 5.0.4 | 稳定 | 2025.03.29 |
+| 5.0.2 | 14 | 5.0.2 | 稳定 | 2025.01.27 |
 
-> ⚠️ **生产环境推荐 API 23**（HarmonyOS 6.1.0 稳定版）。API 22 仍可用，但新项目建议使用 API 23。
+> ⚠️ **生产环境推荐 API 23**（HarmonyOS 6.1.0 稳定版）。API 24 Beta1 适合尝鲜体验新特性。
+
+---
+
+## HarmonyOS 6.1.1 Beta1 新增特性（API 24，Release 2026-04-30）
+
+### UI 与设计
+- **平行视界状态获取**：应用可获取平行视界当前分栏状态
+- **自定义组件跨 Ability 迁移**：支持组件状态跨应用迁移
+- **动态布局容器**：新增动态布局容器能力
+
+### ArkUI 增强
+- 新增多个组件的 C API 支持
+- List/Grid 组件长按聚拢动效增强
+
+### ArkTS 增强
+- **虚拟机维测能力增强**：提供更详细的运行时诊断信息
+- **taskpool 任务超时设置**：支持为任务池设置超时时间
+
+### ArkWeb 增强
+- **下载任务回调增强**：更精细的下载进度控制
+- **URL 白名单和安全控制接口**：增强网络安全能力
+
+### Kit 能力新增
+- **Camera Kit**：新增延迟预览输出和影随人动能力
+- **Audio Kit**：新增 MIDI C API 支持外接设备
+- **FAST Kit**：新增并发哈希表、向量运算和滤波器功能
+- **Performance Analysis Kit**：增强资源采集和崩溃日志分析能力
+- **Content Embed Kit**：**全新 Kit** — 内容嵌入服务
+
+### DevEco Studio 工具链升级
+- 支持开发 API 24 工程
+- **Hot Reload 增强**：支持修改 C++ 代码和资源文件
+- **AppFreeze 日志解析增强**：支持 Binder 通信信息、主线程任务队列和采样栈数据
+- **ComMemory 模板**：分析 UI 界面各组件内存分配，定位内存泄漏问题
 
 ---
 
@@ -149,7 +188,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 ## API 24 Beta1 变更追踪（2026-04-30）
 
-> 以下为 HarmonyOS 6.1.1(24) Beta1 新增特性，待 API 24 正式发布后纳入正式文档。
+> API 24 Beta1 详细变更请参见上方「HarmonyOS 6.1.1 Beta1 新增特性」章节。
 
 | 领域 | Kit | 变更 |
 |------|-----|------|
@@ -158,10 +197,27 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 应用框架 | ArkTS | 虚拟机维测能力增强、taskpool 任务超时设置 |
 | 应用框架 | ArkWeb | 下载任务回调增强、URL 白名单和安全控制接口 |
 | 开发工具 | DevEco Studio | Hot Reload 增强（支持 C++ 和资源文件）、AppFreeze 日志解析、ComMemory 模板 |
+| 媒体 | Camera Kit | 延迟预览输出、影随人动能力 |
+| 媒体 | Audio Kit | MIDI C API 支持外接设备 |
 | AI | FAST Kit | 并发哈希表、向量运算和滤波器 |
 | AI | Content Embed Kit | **全新 Kit** — 内容嵌入服务 |
 | 系统 | Performance Analysis Kit | 资源采集和崩溃日志分析增强 |
-| 系统 | Enterprise Threat Protection Kit | **全新 Kit** — 企业威胁防护服务 |
+
+---
+
+## API 23 稳定版变更追踪（2026-04-20）
+
+| 领域 | Kit | 变更 |
+|------|-----|------|
+| 应用框架 | Ability Kit | 新增启动时间戳能力 |
+| 应用框架 | Form Kit | 待机屏保卡片、透明卡片 |
+| 应用框架 | ArkWeb | 画中画、字体预下载、同层渲染、首屏渲染时间统计 |
+| 媒体 | Media Kit | 20+ 媒体格式、边播边缓存、窗口级录屏、双屏录制 |
+| 图形 | AR Engine | 3D 空间重建、营销组件、多 Kit 扩展 |
+| 系统 | Scan Kit | 直达服务 |
+| 系统 | Service Collaboration Kit | 跨设备互通增强 |
+| 系统 | Device Security Kit | 防窥保护（DLP Anti-Peep） |
+| AI | Agent Framework Kit | 智能体组合服务 |
 
 ---
 

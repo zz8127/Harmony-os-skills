@@ -8,7 +8,7 @@ description: |
 
 # HarmonyOS AI 与元服务
 
-> **适用版本**：HarmonyOS 6.1 / API 23（稳定）；HarmonyOS 6.0 / API 22（稳定）。兼容 API 14+。
+> **适用版本**：HarmonyOS 6.1.1 / API 24（Beta1）；HarmonyOS 6.1 / API 23（稳定）。
 
 ## 快速导航
 
@@ -34,12 +34,14 @@ description: |
 | VisionKit | `@kit.VisionKit` | 文字识别、物体识别、人脸检测 |
 | MLKit | @kit.MLKit | 端侧 AI 模型推理 |
 | CANNKit | @kit.CANNKit | NPU 异构计算，推理加速 |
-| AgentFrameworkKit | @kit.AgentFrameworkKit | 智能体框架，多 Agent 协作（API 23 新增） |
+| AgentFrameworkKit | @kit.AgentFrameworkKit | 智能体框架，多 Agent 协作 |
 | CoreSpeechKit | `@kit.CoreSpeechKit` | 基础语音：TTS/ASR |
 | CoreVisionKit | `@kit.CoreVisionKit` | 基础视觉：OCR/人脸检测/主体分割 |
 | NaturalLanguageKit | `@kit.NaturalLanguageKit` | 自然语言理解：分词/实体抽取 |
 | MindSporeLiteKit | `@kit.MindSporeLiteKit` | 昇思推理框架，轻量化AI引擎 |
 | NeuralNetworkRuntimeKit | `@kit.NeuralNetworkRuntimeKit` | 神经网络运行时，跨芯片推理 |
+| ContentEmbedKit | `@kit.ContentEmbedKit` | 内容嵌入服务（API 24 新增） |
+| FASTKit | `@kit.FASTKit` | 算法加速：哈希表/向量运算/滤波器（API 24 增强） |
 
 ---
 
@@ -118,7 +120,8 @@ FaceAR 和 BodyAR 此前已支持，详见 dev/SKILL.md。
 | FAST Kit | 并发哈希表、向量运算和滤波器 |
 | Performance Analysis Kit | 资源采集和崩溃日志分析增强 |
 | Content Embed Kit | **全新 Kit** — 内容嵌入服务 |
-| Enterprise Threat Protection Kit | **全新 Kit** — 企业威胁防护服务 |
+| Camera Kit | 延迟预览输出、影随人动能力 |
+| Audio Kit | MIDI C API 支持外接设备 |
 
 ---
 
