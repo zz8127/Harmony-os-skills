@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 6.1.1 / API 24（Beta1，2026-04-30）；HarmonyOS 6.1.0 / API 23（稳定，2026-04-20）
-> **更新时间**：2026-05-18
+> **版本**：HarmonyOS 6.1.1 / API 24（Release，2026-05-26）；HarmonyOS 6.1.0 / API 23（稳定，2026-04-20）
+> **更新时间**：2026-06-03
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -47,7 +47,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
-| **6.1.1** | **24** | **6.1.1 Beta1（6.1.1.268）** | **Beta（尝鲜）** | **2026.04.30** |
+| **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）** | **Release（正式版）** | **2026.05.26** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定（当前生产推荐）** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 | 稳定 | 2026.01.21 |
 | 6.0.1 | 21 | 6.0.1 | 稳定 | 2025.11.20 |
@@ -57,37 +57,66 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 5.0.4 | 16 | 5.0.4 | 稳定 | 2025.03.29 |
 | 5.0.2 | 14 | 5.0.2 | 稳定 | 2025.01.27 |
 
-> ⚠️ **生产环境推荐 API 23**（HarmonyOS 6.1.0 稳定版）。API 24 Beta1 适合尝鲜体验新特性。
+> ⚠️ **生产环境推荐 API 24**（HarmonyOS 6.1.1 稳定版）。API 23 仍可用于生产，但 API 24 提供更多新特性。
 
 ---
 
-## HarmonyOS 6.1.1 Beta1 新增特性（API 24，Release 2026-04-30）
+## HarmonyOS 6.1.1 Release 新增特性（API 24，Release 2026-05-26）
 
-### UI 与设计
+### API 24 Release 新增特性（Beta1 后新增）
+
+#### Ability Kit
+- **AbilityStage 生命周期增强**：新增 `onAboutToCreateAbility` 回调（首个 Ability 创建前）和 `onLaunchFromHypersnap` 回调（进程从应用快照启动时）
+
+#### ArkTS
+- **Local Handle 检测**：`enableLocalHandleDetection` 接口保证 EventHandler 和 libuv 任务在 scope 范围内执行，避免跨语言内存泄漏
+- **XML 解析增强**：新增 `XmlSAXHandler`，支持 SAX 方式解析 XML
+
+#### ArkWeb
+- **下载任务回调增强**：新增 `getOriginalUrl` 和 `getReferrerUrl` 接口
+
+#### Call Service Kit
+- **企业服务信息查询**：企业员工来电/去电时，可通过手机号查询企业服务信息（目前支持快递类型）
+
+#### Camera Kit
+- **闪光灯状态订阅**：支持订阅/取消订阅闪光灯状态变化事件
+- **OIS 光学防抖**：支持查询和设置 OIS 模式、轴向偏移量
+- **手动曝光/对焦/ISO/光圈**：完整的手动拍摄专业能力
+- **逻辑摄像头管理**：支持通过 `isLogicalCamera` 查询逻辑摄像头，通过 `constituentCameraDevices` 获取物理摄像头列表
+
+#### CANN Kit
+- **PC 大语言模型推理**：针对 PC 设备开放大语言模型推理 API，支持计算链路加速封装
+
+#### MDM Kit
+- **隐藏设置项管理**：支持对当前用户下被隐藏的设置项列表进行添加、删除、查询操作
+
+### API 24 Beta1 新增特性（已包含在 Release 中）
+
+#### UI 与设计
 - **平行视界状态获取**：应用可获取平行视界当前分栏状态
 - **自定义组件跨 Ability 迁移**：支持组件状态跨应用迁移
 - **动态布局容器**：新增动态布局容器能力
 
-### ArkUI 增强
+#### ArkUI 增强
 - 新增多个组件的 C API 支持
 - List/Grid 组件长按聚拢动效增强
 
-### ArkTS 增强
+#### ArkTS 增强
 - **虚拟机维测能力增强**：提供更详细的运行时诊断信息
 - **taskpool 任务超时设置**：支持为任务池设置超时时间
 
-### ArkWeb 增强
+#### ArkWeb 增强
 - **下载任务回调增强**：更精细的下载进度控制
 - **URL 白名单和安全控制接口**：增强网络安全能力
 
-### Kit 能力新增
+#### Kit 能力新增
 - **Camera Kit**：新增延迟预览输出和影随人动能力
 - **Audio Kit**：新增 MIDI C API 支持外接设备
 - **FAST Kit**：新增并发哈希表、向量运算和滤波器功能
 - **Performance Analysis Kit**：增强资源采集和崩溃日志分析能力
 - **Content Embed Kit**：**全新 Kit** — 内容嵌入服务
 
-### DevEco Studio 工具链升级
+#### DevEco Studio 工具链升级
 - 支持开发 API 24 工程
 - **Hot Reload 增强**：支持修改 C++ 代码和资源文件
 - **AppFreeze 日志解析增强**：支持 Binder 通信信息、主线程任务队列和采样栈数据
@@ -186,9 +215,23 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 ---
 
-## API 24 Beta1 变更追踪（2026-04-30）
+## API 24 Release 变更追踪（2026-05-26）
 
-> API 24 Beta1 详细变更请参见上方「HarmonyOS 6.1.1 Beta1 新增特性」章节。
+> API 24 Release 详细变更请参见上方「HarmonyOS 6.1.1 Release 新增特性」章节。
+
+### Release 新增（Beta1 后新增）
+
+| 领域 | Kit | 变更 |
+|------|-----|------|
+| 应用框架 | Ability Kit | AbilityStage 新增 `onAboutToCreateAbility` 和 `onLaunchFromHypersnap` 回调 |
+| 应用框架 | ArkTS | `enableLocalHandleDetection` 接口、XmlSAXHandler |
+| 应用框架 | ArkWeb | 下载任务 `getOriginalUrl` 和 `getReferrerUrl` |
+| 应用服务 | Call Service Kit | 企业服务信息查询（快递类型） |
+| 媒体 | Camera Kit | 闪光灯状态订阅、OIS、手动曝光/对焦/ISO/光圈、逻辑摄像头管理 |
+| AI | CANN Kit | PC 设备大语言模型推理 API |
+| 系统 | MDM Kit | 隐藏设置项管理 |
+
+### Beta1 变更（已包含在 Release 中）
 
 | 领域 | Kit | 变更 |
 |------|-----|------|
