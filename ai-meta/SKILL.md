@@ -8,7 +8,7 @@ description: |
 
 # HarmonyOS AI 与元服务
 
-> **适用版本**：HarmonyOS 6.1.1 / API 24（Beta1）；HarmonyOS 6.1 / API 23（稳定）。
+> **适用版本**：HarmonyOS 6.1.1 / API 24（Release）；HarmonyOS 6.1 / API 23（稳定）。
 
 ## 快速导航
 
@@ -113,7 +113,16 @@ FaceAR 和 BodyAR 此前已支持，详见 dev/SKILL.md。
 
 ---
 
-## API 24 Beta1 变更追踪（2026-04-30）
+## API 24 Release 变更追踪（2026-05-26）
+
+### Release 新增（Beta1 后新增）
+
+| Kit | 变更 |
+|-----|------|
+| Camera Kit | 闪光灯状态订阅、OIS 光学防抖、手动曝光/对焦/ISO/光圈、逻辑摄像头管理 |
+| CANN Kit | PC 设备大语言模型推理 API |
+
+### Beta1 变更（已包含在 Release 中）
 
 | Kit | 变更 |
 |-----|------|

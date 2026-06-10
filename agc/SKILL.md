@@ -10,8 +10,8 @@ description: |
 
 # AppGallery Connect (AGC) 开发指南
 
-> **适用版本**：HarmonyOS 6.1 / API 23（稳定）。兼容 API 14+。
-> **更新时间**：2026-04-24
+> **适用版本**：HarmonyOS 6.1.1 / API 24（Release）；HarmonyOS 6.1 / API 23（稳定）。兼容 API 14+。
+> **更新时间**：2026-06-10
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/app/agc-help-overview-0000001100246618
 
 ---
@@ -118,9 +118,9 @@ AGC 服务分为**免费服务**和**收费服务**：
 
 ---
 
-## API 24 Beta1 变更追踪（2026-04-30）
+## API 24 Release 变更追踪（2026-05-26）
 
-> HarmonyOS 6.1.1(24) Beta1 已发布，AGC 服务暂无重大变更。持续关注官方更新。
+> HarmonyOS 6.1.1(24) Release 已发布，AGC 服务暂无重大变更。持续关注官方更新。
 
 ---
 

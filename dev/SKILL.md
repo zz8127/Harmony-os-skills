@@ -8,9 +8,9 @@ description: |
 
 # HarmonyOS 6 应用开发规范
 
-> **版本说明**：本文档基于 **HarmonyOS 6.1.1**（API 24 Beta1）编写，生产推荐 API 23。
+> **版本说明**：本文档基于 **HarmonyOS 6.1.1**（API 24 Release，2026-05-26）编写，生产推荐 API 24。
 > HarmonyOS 6 于 2025年9月25日发布（API 20）；2026年4月20日 HarmonyOS 6.1 正式发布（API 23 稳定）。
-> 2026年4月30日 HarmonyOS 6.1.1 Beta1 发布（API 24 Beta）。
+> 2026年5月26日 HarmonyOS 6.1.1 Release 发布（API 24 正式版）。
 > 历史版本：HarmonyOS 5.x = API 12/13/14/16。
 
 ## 扩展技能（独立 Skill）
@@ -75,10 +75,10 @@ description: |
 | 5.0.2 | 14 | — | 稳定 | 2025.01 |
 | 5.0.4 | 16 | 5.0.4 Release | 稳定 | 2025.03.27 |
 | **6.0.2** | **22** | **6.0.2 Release** | **稳定** | **2026.01.21** |
-| **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定（当前生产推荐）** | **2026.04.20** |
-| **6.1.1** | **24** | **6.1.1 Beta1** | **Beta（按需使用）** | **2026.04.30** |
+| **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
+| **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）** | **Release（生产推荐）** | **2026.05.26** |
 
-> ⚠️ **生产环境推荐 API 23**（HarmonyOS 6.1.0 稳定版）。API 22 仍可用，但新项目建议使用 API 23。
+> ⚠️ **生产环境推荐 API 24**（HarmonyOS 6.1.1 Release）。API 23 仍可用于生产，但 API 24 提供更多新特性。
 
 ---
 
@@ -319,9 +319,21 @@ let params = router.getParams() as Record<string, number>
 
 ---
 
-## API 24 Beta1 变更追踪（2026-04-30）
+## API 24 Release 变更追踪（2026-05-26）
 
-> 以下为 HarmonyOS 6.1.1(24) Beta1 新增特性，待 API 24 正式发布后纳入正式文档。
+### Release 新增（Beta1 后新增）
+
+| Kit | 变更 |
+|-----|------|
+| Ability Kit | AbilityStage 新增 `onAboutToCreateAbility` 和 `onLaunchFromHypersnap` 回调 |
+| ArkTS | `enableLocalHandleDetection` 接口、XmlSAXHandler |
+| ArkWeb | 下载任务 `getOriginalUrl` 和 `getReferrerUrl` |
+| Call Service Kit | 企业服务信息查询（快递类型） |
+| Camera Kit | 闪光灯状态订阅、OIS 光学防抖、手动曝光/对焦/ISO/光圈、逻辑摄像头管理 |
+| CANN Kit | PC 设备大语言模型推理 API |
+| MDM Kit | 隐藏设置项管理 |
+
+### Beta1 变更（已包含在 Release 中）
 
 | Kit | 变更 |
 |-----|------|
