@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 6.1.1 / API 24（Release，2026-05-26）；HarmonyOS 6.1.0 / API 23（稳定，2026-04-20）
-> **更新时间**：2026-06-10
+> **版本**：HarmonyOS 26.0.0 / API 26（Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26）
+> **更新时间**：2026-06-15
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -47,6 +47,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
+| **26.0.0** | **26** | **26.0.0 Beta1（26.0.0.461）** | **Beta** | **2026.06.12** |
 | **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）** | **Release（生产推荐）** | **2026.05.26** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 Release | 稳定 | 2026.01.21 |
@@ -57,7 +58,54 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 5.0.4 | 16 | 5.0.4 Release | 稳定 | 2025.03.29 |
 | 5.0.2 | 14 | 5.0.2 Release | 稳定 | 2025.01.27 |
 
-> ⚠️ **生产环境推荐 API 24**（HarmonyOS 6.1.1 Release）。API 23 仍可用于生产，但 API 24 提供更多新特性。
+> ⚠️ **生产环境推荐 API 24**（HarmonyOS 6.1.1 Release）。API 26 为 Beta 版本，适合尝鲜体验新特性。
+
+---
+
+## HarmonyOS 26.0.0 Beta1 新增特性（API 26，2026-06-12）
+
+### 版本说明
+
+26.0.0 Beta1 在 6.1.1(24) 的基础上进一步增强，本次发布对版本号格式进行了调整。ArkWeb 的 Chromium 内核从 132 升级为 144 版本。
+
+### UI 与设计
+
+- **系统材质效果增强**：所有支持通用属性的组件均支持 `systemMaterial` 属性，实现更好的沉浸光感效果
+- **Chip 组件材质配置**：支持 `backgroundSystemMaterial` 和 `activatedBackgroundSystemMaterial` 配置
+- **弹窗类组件材质效果**：Tips、Toast、对话框、操作菜单、自定义弹窗、半模态、Popup 均支持系统材质效果
+- **标准悬浮窗**：新增窗口管理能力，支持创建悬浮在桌面/应用界面上的小型窗口
+
+### ArkUI 增强
+
+- **组件级沉浸光感**：提供高品质视觉与动效体系
+- **自定义组件全局复用**：支持配置复用池，提供全局复用能力
+
+### ArkWeb 增强
+
+- **Chromium 内核升级**：从 132 升级为 144 版本
+- **安全特性配置**：新增安全配置属性类
+
+### Kit 能力新增
+
+- **Accessory Kit【全新】**：配件接入服务，提供关联唤醒、系统服务联动、按需调度与安全授信管理
+- **Ability Kit**：新增 AgentCard 支持、ArkTS 脚本应用 Skill 开发能力
+- **Core File Kit**：支持沙箱目录共享为系统级可见、文件 mmap 能力、UNCACHE 参数
+- **Device Security Kit**：星盾机密风控引擎、统一风控凭证、超级隐私策略化管控
+- **Graphics Accelerate Kit**：游戏预启动特性，提升启动体验
+- **Notification Kit**：锁屏通知设置、半模态方式拉起通知设置界面
+- **Online Authentication Kit**：新增 DID（去中心化身份）能力
+- **FAST Kit**：实数快速傅里叶变换、智能序列预测
+- **Core Vision Kit**：图像超分能力、文本语意搜索图片
+
+### DevEco Studio 工具链升级
+
+- 支持开发 API 26.0.0 工程
+- 按需加载模块，提升代码索引效率
+- 新增 Code Scanner 工具，检查资源泄漏
+- 支持同时预览 8 个档位断点的 UI 效果
+- 新增 Car 设备模拟器
+- 支持设备投屏到 DevEco Studio
+- 支持解析应用崩溃 dump 文件
 
 ---
 
@@ -212,6 +260,26 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 控件设计规范 | `design/references/controls.md` |
 | 多设备设计规范 | `design/references/multi-device-design.md` |
 | 设计规范变更 | `design/references/design-changes.md` |
+
+---
+
+## API 26 Beta1 变更追踪（2026-06-12）
+
+> API 26 Beta1 详细变更请参见上方「HarmonyOS 26.0.0 Beta1 新增特性」章节。
+
+| 领域 | Kit | 变更 |
+|------|-----|------|
+| 应用框架 | Ability Kit | 新增 AgentCard、ArkTS 脚本应用 Skill 开发、脚本管理 API |
+| 应用框架 | ArkUI | systemMaterial 属性、组件级沉浸光感、全局复用、标准悬浮窗 |
+| 应用框架 | ArkWeb | Chromium 内核 132→144、安全特性配置 |
+| 应用框架 | Core File Kit | 沙箱目录共享、mmap 能力、UNCACHE 参数、递归文件列表 |
+| 系统 | Accessory Kit | **全新 Kit** — 配件接入服务 |
+| 系统 | Device Security Kit | 星盾机密风控引擎、统一风控凭证、超级隐私管控、文件事件订阅 |
+| 系统 | Graphics Accelerate Kit | 游戏预启动特性、资源包下载支持 |
+| 系统 | Notification Kit | 锁屏通知设置、半模态通知设置界面 |
+| 系统 | Online Authentication Kit | DID（去中心化身份）能力 |
+| AI | FAST Kit | 实数 FFT、智能序列预测 |
+| AI | Core Vision Kit | 图像超分、文本语意搜索图片 |
 
 ---
 

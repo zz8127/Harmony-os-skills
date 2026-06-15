@@ -8,7 +8,7 @@ description: |
 
 # HarmonyOS 系统能力
 
-> **适用版本**：HarmonyOS 6.1 / API 23（稳定）；HarmonyOS 6.0 / API 22（稳定）。兼容 API 14+。
+> **适用版本**：HarmonyOS 26.0.0 / API 26（Beta1）；HarmonyOS 6.1.1 / API 24（稳定）。兼容 API 14+。
 
 ## 快速导航
 
@@ -57,6 +57,7 @@ description: |
 | 算法 | [算法加速](references/fast-kit.md) | FASTKit：高阶数据结构/规划求解/数字信号处理 |
 | 健康 | [运动健康](references/health-service-kit.md) | HealthServiceKit：步数/心率/运动联动/训练负荷 |
 | 天气 | [天气服务](references/weather-service-kit.md) | WeatherServiceKit：天气预报/降水/预警/指数 |
+| 配件 | [配件接入](references/accessory-kit.md) | AccessoryKit：配件发现/配对/消息通信/安全认证 |
 
 ---
 
@@ -100,6 +101,7 @@ description: |
 | RemoteCommunicationKit | `@kit.RemoteCommunicationKit` | 远场通信 |
 | EnterpriseDataGuardKit | `@kit.EnterpriseDataGuardKit` | 企业数据保护 |
 | EnterpriseSpaceKit | `@kit.EnterpriseSpaceKit` | 企业数字空间 |
+| AccessoryKit | `@kit.AccessoryKit` | 配件接入服务（API 26 新增） |
 
 ---
 
@@ -116,6 +118,17 @@ description: |
 | 后台任务 | `ohos.permission.KEEP_BACKGROUND_RUNNING` |
 
 > 注意：从 HarmonyOS NEXT 起，部分权限从 user-grant 改为 system-grant，具体以官方文档为准。
+
+---
+
+## API 26 Beta1 变更追踪（2026-06-12）
+
+| Kit | 变更 |
+|-----|------|
+| AccessoryKit | **全新 Kit** — 配件接入服务，提供关联唤醒、系统服务联动、按需调度与安全授信管理 |
+| DeviceSecurityKit | 星盾机密风控引擎、统一风控凭证、超级隐私策略化管控 |
+| GraphicsAccelerateKit | 游戏预启动特性 |
+| NearLinkKit | 新增 startScan 接口扫描周边星闪设备 |
 
 ---
 
