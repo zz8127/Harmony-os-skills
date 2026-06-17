@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26）
-> **更新时间**：2026-06-15
+> **更新时间**：2026-06-17
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
