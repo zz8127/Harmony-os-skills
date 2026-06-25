@@ -102,6 +102,7 @@ description: |
 | EnterpriseDataGuardKit | `@kit.EnterpriseDataGuardKit` | 企业数据保护 |
 | EnterpriseSpaceKit | `@kit.EnterpriseSpaceKit` | 企业数字空间 |
 | AccessoryKit | `@kit.AccessoryKit` | 配件接入服务（API 26 新增） |
+| UserAuthenticationKit | `@kit.UserAuthenticationKit` | 用户身份认证（锁屏口令/人脸/指纹） |
 
 ---
 

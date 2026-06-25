@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26）
-> **更新时间**：2026-06-17
+> **更新时间**：2026-06-25
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -35,7 +35,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 领域 | 覆盖 Kit | 核心能力 |
 |------|---------|---------|
 | 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit、AccountKit、FileManagerServiceKit、DesktopExtensionKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔、华为账号、文件管理服务、桌面拓展 |
-| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间** |
+| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证** |
 | 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册 |
 | 图形 | ArkGraphics 2D、ArkGraphics 3D、SpatialReconKit、GraphicsAccelerateKit、XEngineKit、AREngine | 2D/3D绘制、空间建模、图形加速、GPU引擎、AR |
 | 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ScanKit、ShareKit、NotificationKit、TelephonyKit、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、扫码、分享、通知、电话、健康、天气、游戏 |
