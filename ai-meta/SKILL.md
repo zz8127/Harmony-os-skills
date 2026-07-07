@@ -3,7 +3,7 @@ name: harmonyos-ai-meta
 description: |
   HarmonyOS AI 能力与元服务开发规范。
   触发场景：开发意图智能分发、语音合成/识别、图像识别、元服务（服务卡片）、服务流转时。
-  包含：IntentsKit（意图框架/智慧分发）、SpeechKit（语音）、VisionKit（视觉）、MLKit（端侧AI）、元服务（Service Widget/卡片）、服务流转。
+  包含：IntentsKit（意图框架/智慧分发）、SpeechKit（语音）、VisionKit（视觉）、CoreSpeechKit/CoreVisionKit（基础AI）、元服务（Service Widget/卡片）、服务流转。
 ---
 
 # HarmonyOS AI 与元服务
@@ -32,7 +32,6 @@ description: |
 | IntentsKit | `@kit.IntentsKit` | 意图框架，智慧分发 |
 | SpeechKit | `@kit.SpeechKit` | 语音合成（TTS）、语音识别（ASR） |
 | VisionKit | `@kit.VisionKit` | 文字识别、物体识别、人脸检测 |
-| MLKit | @kit.MLKit | 端侧 AI 模型推理 |
 | CANNKit | @kit.CANNKit | NPU 异构计算，推理加速 |
 | AgentFrameworkKit | @kit.AgentFrameworkKit | 智能体框架，多 Agent 协作 |
 | CoreSpeechKit | `@kit.CoreSpeechKit` | 基础语音：TTS/ASR |
@@ -41,7 +40,7 @@ description: |
 | MindSporeLiteKit | `@kit.MindSporeLiteKit` | 昇思推理框架，轻量化AI引擎 |
 | NeuralNetworkRuntimeKit | `@kit.NeuralNetworkRuntimeKit` | 神经网络运行时，跨芯片推理 |
 | ContentEmbedKit | `@kit.ContentEmbedKit` | 内容嵌入服务（API 24 新增） |
-| FASTKit | `@kit.FASTKit` | 算法加速：哈希表/向量运算/滤波器（API 24 增强） |
+| FASTKit | `@kit.FASTKit` | 算法加速：哈希表/向量运算/滤波器（属系统类别，API 24 增强 AI 相关能力） |
 
 ---
 
@@ -71,6 +70,8 @@ description: |
 ---
 
 ## 端侧 AI（MLKit）
+
+> ⚠️ **MLKit 已不再单独提供**：根据官方文档首页最新 Kit 列表，MLKit 已不在 AI 类别中单独列出。端侧 AI 推理能力已由 CANNKit、MindSporeLiteKit、NeuralNetworkRuntimeKit 承担。以下代码仅作历史参考。
 
 ```typescript
 import { mlAiSession } from '@kit.MLKit';
@@ -138,5 +139,4 @@ FaceAR 和 BodyAR 此前已支持，详见 dev/SKILL.md。
 
 - IntentsKit 概述：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/intents-introduction-V5
 - IntentsKit SDK：https://developer.huawei.com/consumer/cn/sdk/intents-kit
-- ML Kit 端侧 AI：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ml-kit-overview-V5
 - 元服务概述：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/service-widget-overview-V5

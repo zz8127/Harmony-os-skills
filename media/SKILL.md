@@ -24,6 +24,7 @@ description: |
 | [DRM+铃声](references/drm-ringtone-kit.md) | DRM Kit：数字版权保护 + Ringtone Kit：铃声设置 |
 | [3D图形](references/arkgraphics-3d.md) | ArkGraphics 3D + SpatialRecon + GraphicsAccelerate + XEngine |
 | [图片处理](references/image-kit.md) | Image Kit：图片编解码/元数据读写/图片效果 |
+| [统一扫码](../system/references/scan-kit.md) | ScanKit：扫码/码识别/直达服务（官方首页归到媒体类别，文档位于 system/） |
 
 ---
 
@@ -45,6 +46,7 @@ description: |
 | SpatialReconKit | `@kit.SpatialReconKit` | 3D空间建模 |
 | GraphicsAccelerateKit | `@kit.GraphicsAccelerateKit` | 图形加速、超帧 |
 | XEngineKit | `@kit.XEngineKit` | GPU加速引擎 |
+| ScanKit | `@kit.ScanKit` | 统一扫码、码识别、直达服务（官方首页归到媒体类别） |
 
 ---
 
