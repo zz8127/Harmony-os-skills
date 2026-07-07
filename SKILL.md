@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 26.0.0 / API 26（Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26）
-> **更新时间**：2026-06-25
+> **版本**：HarmonyOS 26.0.0 / API 26（Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
+> **更新时间**：2026-07-07
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -19,8 +19,8 @@ description: |
 |------|------|---------|
 | **开发规范** | `dev/SKILL.md` | Stage模型、ArkUI、ArkTS、权限、发布、NDK、行业实践、应用质量、最佳实践、FAQ |
 | **系统能力** | `system/SKILL.md` | 蓝牙/Wi-Fi/NFC/定位/传感器/安全/车机/星闪/企业管理/穿戴/协同/测试/健康/天气 |
-| **媒体服务** | `media/SKILL.md` | CameraKit/AVPlayer/AVSession/DRM/3D图形/铃声/编解码/2D绘制 |
-| **AI与元服务** | `ai-meta/SKILL.md` | IntentsKit/SpeechKit/MLKit/基础AI/推理运行时/元服务/服务流转/智能体 |
+| **媒体服务** | `media/SKILL.md` | CameraKit/AVPlayer/AVSession/DRM/3D图形/铃声/编解码/2D绘制/ScanKit |
+| **AI与元服务** | `ai-meta/SKILL.md` | IntentsKit/SpeechKit/VisionKit/基础AI/推理运行时/元服务/服务流转/智能体 |
 | **设计规范** | `design/SKILL.md` | 设计原则/色彩/字体/图标/布局/动效/人机交互/UX最佳实践/控件/多设备 |
 | **示例代码** | `samples/SKILL.md` | 官方示例代码/Gitee仓/按Kit分类索引 |
 | **模板组件** | `templates/SKILL.md` | DevEco Studio模板/生态市场模板/主题图标资源 |
@@ -35,11 +35,11 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 领域 | 覆盖 Kit | 核心能力 |
 |------|---------|---------|
 | 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit、AccountKit、FileManagerServiceKit、DesktopExtensionKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔、华为账号、文件管理服务、桌面拓展 |
-| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证** |
-| 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册 |
+| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、**NetworkBoostKit**、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit**、**PerformanceAnalysisKit**、**TelephonyKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、**网络加速**、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证**、**性能分析**、**电话蜂窝** |
+| 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit、**ScanKit** | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册、**统一扫码** |
 | 图形 | ArkGraphics 2D、ArkGraphics 3D、SpatialReconKit、GraphicsAccelerateKit、XEngineKit、AREngine | 2D/3D绘制、空间建模、图形加速、GPU引擎、AR |
-| 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ScanKit、ShareKit、NotificationKit、TelephonyKit、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、扫码、分享、通知、电话、健康、天气、游戏 |
-| AI | IntentsKit、SpeechKit、MLKit、VisionKit、CoreSpeechKit、CoreVisionKit、NaturalLanguageKit、CANNKit、MindSporeLiteKit、NeuralNetworkRuntimeKit、AgentFrameworkKit、FASTKit、**ContentEmbedKit** | 意图分发、语音、端侧AI、视觉、基础语音/视觉/NLP、NPU加速、推理框架、智能体、**内容嵌入** |
+| 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、**AppLinkingKit**、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ShareKit、NotificationKit、**CloudFoundationKit**、**PDFKit**、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、应用市场、**应用链接**、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、分享、通知、**云开发**、**PDF处理**、健康、天气、游戏 |
+| AI | IntentsKit、SpeechKit、VisionKit、CoreSpeechKit、CoreVisionKit、NaturalLanguageKit、CANNKit、MindSporeLiteKit、NeuralNetworkRuntimeKit、AgentFrameworkKit、**ContentEmbedKit** | 意图分发、语音、视觉、基础语音/视觉/NLP、NPU加速、推理框架、智能体、**内容嵌入** |
 
 ---
 
@@ -48,7 +48,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
 | **26.0.0** | **26** | **26.0.0 Beta1（26.0.0.461）** | **Beta** | **2026.06.12** |
-| **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）** | **Release（生产推荐）** | **2026.05.26** |
+| **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）；Patch（6.1.1.290，2026.06.30）** | **Release（生产推荐）** | **2026.05.26** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 Release | 稳定 | 2026.01.21 |
 | 6.0.1 | 21 | 6.0.1 Release | 稳定 | 2025.11.20 |
@@ -59,6 +59,10 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 5.0.2 | 14 | 5.0.2 Release | 稳定 | 2025.01.27 |
 
 > ⚠️ **生产环境推荐 API 24**（HarmonyOS 6.1.1 Release）。API 26 为 Beta 版本，适合尝鲜体验新特性。
+
+### 6.1.1 Patch 版本说明（2026-06-30）
+
+DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），API 版本号仍为 6.1.1(24)。Patch 版本主要修复 DevEco Studio 工具链问题，不涉及 API 能力新增。开发者可按需升级 DevEco Studio 至 Patch 版本以获得更稳定的开发体验。
 
 ---
 
@@ -260,6 +264,13 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 控件设计规范 | `design/references/controls.md` |
 | 多设备设计规范 | `design/references/multi-device-design.md` |
 | 设计规范变更 | `design/references/design-changes.md` |
+| PDF文件处理/批注/水印 | `dev/references/pdf-kit.md` |
+| 扫码/码识别/直达服务 | `system/references/scan-kit.md` |
+| 电话/蜂窝通信 | `system/references/telephony-kit.md` |
+| 网络加速/远场通信 | `system/references/network-boost-remote-kit.md` |
+| 性能分析/事件跟踪/日志 | `dev/references/performance-analysis-kit.md` |
+| 云开发/云函数/云数据库 | `agc/references/cloud-development.md` |
+| 应用链接/延迟链接 | `agc/references/growth.md` |
 
 ---
 
