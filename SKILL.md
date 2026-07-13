@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-07-07
+> **更新时间**：2026-07-13
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -77,12 +77,14 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 - **系统材质效果增强**：所有支持通用属性的组件均支持 `systemMaterial` 属性，实现更好的沉浸光感效果
 - **Chip 组件材质配置**：支持 `backgroundSystemMaterial` 和 `activatedBackgroundSystemMaterial` 配置
 - **弹窗类组件材质效果**：Tips、Toast、对话框、操作菜单、自定义弹窗、半模态、Popup 均支持系统材质效果
-- **标准悬浮窗**：新增窗口管理能力，支持创建悬浮在桌面/应用界面上的小型窗口
 
 ### ArkUI 增强
 
 - **组件级沉浸光感**：提供高品质视觉与动效体系
 - **自定义组件全局复用**：支持配置复用池，提供全局复用能力
+- **ContainerReader 容器断点组件**：基于容器尺寸而非窗口尺寸实现自适应布局
+- **LazyVWaterFlowLayout 瀑布流**：懒加载垂直瀑布流布局容器，按需加载子组件
+- **闪控窗**：窗口管理新增闪控窗能力，悬浮在桌面/应用界面上的小型窗口
 
 ### ArkWeb 增强
 
@@ -92,14 +94,40 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 ### Kit 能力新增
 
 - **Accessory Kit【全新】**：配件接入服务，提供关联唤醒、系统服务联动、按需调度与安全授信管理
-- **Ability Kit**：新增 AgentCard 支持、ArkTS 脚本应用 Skill 开发能力
-- **Core File Kit**：支持沙箱目录共享为系统级可见、文件 mmap 能力、UNCACHE 参数
-- **Device Security Kit**：星盾机密风控引擎、统一风控凭证、超级隐私策略化管控
-- **Graphics Accelerate Kit**：游戏预启动特性，提升启动体验
+- **Ability Kit**：新增 AgentCard 支持、ArkTS 脚本应用 Skill 开发能力、ModularObjectExtensionAbility C API
+- **Accessibility Kit**：新增关怀模式接入，提升长辈关怀功能及体验
+- **Account Kit**：LoginWithHuaweiIDButton 支持文本多语言显示、自定义动效加载
+- **Core File Kit**：支持沙箱目录共享为系统级可见、文件 mmap 能力、UNCACHE 参数、递归文件列表
+- **Device Security Kit**：星盾机密风控引擎、统一风控凭证、超级隐私策略化管控、文件事件订阅与正则过滤
+- **Graphics Accelerate Kit**：游戏预启动特性，提升启动体验；资源包下载能力查询
 - **Notification Kit**：锁屏通知设置、半模态方式拉起通知设置界面
 - **Online Authentication Kit**：新增 DID（去中心化身份）能力
 - **FAST Kit**：实数快速傅里叶变换、智能序列预测
 - **Core Vision Kit**：图像超分能力、文本语意搜索图片
+- **Background Tasks Kit**：倒计时实例新增重复周期和重复次数参数
+- **Data Augmentation Kit**：知识加工新增邮件智能分析模块（分类、摘要、待办抽取）
+- **Driver Development Kit**：查询外接 USB Hub 并开发用户态驱动
+- **Enterprise Data Guard Kit**：文件分级管控 getPolicy、isKia 接口
+- **Enterprise Space Kit**：查询双空间状态、判断工作空间是否为企业空间
+- **Input Kit**：输入事件注入模块，提供键盘和鼠标输入事件模拟能力
+- **Nearlink Kit**：startScan 接口扫描周边星闪设备
+- **Network Boost Kit**：setDataFlowDesc 接口，按五元组设置流描述
+- **Performance Analysis Kit**：应用灰度采集、HiAppEvent 冻屏告警事件
+- **Remote Communication Kit**：HTTP 版本选择、流式上传、有序表单、QUIC 客户端
+- **Scan Kit**：查询设备是否支持默认/自定义界面扫码
+- **Share Kit**：碰一碰分享获取轻碰位置信息（PC/2in1/Tablet）
+- **AVCodec Kit**：H265 硬件编码器 CBRHQ、Audio Vivid 编码及 C API
+- **Image Kit**：GIF/JFIF/TIFF/PNG/AVIS 图像元数据类、XMP 元数据
+- **AR Engine**：闪光灯控制、预览流图片数据、3D 高斯模型加载、外部相机传感器
+- **Spatial Recon Kit**：3DGS 高斯球编辑、空间照片能力
+- **Game Service Kit**：近场快传免集成实现安装包传输
+- **Live View Kit**：实况窗卡片辅助区模板，支持百分比进度环
+- **PDF Kit**：多张页面指定区域转化为一张图片
+- **Preview Kit**：文件加速 C API（扫描、预加载策略、可用性查询）
+- **Push Kit**：推送实况窗消息支持 Wearable 设备
+- **Scenario Fusion Kit**：场景化分享 Button 支持图片、视频、文本
+- **UI Design Kit**：标题顶部/底部自定义区域更新节点配置
+- **NDK**：JSVM 支持从外部内存创建 ArrayBuffer 对象
 
 ### DevEco Studio 工具链升级
 
@@ -280,15 +308,43 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 
 | 领域 | Kit | 变更 |
 |------|-----|------|
-| 应用框架 | Ability Kit | 新增 AgentCard、ArkTS 脚本应用 Skill 开发、脚本管理 API |
-| 应用框架 | ArkUI | systemMaterial 属性、组件级沉浸光感、全局复用、标准悬浮窗 |
+| 应用框架 | Ability Kit | 新增 AgentCard、ArkTS 脚本应用 Skill 开发、脚本管理 API、ModularObjectExtensionAbility C API |
+| 应用框架 | Accessibility Kit | 新增关怀模式接入，提升长辈关怀功能及体验 |
+| 应用框架 | Account Kit | LoginWithHuaweiIDButton 支持文本多语言显示、自定义动效加载 |
+| 应用框架 | ArkUI | systemMaterial 属性、组件级沉浸光感、全局复用、闪控窗、ContainerReader 容器断点组件、LazyVWaterFlowLayout 瀑布流 |
 | 应用框架 | ArkWeb | Chromium 内核 132→144、安全特性配置 |
+| 应用框架 | Background Tasks Kit | 倒计时实例新增重复周期（repeatInterval）和重复次数（repeatCount） |
 | 应用框架 | Core File Kit | 沙箱目录共享、mmap 能力、UNCACHE 参数、递归文件列表 |
+| 应用框架 | Data Augmentation Kit | 知识加工新增邮件智能分析模块（分类、摘要、待办抽取） |
+| 应用框架 | NDK | JSVM 支持从外部内存创建 ArrayBuffer 对象 |
+| 应用框架 | UI Design Kit | 标题顶部/底部自定义区域更新节点配置 |
 | 系统 | Accessory Kit | **全新 Kit** — 配件接入服务 |
-| 系统 | Device Security Kit | 星盾机密风控引擎、统一风控凭证、超级隐私管控、文件事件订阅 |
-| 系统 | Graphics Accelerate Kit | 游戏预启动特性、资源包下载支持 |
+| 系统 | Device Security Kit | 星盾机密风控引擎、统一风控凭证、超级隐私管控、文件事件订阅、文件路径正则过滤 |
+| 系统 | Driver Development Kit | 查询外接 USB Hub 并开发用户态驱动 |
+| 系统 | Enterprise Data Guard Kit | 文件分级管控 getPolicy、isKia 接口 |
+| 系统 | Enterprise Space Kit | 查询双空间状态、判断工作空间是否为企业空间 |
+| 系统 | Graphics Accelerate Kit | 游戏预启动特性、资源包下载支持、isSupportAssetDownload 查询 |
+| 系统 | Input Kit | 输入事件注入模块（键盘和鼠标事件模拟） |
+| 系统 | Nearlink Kit | startScan 接口扫描周边星闪设备 |
+| 系统 | Network Boost Kit | setDataFlowDesc 接口（五元组流描述） |
 | 系统 | Notification Kit | 锁屏通知设置、半模态通知设置界面 |
 | 系统 | Online Authentication Kit | DID（去中心化身份）能力 |
+| 系统 | Performance Analysis Kit | 应用灰度采集、HiAppEvent 冻屏告警事件 |
+| 系统 | Remote Communication Kit | HTTP 版本选择、流式上传、有序表单、QUIC 客户端 |
+| 系统 | Scan Kit | 查询设备是否支持默认/自定义界面扫码 |
+| 系统 | Share Kit | 碰一碰分享获取轻碰位置信息（PC/2in1/Tablet） |
+| 媒体 | AVCodec Kit | H265 硬件编码器 CBRHQ、Audio Vivid 编码及 C API |
+| 媒体 | AVSession Kit | 新增不同场景额外键的枚举 |
+| 媒体 | Image Kit | GIF/JFIF/TIFF/PNG/AVIS 图像元数据类、XMP 元数据 |
+| 图形 | AR Engine | 闪光灯控制、预览流图片数据、3D 高斯模型加载、外部相机传感器 |
+| 图形 | ArkGraphics 2D | 坐标点处理类（取反、偏移量设置） |
+| 图形 | Spatial Recon Kit | 3DGS 高斯球编辑（选择/变换/上色/删除）、空间照片能力 |
+| 应用服务 | Game Service Kit | 近场快传免集成 Game Service Kit 实现安装包传输 |
+| 应用服务 | Live View Kit | 实况窗卡片辅助区模板（百分比进度环） |
+| 应用服务 | PDF Kit | 多张页面指定区域转化为一张图片 |
+| 应用服务 | Preview Kit | 文件加速 C API（扫描、预加载策略、可用性查询、事件上报） |
+| 应用服务 | Push Kit | 推送实况窗消息支持 Wearable 设备 |
+| 应用服务 | Scenario Fusion Kit | 场景化分享 Button 支持图片、视频、文本 |
 | AI | FAST Kit | 实数 FFT、智能序列预测 |
 | AI | Core Vision Kit | 图像超分、文本语意搜索图片 |
 
