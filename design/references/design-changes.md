@@ -1,10 +1,128 @@
 # 设计规范变更说明
 
-> **适用版本**：HarmonyOS NEXT 设计指南。记录 2024 年 6 月至 2026 年 2 月的阶段性变更。
+> **适用版本**：HarmonyOS NEXT 设计指南。记录 2024 年 6 月至 2026 年 6 月的阶段性变更。
 
 ## 概述
 
 本文档记录 HarmonyOS 设计指南的阶段性变更信息，包括新增文档、优化文档和目录结构变更，帮助开发者及时了解设计规范的最新动态。
+
+---
+
+## 2026年6月12日（HDC 版本发布）
+
+### 新增文档（14篇）
+
+**通用设计基础**
+
+- [鸿蒙黑体](https://developer.huawei.com/consumer/cn/doc/design-guides/font-0000001828772001)、[沉浸光感](https://developer.huawei.com/consumer/cn/doc/design-guides/immersivelight-0000002612101053)、[圆角参数](https://developer.huawei.com/consumer/cn/doc/design-guides/corner-radius-parameter-0000002556468705)、[间隔参数](https://developer.huawei.com/consumer/cn/doc/design-guides/interval-parameter-0000002562577161)。
+
+**控件**
+
+- [色彩选择器](https://developer.huawei.com/consumer/cn/doc/design-guides/color-picker-0000002574393143)
+
+**系统特性&能力**
+
+- [闪控球和闪控窗](https://developer.huawei.com/consumer/cn/doc/design-guides/floatview-0000002624640357)、[桌面快捷方式](https://developer.huawei.com/consumer/cn/doc/design-guides/shortcat-0000002550987962)、[平行视界](https://developer.huawei.com/consumer/cn/doc/design-guides/parallel_view-0000002588655180)。
+
+**针对多设备设计**
+
+- 智能座舱系列 6 篇：[概述](https://developer.huawei.com/consumer/cn/doc/design-guides/smart-cockpit-overview-0000002592486432)、[基础体验要求](https://developer.huawei.com/consumer/cn/doc/design-guides/smart-cockpit-basic-experience-0000002592646356)、[设计基础](https://developer.huawei.com/consumer/cn/doc/design-guides/smart-cockpit-ux-basic-0000002622965869)、[系统架构](https://developer.huawei.com/consumer/cn/doc/design-guides/smart-cockpit-system-architecture-0000002623086005)、[应用架构](https://developer.huawei.com/consumer/cn/doc/design-guides/smart-cockpit-application-architecture-0000002592486434)、[HUAWEI HiCar](https://developer.huawei.com/consumer/cn/doc/design-guides/smart-cockpit-hicar-0000002592646358)。
+
+### 优化文档
+
+**通用设计基础**
+
+- [文本排印](https://developer.huawei.com/consumer/cn/doc/design-guides/typography-0000002622688363)：原"字体排印"更名为"文本排印"，图文更新。
+- [应用图标](https://developer.huawei.com/consumer/cn/doc/design-guides/application-icon-0000001953444009)：图文更新。
+
+**控件**
+
+- 多个控件新增沉浸光感内容：底部页签、子页签、标题栏、导航点、索引条、即时反馈、即时操作、气泡提示、按钮、下拉按钮、状态按钮、操作块、工具栏、核心操作栏、菜单、文本选择菜单、搜索框、开关、滑动条、分段按钮、弹出框、半模态面板等。
+- [选择器](https://developer.huawei.com/consumer/cn/doc/design-guides/picker-0000001956852749)：图文更新。
+
+**人机交互**
+
+- [手势](https://developer.huawei.com/consumer/cn/doc/design-guides/hmi-touchscreen-0000001928273206)：新增隔空手势内容。
+
+**系统特性&能力**
+
+- [智感握姿](https://developer.huawei.com/consumer/cn/doc/design-guides/smart-reachability-0000002556657823)：图文更新。
+
+**应用设计最佳实践**
+
+- [新闻阅读类](https://developer.huawei.com/consumer/cn/doc/design-guides/responsive-design-examples4-0000001746657290)：新增阅读器内容；新材质组件图片更新。
+- [影音娱乐类](https://developer.huawei.com/consumer/cn/doc/design-guides/responsive-design-examples1-0000001957369849)：新增短视频自适应沉浸式内容；新材质组件图片更新。
+- 概述、社交通讯类、拍摄美化类、电商购物类、金融理财类、便捷生活类、旅游住宿类、出行导航类、移动支付类、游戏类、汽车类、办公类：新材质组件图片更新。
+
+**应用UX体验标准**
+
+- [通用应用UX体验标准](https://developer.huawei.com/consumer/cn/doc/design-guides/ux-guidelines-general-0000001760708152)：新增 2.1.3.4 可滑动控件高度、2.2.4.3 画中画适配、2.2.7.1 滑动沉浸、2.2.7.2 短视频沉浸。
+- [大屏应用UX体验标准](https://developer.huawei.com/consumer/cn/doc/design-guides/ux-guidelines-large-screen-0000001807707561)：3.2.1.3 弹出框大小适中、3.2.2.1 布局创新内容更新；删除 3.2.2.2 侧边导航栏；新增 3.2.1.9 适当留白、3.2.2.2 信息聚合、3.3.2.3 支持布局缩放。
+- [折叠屏应用UX体验标准](https://developer.huawei.com/consumer/cn/doc/design-guides/ux-guidelines-foldable-screen-0000001807866557)：新增 4.2.1 标题栏适配、4.2.2 搜索框适配、4.2.3 索引条适配、4.2.4 底部页签适配。
+
+---
+
+## 2026年5月26日
+
+### 优化文档
+
+**针对多设备设计**
+
+- [应用接入状态栏](https://developer.huawei.com/consumer/cn/doc/design-guides/statusbar-0000002319710910)：原"应用状态栏接入"更名为"应用接入状态栏"。
+
+**系统特性&能力**
+
+- [实况窗](https://developer.huawei.com/consumer/cn/doc/design-guides/system-features-live-view-0000001955186861)：添加卡片视觉重心说明文字。
+
+---
+
+## 2026年5月18日
+
+### 优化文档
+
+**系统特性&能力**
+
+- [靠近发现](https://developer.huawei.com/consumer/cn/doc/design-guides/i-connect-0000002354482789)：新增交互规则、附加元素规则、标题栏规范等内容。
+
+---
+
+## 2026年5月13日
+
+### 优化文档
+
+**针对多设备设计**
+
+- [阔折叠](https://developer.huawei.com/consumer/cn/doc/design-guides/flip-0000002321233974)：新增滑动沉浸内容。
+
+---
+
+## 2026年4月28日
+
+### 优化文档
+
+**针对多设备设计**
+
+- [窗口框架](https://developer.huawei.com/consumer/cn/doc/design-guides/window-0000002321868010)：新增"窗口回弹规格"、"窗口分屏准入原则"内容。
+
+---
+
+## 2026年4月1日
+
+### 优化文档
+
+**系统特性&能力**
+
+- [播控中心](https://developer.huawei.com/consumer/cn/doc/design-guides/broadcasting-control-0000001957017133)：图文更新。
+
+---
+
+## 2026年3月30日
+
+### 新增文档
+
+**系统特性&能力**
+
+- [智感握姿](https://developer.huawei.com/consumer/cn/doc/design-guides/smart-reachability-0000002556657823)。
 
 ---
 
