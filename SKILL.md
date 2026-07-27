@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-07-13
+> **更新时间**：2026-07-27
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -63,6 +63,16 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 ### 6.1.1 Patch 版本说明（2026-06-30）
 
 DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），API 版本号仍为 6.1.1(24)。Patch 版本主要修复 DevEco Studio 工具链问题，不涉及 API 能力新增。开发者可按需升级 DevEco Studio 至 Patch 版本以获得更稳定的开发体验。
+
+### 周检记录（2026-07-27）
+
+- **版本检查**：官方版本列表（更新时间 2026-06-27）确认最新版本仍为 26.0.0 Beta1（2026/06/12），未发布新版本或 Beta2
+- **OS 新增特性页**（更新时间 2026-07-06）：与现有 SKILL.md 内容一致，无新增 Kit 特性
+- **Kit 列表对比**：官方首页 Kit 与现有 references/ 文件完整对应
+  - ⚠️ **Mechanic Kit**：仅出现在 API 26 Beta1 的 API 变更清单中，官方未发布公开指南页，暂不单独建文件，待官方文档公开后补充
+  - ⚠️ **Data Protection Kit**：在多个版本的 API 变更清单中存在，与 DataLossPreventionKit 是否为同一 Kit 官方未明确说明，沿用现有 data-loss-prevention-kit.md 命名
+- **设计变更补充**：补全 `design/references/design-changes.md` 中缺失的 7 次变更（2026-03-30 至 2026-06-12 HDC 版本发布），新增 14 篇设计文档及大量沉浸光感、智能座舱相关内容
+- **design/SKILL.md**：更新适用版本至 API 26 Beta1 / API 24 Release，重写设计规范变更追踪章节
 
 ---
 
