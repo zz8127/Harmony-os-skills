@@ -58,6 +58,10 @@ description: |
 | 健康 | [运动健康](references/health-service-kit.md) | HealthServiceKit：步数/心率/运动联动/训练负荷 |
 | 天气 | [天气服务](references/weather-service-kit.md) | WeatherServiceKit：天气预报/降水/预警/指数 |
 | 配件 | [配件接入](references/accessory-kit.md) | AccessoryKit：配件发现/配对/消息通信/安全认证 |
+| 导航 | [熄屏导航](references/aod-navigation-kit.md) | AODNavigationKit：熄屏导航/低功耗代理/轨迹显示 |
+| 安全 | [机密空间](references/confidential-space-kit.md) | ConfidentialSpaceKit：机密空间/隐私计算/数据隔离 |
+| 性能 | [灵犀加速](references/linx-kit.md) | LinxKit：热点加速/CPU软硬协同/游戏优化 |
+| 服务 | [服务与支持](references/service-support-kit.md) | ServiceSupportKit：硬件检测/屏幕电池主板/回收评估 |
 
 ---
 
@@ -103,6 +107,10 @@ description: |
 | EnterpriseSpaceKit | `@kit.EnterpriseSpaceKit` | 企业数字空间 |
 | AccessoryKit | `@kit.AccessoryKit` | 配件接入服务（API 26 新增） |
 | UserAuthenticationKit | `@kit.UserAuthenticationKit` | 用户身份认证（锁屏口令/人脸/指纹） |
+| AODNavigationKit | `@kit.AODNavigationKit` | 熄屏导航服务（低功耗导航代理） |
+| ConfidentialSpaceKit | `@kit.ConfidentialSpaceKit` | 机密空间服务（隐私数据处理） |
+| LinxKit | `@kit.LinxKit` | 灵犀加速库（CPU 热点加速） |
+| ServiceSupportKit | `@kit.ServiceSupportKit` | 服务与支持（设备硬件检测） |
 
 ---
 
@@ -152,6 +160,19 @@ description: |
 | Camera Kit | 延迟预览输出、影随人动能力 |
 | Audio Kit | MIDI C API 支持外接设备 |
 | FAST Kit | 并发哈希表、向量运算和滤波器 |
+
+---
+
+## 周检补充（2026-08-03）
+
+以下 4 个 Kit 在官方文档首页列出但此前未收录，官方文档更新时间为 2026-07-28：
+
+| Kit | 说明 | 支持设备 | 文档 |
+|-----|------|---------|------|
+| AODNavigationKit | 熄屏导航服务，低功耗代理导航业务，支持轨迹/里程等关键信息熄屏显示 | Phone | [aod-navigation-kit.md](references/aod-navigation-kit.md) |
+| ConfidentialSpaceKit | 机密空间服务，在隔离环境中运行数据应用处理隐私数据，防止信息外泄 | Phone/Tablet/PC/2in1 | [confidential-space-kit.md](references/confidential-space-kit.md) |
+| LinxKit | 灵犀加速库，基于灵犀 CPU 核软硬协同优化，提升游戏/视频流畅度 | Phone/Tablet/PC/2in1/TV/Car | [linx-kit.md](references/linx-kit.md) |
+| ServiceSupportKit | 服务与支持，设备硬件检测（屏幕/电池/主板），用于门店二手回收场景 | Phone/Tablet | [service-support-kit.md](references/service-support-kit.md) |
 
 ---
 

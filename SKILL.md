@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-07-27
+> **更新时间**：2026-08-03
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -35,7 +35,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 领域 | 覆盖 Kit | 核心能力 |
 |------|---------|---------|
 | 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit、AccountKit、FileManagerServiceKit、DesktopExtensionKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔、华为账号、文件管理服务、桌面拓展 |
-| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、**NetworkBoostKit**、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit**、**PerformanceAnalysisKit**、**TelephonyKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、**网络加速**、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证**、**性能分析**、**电话蜂窝** |
+| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、**NetworkBoostKit**、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit**、**PerformanceAnalysisKit**、**TelephonyKit**、**AODNavigationKit**、**ConfidentialSpaceKit**、**LinxKit**、**ServiceSupportKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、**网络加速**、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证**、**性能分析**、**电话蜂窝**、**熄屏导航**、**机密空间**、**灵犀加速**、**服务与支持** |
 | 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit、**ScanKit** | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册、**统一扫码** |
 | 图形 | ArkGraphics 2D、ArkGraphics 3D、SpatialReconKit、GraphicsAccelerateKit、XEngineKit、AREngine | 2D/3D绘制、空间建模、图形加速、GPU引擎、AR |
 | 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、**AppLinkingKit**、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ShareKit、NotificationKit、**CloudFoundationKit**、**PDFKit**、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、应用市场、**应用链接**、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、分享、通知、**云开发**、**PDF处理**、健康、天气、游戏 |
@@ -73,6 +73,17 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
   - ⚠️ **Data Protection Kit**：在多个版本的 API 变更清单中存在，与 DataLossPreventionKit 是否为同一 Kit 官方未明确说明，沿用现有 data-loss-prevention-kit.md 命名
 - **设计变更补充**：补全 `design/references/design-changes.md` 中缺失的 7 次变更（2026-03-30 至 2026-06-12 HDC 版本发布），新增 14 篇设计文档及大量沉浸光感、智能座舱相关内容
 - **design/SKILL.md**：更新适用版本至 API 26 Beta1 / API 24 Release，重写设计规范变更追踪章节
+
+### 周检记录（2026-08-03）
+
+- **版本检查**：官方版本列表（更新时间 2026-06-27）确认最新版本仍为 26.0.0 Beta1（2026/06/12），未发布新版本或 Beta2
+- **Kit 列表对比**：官方首页 Kit 与现有 references/ 文件对比，发现 4 个新 Kit（官方文档更新时间 2026-07-28，在上次周检之后）
+  - ✅ **AOD Navigation Kit**（熄屏导航服务）：系统/硬件，低功耗熄屏导航代理，仅支持 Phone
+  - ✅ **Confidential Space Kit**（机密空间服务）：系统/安全，机密空间内运行数据应用处理隐私数据，支持 Phone/Tablet/PC/2in1
+  - ✅ **Linx Kit**（灵犀加速库）：系统/基础功能，基于灵犀 CPU 核的软硬协同性能优化，支持 Phone/Tablet/PC/2in1/TV/Car
+  - ✅ **Service Support Kit**（服务与支持）：系统/基础功能，设备硬件检测（屏幕/电池/主板），用于门店二手回收场景，仅支持 Phone/Tablet
+- **新增参考文件**：`system/references/aod-navigation-kit.md`、`confidential-space-kit.md`、`linx-kit.md`、`service-support-kit.md`
+- **Mechanic Kit**：仍未出现在官方首页 Kit 列表，仅在 API 26 Beta1 API 变更清单中存在，继续待官方文档公开后补充
 
 ---
 
@@ -306,6 +317,10 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 | 扫码/码识别/直达服务 | `system/references/scan-kit.md` |
 | 电话/蜂窝通信 | `system/references/telephony-kit.md` |
 | 网络加速/远场通信 | `system/references/network-boost-remote-kit.md` |
+| 熄屏导航/低功耗导航 | `system/references/aod-navigation-kit.md` |
+| 机密空间/隐私数据处理 | `system/references/confidential-space-kit.md` |
+| 灵犀加速/CPU性能优化 | `system/references/linx-kit.md` |
+| 设备硬件检测/二手回收 | `system/references/service-support-kit.md` |
 | 性能分析/事件跟踪/日志 | `dev/references/performance-analysis-kit.md` |
 | 云开发/云函数/云数据库 | `agc/references/cloud-development.md` |
 | 应用链接/延迟链接 | `agc/references/growth.md` |
