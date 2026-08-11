@@ -17,7 +17,7 @@ description: |
 | 系统能力 | `../system/SKILL.md` | 蓝牙/定位/传感器等技术规范 |
 | 媒体服务 | `../media/SKILL.md` | 相机/音频等媒体规范 |
 
-本文档基于华为官方 HarmonyOS Design 设计指南整理，适用于 HarmonyOS 26.0.0（API 26 Beta1）/ 6.1.1（API 24 Release，生产推荐）应用界面设计。
+本文档基于华为官方 HarmonyOS Design 设计指南整理，适用于 HarmonyOS 26.0.0（API 26 Beta2）/ 6.1.1（API 24 Release，生产推荐）应用界面设计。
 
 ## 快速导航
 
