@@ -62,6 +62,7 @@ description: |
 | 安全 | [机密空间](references/confidential-space-kit.md) | ConfidentialSpaceKit：机密空间/隐私计算/数据隔离 |
 | 性能 | [灵犀加速](references/linx-kit.md) | LinxKit：热点加速/CPU软硬协同/游戏优化 |
 | 服务 | [服务与支持](references/service-support-kit.md) | ServiceSupportKit：硬件检测/屏幕电池主板/回收评估 |
+| 硬件 | [机械设备管理](references/mechanic-kit.md) | MechanicKit：云台控制/目标跟踪/设备连接/状态监控 |
 
 ---
 
@@ -111,6 +112,7 @@ description: |
 | ConfidentialSpaceKit | `@kit.ConfidentialSpaceKit` | 机密空间服务（隐私数据处理） |
 | LinxKit | `@kit.LinxKit` | 灵犀加速库（CPU 热点加速） |
 | ServiceSupportKit | `@kit.ServiceSupportKit` | 服务与支持（设备硬件检测） |
+| MechanicKit | `@kit.MechanicKit` | 机械设备管理服务（云台等机械体设备控制，API 20 起） |
 
 ---
 
@@ -173,6 +175,16 @@ description: |
 | ConfidentialSpaceKit | 机密空间服务，在隔离环境中运行数据应用处理隐私数据，防止信息外泄 | Phone/Tablet/PC/2in1 | [confidential-space-kit.md](references/confidential-space-kit.md) |
 | LinxKit | 灵犀加速库，基于灵犀 CPU 核软硬协同优化，提升游戏/视频流畅度 | Phone/Tablet/PC/2in1/TV/Car | [linx-kit.md](references/linx-kit.md) |
 | ServiceSupportKit | 服务与支持，设备硬件检测（屏幕/电池/主板），用于门店二手回收场景 | Phone/Tablet | [service-support-kit.md](references/service-support-kit.md) |
+
+---
+
+## 周检补充（2026-08-17）
+
+Mechanic Kit（机械设备管理服务）已在官方 SDK 页面公开指南（此前仅出现在 API 26 Beta1 变更清单中，官方指南页更新时间 2026-04-20）：
+
+| Kit | 说明 | 起始版本 | 文档 |
+|-----|------|---------|------|
+| MechanicKit | 机械设备管理服务，通过 mechanicManager 模块控制云台等机械体设备：设备连接管理、目标跟踪控制（人脸/物体跟踪）、设备状态监控（角度/旋转限制/运动参数） | API 20 | [mechanic-kit.md](references/mechanic-kit.md) |
 
 ---
 

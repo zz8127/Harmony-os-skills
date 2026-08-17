@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Beta2，2026-07-28；Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-08-11
+> **更新时间**：2026-08-17
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -35,7 +35,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 领域 | 覆盖 Kit | 核心能力 |
 |------|---------|---------|
 | 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit、AccountKit、FileManagerServiceKit、DesktopExtensionKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔、华为账号、文件管理服务、桌面拓展 |
-| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、**NetworkBoostKit**、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit**、**PerformanceAnalysisKit**、**TelephonyKit**、**AODNavigationKit**、**ConfidentialSpaceKit**、**LinxKit**、**ServiceSupportKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、**网络加速**、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证**、**性能分析**、**电话蜂窝**、**熄屏导航**、**机密空间**、**灵犀加速**、**服务与支持** |
+| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、**NetworkBoostKit**、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit**、**PerformanceAnalysisKit**、**TelephonyKit**、**AODNavigationKit**、**ConfidentialSpaceKit**、**LinxKit**、**ServiceSupportKit**、**MechanicKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、**网络加速**、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证**、**性能分析**、**电话蜂窝**、**熄屏导航**、**机密空间**、**灵犀加速**、**服务与支持**、**机械设备管理** |
 | 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit、**ScanKit** | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册、**统一扫码** |
 | 图形 | ArkGraphics 2D、ArkGraphics 3D、SpatialReconKit、GraphicsAccelerateKit、XEngineKit、AREngine | 2D/3D绘制、空间建模、图形加速、GPU引擎、AR |
 | 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、**AppLinkingKit**、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ShareKit、NotificationKit、**CloudFoundationKit**、**PDFKit**、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、应用市场、**应用链接**、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、分享、通知、**云开发**、**PDF处理**、健康、天气、游戏 |
@@ -99,6 +99,15 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
   - 4 个新 Kit（AOD Navigation/Confidential Space/Linx/Service Support Kit）在 Beta2 章节正式标记为"新增 Kit"，文件已在上次周检创建，内容与官方说明一致，无需修改
 - **Kit 列表对比**：官方首页 Kit 与现有 references/ 文件完整对应，无新增 Kit 需要建文件
 - **Mechanic Kit**：仍未出现在官方首页 Kit 列表，继续待官方文档公开后补充
+
+### 周检记录（2026-08-17）
+
+- **版本检查**：官方版本列表（更新时间 2026-07-28 19:14）确认最新版本仍为 26.0.0 Beta2（2026/07/28），未发布新版本
+- **Kit 列表对比**：从官方 SDK 页面（六大领域 Kit 全列表）与现有 references/ 文件逐一对比，各领域 Kit 均已覆盖
+  - ✅ **Mechanic Kit**（机械设备管理服务）：已在官方 SDK 页面公开指南页（https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/mechanic-kit ，页面更新时间 2026-04-20），此前仅出现在 API 26 Beta1 变更清单中，本次正式收录
+    - 起始版本 API 20，通过 mechanicManager 模块控制云台等机械体设备：设备连接管理、目标跟踪控制（人脸/物体跟踪、四种跟踪布局）、设备状态监控（三轴角度/旋转限制/运动参数）
+    - 新增参考文件：`system/references/mechanic-kit.md`
+- **README.md 统计修正**：各目录 references/ 实际文件数与 README 记载不符（README 记 121 篇），已按实际重新统计更新：dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 **137 篇**
 
 ---
 
