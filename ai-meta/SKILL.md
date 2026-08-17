@@ -97,7 +97,7 @@ let result = await session.run({ input: imageData });
 | 营销组件 | AR 营销互动能力 |
 | 多设备扩展 | 多 Kit 扩展对 PC/2in1、TV 设备支持 |
 
-FaceAR 和 BodyAR 此前已支持，详见 dev/SKILL.md。
+FaceAR 和 BodyAR 此前已支持，详见 media/references/ar-engine.md。
 
 ---
 

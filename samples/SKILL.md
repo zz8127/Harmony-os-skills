@@ -20,7 +20,7 @@ description: |
 | 开发规范 | `../dev/SKILL.md` | Stage模型/ArkUI/ArkTS 开发规范 |
 | 系统能力 | `../system/SKILL.md` | 蓝牙/Wi-Fi/传感器等系统 Kit |
 | 媒体服务 | `../media/SKILL.md` | 相机/音视频/相册 Kit |
-| AI与元服务 | `../ai-meta/SKILL.md` | 意图/语音/MLKit |
+| AI与元服务 | `../ai-meta/SKILL.md` | 意图/语音/视觉/Agent Framework |
 
 ---
 

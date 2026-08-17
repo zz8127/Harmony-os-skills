@@ -25,6 +25,7 @@ description: |
 | [3D图形](references/arkgraphics-3d.md) | ArkGraphics 3D + SpatialRecon + GraphicsAccelerate + XEngine |
 | [图片处理](references/image-kit.md) | Image Kit：图片编解码/元数据读写/图片效果 |
 | [统一扫码](../system/references/scan-kit.md) | ScanKit：扫码/码识别/直达服务（官方首页归到媒体类别，文档位于 system/） |
+| [AR引擎](references/ar-engine.md) | AR Engine：FaceAR/BodyAR/3D空间重建/营销组件 |
 
 ---
 
@@ -47,6 +48,7 @@ description: |
 | GraphicsAccelerateKit | `@kit.GraphicsAccelerateKit` | 图形加速、超帧 |
 | XEngineKit | `@kit.XEngineKit` | GPU加速引擎 |
 | ScanKit | `@kit.ScanKit` | 统一扫码、码识别、直达服务（官方首页归到媒体类别） |
+| AREngine | `@kit.AREngine` | AR引擎：FaceAR/BodyAR/3D重建 |
 
 ---
 
