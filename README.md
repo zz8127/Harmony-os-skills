@@ -2,7 +2,7 @@
 
 ![API 23/24](https://img.shields.io/badge/API-23%2F24-blue)
 ![HarmonyOS 6.1](https://img.shields.io/badge/HarmonyOS-6.1-green)
-![Docs](https://img.shields.io/badge/参考文档-121篇-orange)
+![Docs](https://img.shields.io/badge/参考文档-137篇-orange)
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow)
 
 一站式 HarmonyOS 应用开发知识库，覆盖从开发到上架全流程。以 HarmonyOS 6.1.0 (API 23) 为基准，兼容 API 24 (6.1.1 Release)，并跟踪 API 26 Beta。
@@ -11,8 +11,8 @@
 
 | 目录 | 主题 | 参考文档数 | 覆盖内容 |
 |------|------|-----------|----------|
-| `dev/` | 开发规范 | 34 | Stage 模型 / ArkUI / ArkTS / ArkData / ArkWeb / 卡片 / 权限 / 发布 / NDK / IPC / 输入法 / 国际化 / 无障碍 / 性能分析 / 华为账号 / 文件服务 / 最佳实践 / 应用 FAQ / 行业实践 / 应用质量 |
-| `system/` | 系统能力 | 36 | 蓝牙 / Wi-Fi / NFC / 星闪 / 定位 / 传感器 / 网络 / 后台任务 / 文件管理 / 密钥 / 加密框架 / 分布式 / 协同服务 / 测试 / 车机 / 穿戴 / 驱动 / 企业管理 / 企业威胁防护 / 算法加速 / 运动健康 / 天气 |
+| `dev/` | 开发规范 | 35 | Stage 模型 / ArkUI / ArkTS / ArkData / ArkWeb / 卡片 / 权限 / 发布 / NDK / IPC / 输入法 / 国际化 / 无障碍 / 性能分析 / 华为账号 / 文件服务 / 桌面扩展 / 实况窗 / PDF / 最佳实践 / 应用 FAQ / 行业实践 / 应用质量 |
+| `system/` | 系统能力 | 51 | 蓝牙 / Wi-Fi / NFC / 星闪 / 定位 / 传感器 / 网络 / 网络加速 / 远场通信 / 后台任务 / 文件管理 / 密钥 / 加密框架 / 分布式 / 协同服务 / 测试 / 车机 / 穿戴 / 驱动 / 企业管理(MDM) / 企业威胁防护 / 企业数据保护 / 企业数字空间 / 数据防泄漏 / 设备证书 / 在线认证 / 算法加速 / 运动健康 / 天气 / 多模输入 / 多模态感知 / 地图 / 扫码 / 分享 / 电话蜂窝 / 配件接入 / 熄屏导航 / 机密空间 / 灵犀加速 / 服务与支持 / 机械设备管理 |
 | `media/` | 媒体服务 | 11 | 相机 / AVPlayer / AVSession / AudioKit / AVCodecKit / DRM / 铃声 / ImageKit / 2D 绘制 / 3D 图形 / AR Engine |
 | `ai-meta/` | AI 与元服务 | 6 | 意图框架 / 语音 / 视觉 / Core AI / CANN / MindSpore / 推理运行时 / 元服务 / 智能体框架 |
 | `design/` | 设计规范 | 14 | 设计原则 / 色彩 / 字体 / 图标 / 布局 / 动效 / 人机交互 / UX 最佳实践 / 控件 / 多设备设计 / 元服务设计 / 设计变更说明 |
