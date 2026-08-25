@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Beta2，2026-07-28；Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-08-17
+> **更新时间**：2026-08-25
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -108,6 +108,15 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
     - 起始版本 API 20，通过 mechanicManager 模块控制云台等机械体设备：设备连接管理、目标跟踪控制（人脸/物体跟踪、四种跟踪布局）、设备状态监控（三轴角度/旋转限制/运动参数）
     - 新增参考文件：`system/references/mechanic-kit.md`
 - **README.md 统计修正**：各目录 references/ 实际文件数与 README 记载不符（README 记 121 篇），已按实际重新统计更新：dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 **137 篇**
+
+### 周检记录（2026-08-25）
+
+- **版本检查**：官方版本列表（更新时间 2026-07-28 19:14）确认最新版本仍为 26.0.0 Beta2（2026/07/28），未发布新版本（无 Beta3 或 Release）
+- **OS 新增特性页面**：更新时间 2026-08-06 16:31，与上次周检记录一致，无新增特性
+- **Kit 列表对比**：从官方文档首页与 SDK 页面（六大领域 Kit 全列表）逐一对比，各领域 Kit 均已覆盖，无新增 Kit
+  - ✅ **Data Protection Kit**：官方 SDK 页面系统分类列出"Data Protection Kit（数据保护服务）"，经核实其内容即数据防泄漏服务（DLP）文档，与 Data Loss Prevention Kit 为同一服务的不同分类名称；API 导入名仍为 `@kit.DataLossPreventionKit`，现有 `system/references/data-loss-prevention-kit.md` 已覆盖（文件标题即含"数据保护服务"），无需修改 —— 解决 2026-08-03 周检遗留疑问
+  - ✅ **Mechanic Kit**：仍列于官方 SDK 页面（系统领域），已收录，无变化
+- **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；API 26 仍为 Beta，版本变更追踪描述准确，无需修改
 
 ---
 
