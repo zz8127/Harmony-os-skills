@@ -1,10 +1,10 @@
 # UI 设计组件库（UI Design Kit）
 
-> HarmonyOS 6.1 / API 23
+> HarmonyOS 6.1 / API 23，API 26 新增颜色选择与组件增强
 
 ## 概述
 
-UI 设计组件库（UI Design Kit）提供符合 HarmonyOS 设计规范的高阶 UI 组件，通过 `@kit.UIDesignKit` 引入。包含导航、标签页、列表项、侧边栏、操作栏、提示条和材质效果等组件，API 23 新增多项增强特性。
+UI 设计组件库（UI Design Kit）提供符合 HarmonyOS 设计规范的高阶 UI 组件，通过 `@kit.UIDesignKit` 引入。包含导航、标签页、列表项、侧边栏、操作栏、提示条、材质效果和颜色选择器等组件，API 23 新增多项增强特性，API 26 新增颜色选择与收藏管理及多个组件样式增强。
 
 ## HdsNavigation
 
@@ -110,7 +110,7 @@ struct MiniBarTabsPage {
 
 ## HdsListItem / HdsListItemCard
 
-高阶列表项组件，支持无障碍、菜单样式和滑动删除。
+高阶列表项组件，支持无障碍、菜单样式和滑动删除。API 26 新增：HdsListItem 多态样式设置（`HdsListItemStateStylesOptions`）；HdsListItemCard 单选框样式选择（`HdsRadioStyle`）。
 
 ```typescript
 import { HdsListItem, HdsListItemCard } from '@kit.UIDesignKit';
@@ -263,7 +263,7 @@ struct ActionBarPage {
 
 ## HdsSnackbar
 
-高阶提示条组件，API 23 新增自动高度适配。
+高阶提示条组件，API 23 新增自动高度适配；API 26 新增左侧图标（`SnackbarIconOptions`）、中间文本标题和内容（`SnackbarMessageOptions`）、右侧操作区关闭按钮图标（`SnackbarOperationOptions`）的样式修改。
 
 ```typescript
 import { HdsSnackbar } from '@kit.UIDesignKit';
@@ -306,6 +306,36 @@ struct MaterialPage {
       }
       .width(300)
       .height(100)
+    }
+  }
+}
+```
+
+## HdsColorPicker（API 26 新增）
+
+颜色选择与收藏管理组件，支持网格、光谱和滑块三种颜色选择模式，支持用户将常用颜色添加到收藏列表。
+
+```typescript
+import { HdsColorPicker } from '@kit.UIDesignKit';
+
+@Entry
+@Component
+struct ColorPickerPage {
+  @State selectedColor: string = '#007DFF';
+
+  build() {
+    Column() {
+      HdsColorPicker({
+        // 网格 / 光谱 / 滑块三种选择模式
+        mode: HdsColorPicker.Mode.SPECTRUM,
+        currentColor: this.selectedColor,
+        onColorChange: (color: string) => {
+          this.selectedColor = color;
+        },
+        onFavoriteChange: (colors: string[]) => {
+          console.info(`收藏列表: ${JSON.stringify(colors)}`);
+        }
+      })
     }
   }
 }

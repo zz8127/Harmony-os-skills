@@ -37,6 +37,11 @@ Core File Kit 为开发者提供一套访问和管理应用文件和用户文件
 - 获取当前应用的存储空间大小
 - 获取指定文件系统的剩余空间大小和总空间大小
 
+### 压缩解压缩（API 26 新增）
+- 为应用提供数据压缩和解压缩的能力
+- 适用场景：文件打包分发、减少存储占用、加速网络传输
+- 指南：[压缩解压缩开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/archive-overview)
+
 ## npm 包
 
 `@kit.CoreFileKit`
