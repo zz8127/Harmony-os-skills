@@ -11,6 +11,7 @@ description: |
 > **版本说明**：本文档基于 **HarmonyOS 6.1.1**（API 24 Release，2026-05-26）编写，生产推荐 API 24。
 > HarmonyOS 6 于 2025年9月25日发布（API 20）；2026年4月20日 HarmonyOS 6.1 正式发布（API 23 稳定）。
 > 2026年5月26日 HarmonyOS 6.1.1 Release 发布（API 24 正式版）。
+> 2026年8月29日 HarmonyOS 开发套件 26.0.0 正式 Release（API 26，配套 DevEco Studio 26.0.0.821 / SDK 26.0.0.105 / OpenHarmony 7.0），详见「API 26 变更追踪」。
 > 历史版本：HarmonyOS 5.x = API 12/13/14/16。
 
 ## 扩展技能（独立 Skill）
@@ -42,7 +43,7 @@ description: |
 - [其他参考](references/other.md) — 网络请求、数据存储、生命周期、常见问题
 - [PDF阅读](references/pdf-kit.md) — PDF Kit：PDF页面视图/文本获取/缩放
 - [实况窗](references/live-view-kit.md) — Live View Kit：地理围栏触发实况窗/API 23新增
-- [UI组件库](references/ui-design-kit.md) — UI Design Kit：官方UI组件库/底部页签/导航/材质效果
+- [UI组件库](references/ui-design-kit.md) — UI Design Kit：官方UI组件库/底部页签/导航/材质效果/颜色选择器(API 26)
 - [卡片开发](references/form-kit.md) — Form Kit：ArkTS卡片/V2装饰器/待机屏保卡片/透明卡片
 - [手写笔](references/pen-kit.md) — Pen Kit：画布绘制/长画布滚动/API 23新增
 - [无障碍](references/accessibility-kit.md) — Accessibility Kit：屏幕朗读/无障碍扩展/分组聚合播报
@@ -56,7 +57,7 @@ description: |
 - [应用服务Kit](references/app-service-kits.md) — Calendar+Contacts+Preview+Reader+ScenarioFusion+CallService
 - [行业实践](references/industry-practices.md) — 16个行业实践分类索引/公共关键技术方案
 - [ArkTS语言](references/arkts.md) — ArkTS：TypeScript超集/声明式UI/状态管理/并发
-- [文件基础服务](references/core-file-kit.md) — Core File Kit：应用文件/用户文件/文件沙箱/分享
+- [文件基础服务](references/core-file-kit.md) — Core File Kit：应用文件/用户文件/文件沙箱/分享/压缩解压(API 26)
 - [华为账号](references/account-kit.md) — Account Kit：一键登录/静默登录/头像昵称/手机号
 - [文件管理服务](references/file-manager-service-kit.md) — File Manager Service Kit：回收站/文件图标/快捷方式
 - [最佳实践](references/best-practices.md) — 官方最佳实践专题：架构/UI/功能/多设备/AI/安全/质量
@@ -342,6 +343,36 @@ let params = router.getParams() as Record<string, number>
 | ArkTS | 虚拟机维测能力增强、taskpool 任务超时设置 |
 | ArkWeb | 下载任务回调增强、URL 白名单和安全控制接口 |
 | DevEco Studio | Hot Reload 增强（支持 C++ 和资源文件）、AppFreeze 日志解析、ComMemory 模板 |
+
+---
+
+## API 26 Release 变更追踪（2026-08-29）
+
+HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release（配套 DevEco Studio 26.0.0.821、HarmonyOS SDK 26.0.0.105、OpenHarmony 7.0）。本节仅列出与开发规范（dev/）领域相关的变更，完整清单参见根 SKILL.md。
+
+### 针对所有应用的变更
+
+- **默认浏览器权限管控**：应用需申请 `ohos.permission.DEFAULT_WEB_BROWSER` 权限方可展示在默认浏览器备选列表（面向浏览器类应用，需通过安全/隐私/用户体验三项审核；下一正式版本生效）
+- **ArkTS/JSVM**：chromium/v8 内核 132→144；JSVM 支持 WASM 解释器，jitless 默认行为变更；async 函数类型判定修复
+- **Ability Kit**：部分公共事件行为变更，增加管控
+
+### dev 领域 Kit 变更
+
+| Kit | 变更 |
+|-----|------|
+| Ability Kit | ModularObjectExtensionAbility 模块化对象（C API）、pluginBundleManager 插件管理、自动填充请求信息定义 |
+| ArkUI | V2 状态管理组件（ChipV2/ChipGroupV2/CounterV2/PopupV2/SwipeRefresherV2/TreeViewV2）、智慧手势、懒加载布局组件、WithEnv/@CustomEnv、DatePickerComponent、SelectionContainer、@ComponentActive/@ComponentInactive |
+| ArkTS | setMultithreadingDetectionEnabled 多线程检测可配置参数 |
+| ArkData | 数据共享多值类型配置发布 |
+| ArkGraphics 2D | 字体绘制获取文字轮廓路径、字体回退 |
+| Core File Kit | **压缩解压缩模块**（数据压缩/解压缩，适用于文件打包分发、减少存储占用、加速网络传输） |
+| UI Design Kit | **颜色选择与收藏管理**（网格/光谱/滑块三种模式）、HdsSnackBar/HdsListItem/HdsListItemCard 组件样式增强 |
+| Desktop Extension Kit | 快捷栏能力（查询接入、设置图标和进度条）、状态栏图标悬浮回调 |
+| Account Kit | 华为账号亲密圈服务 |
+| PDF Kit | 自定义渲染风格、二进制数据读取、视图坐标与 PDF 页面坐标双向转换 |
+| Pen Kit | 手写笔跟手性加速接口 |
+| Performance Analysis Kit | HiDebug 内存导出监听器 |
+| Form Kit / Accessibility Kit / IME Kit / IPC Kit / Localization Kit / Data Augmentation Kit | Beta1 特性（AgentCard、关怀模式、输入事件注入、DID、邮件智能分析等）已包含在 Release 中 |
 
 ---
 

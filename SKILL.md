@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 26.0.0 / API 26（Beta2，2026-07-28；Beta1，2026-06-12）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-08-25
+> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
+> **更新时间**：2026-08-31
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -47,7 +47,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
-| **26.0.0** | **26** | **26.0.0 Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Beta** | **2026.07.28** |
+| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29）；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新）** | **2026.08.29** |
 | **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）；Patch（6.1.1.290，2026.06.30）** | **Release（生产推荐）** | **2026.05.26** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 Release | 稳定 | 2026.01.21 |
@@ -58,7 +58,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 5.0.4 | 16 | 5.0.4 Release | 稳定 | 2025.03.29 |
 | 5.0.2 | 14 | 5.0.2 Release | 稳定 | 2025.01.27 |
 
-> ⚠️ **生产环境推荐 API 24**（HarmonyOS 6.1.1 Release）。API 26 为 Beta 版本，适合尝鲜体验新特性。
+> ⚠️ **生产环境推荐 API 24**（HarmonyOS 6.1.1 Release，存量设备占比 84.93%）。API 26 已于 2026-08-29 正式 Release（配套 HarmonyOS SDK 26.0.0.105 / OpenHarmony 7.0），新项目可选用；targetSdkVersion ≥ 26.0.0 需关注「针对所有应用的变更」。
 
 ### 6.1.1 Patch 版本说明（2026-06-30）
 
@@ -118,13 +118,37 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
   - ✅ **Mechanic Kit**：仍列于官方 SDK 页面（系统领域），已收录，无变化
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；API 26 仍为 Beta，版本变更追踪描述准确，无需修改
 
+### 26.0.0 Release 版本说明（2026-08-29）
+
+HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta1/Beta2 全部特性：
+
+- **配套版本**：API 26.0.0、DevEco Studio 26.0.0.821（Release）、HarmonyOS SDK 26.0.0.105（基于 OpenHarmony SDK Ohos_sdk_public 26.0.0.105）；SDK 内置于 DevEco Studio，安装时自动配套
+- **底座升级**：OpenHarmony 升级至 7.0 Release，API 版本 26.0.0；商用版本 HarmonyOS 7.0.0.105 SP6 已面向 Mate 80、Pura 80 等机型推送
+- **版本号格式**：自 API 26.0.0 起采用语义化版本（SemVer）X.Y.Z 格式，取代原 X.Y.Z (N) 格式（X 主版本/Y 次版本/Z 修订版本）
+- **设备占比**：API 6.1.1 (24) 占 84.93%，API 26.0.0（7.0.0）占 4.65%，存量适配仍以 API 24 为主
+
+### 周检记录（2026-08-31）
+
+- **版本检查**：确认 **26.0.0 已于 2026-08-29 正式 Release**（详见上方「26.0.0 Release 版本说明」）
+- **针对所有应用的变更**（官方变更说明页更新时间 2026-08-19）：
+  - **默认浏览器权限管控**：应用需申请 `ohos.permission.DEFAULT_WEB_BROWSER` 权限方可展示在默认浏览器备选列表并被设置为默认浏览器；面向浏览器类应用，需满足品类标准并通过安全/隐私/用户体验三项审核；于 HarmonyOS 下一正式发布版本生效
+  - **Agent Framework Kit 接口变更**：OnDataCallback 接口 method 参数类型由枚举 AgentOperation 变更为 string；RequestContext.getClientSessionId 方法删除（仅 targetSdkVersion ≥ 26.0.0 生效）
+  - **ArkTS**：JSVM chromium/v8 内核 132→144；JSVM 支持 WASM 解释器，jitless 默认行为变更；async 函数类型判定修复；convertxml fastConvertToJsObject 丢失同级 text 节点问题修复
+  - **Ability Kit**：部分公共事件行为变更，增加管控
+- **Beta2 特性补全**：核对官方 OS 新增特性页（更新时间 2026-08-06）发现 2 个 Kit 的 Beta2 特性此前未收录，本次补全：
+  - ✅ **Core File Kit**：新增压缩解压缩模块，提供数据压缩和解压缩能力（文件打包分发、减少存储占用、加速网络传输）
+  - ✅ **UI Design Kit**：新增颜色选择与收藏管理（网格/光谱/滑块三种模式）；HdsSnackBar 左侧图标/标题内容/关闭按钮样式；HdsListItem 多态样式；HdsListItemCard 单选框样式
+  - 已同步更新 `dev/references/core-file-kit.md`、`dev/references/ui-design-kit.md`
+- **Kit 列表对比**：官方文档首页 Kit 与现有 references/ 文件完整对应，无新增 Kit
+- **README.md**：版本信息表与版本变更追踪已同步更新为 26.0.0 Release 状态
+
 ---
 
-## HarmonyOS 26.0.0 Beta2 新增特性（API 26，2026-07-28）
+## HarmonyOS 26.0.0 新增特性（API 26，Beta2 2026-07-28 / Release 2026-08-29）
 
 ### 版本说明
 
-26.0.0 Beta2 在 Beta1 基础上进一步增强，新增多个基于状态管理（V2）实现的组件；Ability Kit 新增基于 ModularObjectExtensionAbility 的模块化对象，支持应用将自身功能以模块化对象的形式开放给其他应用调用；Basic Services Kit 新增串口通信能力；Remote Communication Kit 新增国密 TLCP 协议和多路传输控制协议（MPTCP）支持；4 个新 Kit（AOD Navigation Kit、Confidential Space Kit、Linx Kit、Service Support Kit）正式加入。
+26.0.0 Beta2 在 Beta1 基础上进一步增强，新增多个基于状态管理（V2）实现的组件；Ability Kit 新增基于 ModularObjectExtensionAbility 的模块化对象，支持应用将自身功能以模块化对象的形式开放给其他应用调用；Basic Services Kit 新增串口通信能力；Remote Communication Kit 新增国密 TLCP 协议和多路传输控制协议（MPTCP）支持；4 个新 Kit（AOD Navigation Kit、Confidential Space Kit、Linx Kit、Service Support Kit）正式加入。26.0.0 于 2026-08-29 正式 Release，上述特性全部包含在 Release 版本中。
 
 ### 应用框架
 
@@ -152,6 +176,12 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
   - 自定义组件生命周期新增 `@ComponentActive` 和 `@ComponentInactive` 装饰器
   - 窗口管理新增支持设置主窗或子窗支持的窗口模式；闪控球新增销毁事件监听
 - **ArkTS**：`setMultithreadingDetectionEnabled` 接口新增多线程检测可配置参数（故障类型、采样频率、上报时间间隔）
+- **Core File Kit**：新增支持压缩解压缩模块，为应用提供数据压缩和解压缩的能力，可用于文件打包分发、减少存储占用、加速网络传输等场景
+- **UI Design Kit**：
+  - 新增颜色选择与收藏管理功能，支持网格、光谱和滑块三种颜色选择模式，支持用户将常用颜色添加到收藏列表
+  - HdsSnackBar 组件新增左侧图标、中间文本的标题和内容、右侧操作区关闭按钮图标的样式修改
+  - HdsListItem 组件新增多态样式的设置功能
+  - HdsListItemCard 组件单选框支持样式选择
 
 ### 系统
 
@@ -233,7 +263,7 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 
 ### DevEco Studio 工具链升级
 
-26.0.0 Beta2 配套 DevEco Studio 26.0.0 Beta2（26.0.0.621），在 Beta1 基础上进一步增强开发体验。
+26.0.0 配套 DevEco Studio 26.0.0 Release（26.0.0.821；Beta2 为 26.0.0.621），在 Beta1 基础上进一步增强开发体验。
 
 ---
 
@@ -448,7 +478,7 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 | 元服务设计/UX最佳实践 | `design/SKILL.md` |
 | 分析服务/行业风向标 | `agc/references/analytics.md` |
 | ArkTS语言/状态管理/并发 | `dev/references/arkts.md` |
-| 文件基础服务/文件沙箱 | `dev/references/core-file-kit.md` |
+| 文件基础服务/文件沙箱/压缩解压 | `dev/references/core-file-kit.md` |
 | 华为账号/一键登录 | `dev/references/account-kit.md` |
 | 文件管理服务/回收站 | `dev/references/file-manager-service-kit.md` |
 | 最佳实践/架构设计 | `dev/references/best-practices.md` |
@@ -477,9 +507,18 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 
 ---
 
-## API 26 Beta2 变更追踪（2026-07-28）
+## API 26 变更追踪（Beta2 2026-07-28 / Release 2026-08-29）
 
-> API 26 Beta2 详细变更请参见上方「HarmonyOS 26.0.0 Beta2 新增特性」章节。
+> API 26 详细变更请参见上方「HarmonyOS 26.0.0 新增特性」章节。
+
+### 针对所有应用的变更（Release）
+
+- **默认浏览器权限管控**：应用需申请 `ohos.permission.DEFAULT_WEB_BROWSER` 权限方可展示在默认浏览器备选列表并设置为默认浏览器（面向浏览器类应用，需通过安全/隐私/用户体验三项审核；下一正式版本生效）
+- **Agent Framework Kit**：OnDataCallback 接口 method 参数类型由枚举 AgentOperation 变更为 string；RequestContext.getClientSessionId 方法删除（targetSdkVersion ≥ 26.0.0 生效）
+- **ArkTS/JSVM**：chromium/v8 内核 132→144；JSVM 支持 WASM 解释器，jitless 默认行为变更；async 函数类型判定修复；convertxml 修复
+- **Ability Kit**：部分公共事件行为变更，增加管控
+
+### Kit 变更清单
 
 | 领域 | Kit | 变更 |
 |------|-----|------|
@@ -490,6 +529,8 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 | 应用框架 | ArkGraphics 2D | 字体绘制获取文字轮廓路径、字体回退 |
 | 应用框架 | ArkUI | V2 状态管理组件（ChipV2/ChipGroupV2/CounterV2/PopupV2/SwipeRefresherV2/TreeViewV2）、智慧手势、懒加载布局组件、WithEnv/@CustomEnv、DatePickerComponent、SelectionContainer、调测标签、系统材质扩展、沉浸式材质 C API、悬浮状态样式、OverlayManager 层级浮层、文本尾部缩进、@ComponentActive/@ComponentInactive、窗口模式设置、闪控球销毁事件 |
 | 应用框架 | ArkTS | setMultithreadingDetectionEnabled 多线程检测可配置参数 |
+| 应用框架 | Core File Kit | 压缩解压缩模块（数据压缩/解压缩） |
+| 应用框架 | UI Design Kit | 颜色选择与收藏管理、HdsSnackBar/HdsListItem/HdsListItemCard 组件样式增强 |
 | 系统 | AOD Navigation Kit | **全新 Kit** — 熄屏导航服务 |
 | 系统 | Basic Services Kit | 串口通信管理（设备列表、读写、流控） |
 | 系统 | Confidential Space Kit | **全新 Kit** — 机密空间服务 |
