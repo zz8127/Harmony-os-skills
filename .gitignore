@@ -20,3 +20,6 @@ oh_modules/
 desktop.ini
 .Spotlight-V100
 .Trashes
+
+# 交接文档仅本地保留，不纳入版本控制
+MIGRATION.md
