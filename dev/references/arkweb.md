@@ -12,6 +12,7 @@ ArkWeb内核版本与系统版本对应关系：
 | HarmonyOS 4.1-5.1 | M114 |
 | HarmonyOS 6.0 | M132（默认，推荐）/ M114（可选） |
 | HarmonyOS 6.1 | M132 |
+| HarmonyOS 26（7.0） | M144 |
 
 ## 使用场景
 
@@ -30,6 +31,20 @@ ArkWeb内核版本与系统版本对应关系：
 - 维测能力：DevTools调试、crashpad崩溃信息收集、白屏定位、Hypium自动化测试
 - 高阶能力：同层渲染、网络托管、媒体播放托管、自定义输入法、密码保险箱接入
 - API 23新增：画中画、字体预加载、同层渲染增强
+- API 26新增：subframe 错误页、隐私模式/partitioned cookies 获取、C API 获取 cookies、Chromium 内核升级 M144
+
+## API 26 新增（HarmonyOS 26.0.0）
+
+### Release 阶段新增（Beta2 后）
+
+- **subframe 错误页**：启用 mainframe 错误页功能的接口 `setErrorPageEnabled` 新增同名接口，用于同时启动 subframe 错误页功能，同时提供 subframe 错误页启用状态的查询能力
+- **cookies 获取增强**：获取指定 URL 对应 cookies 的接口 `fetchCookieSync` 和 `fetchCookie` 均新增同名接口，支持获取隐私模式下的 cookies，也支持获取第一方 partitioned cookies
+- **C API 获取 cookies**：新增 C API，支持同步和异步方式获取指定 URL 的 cookies
+
+### Beta1 阶段新增（已包含在 Release 中）
+
+- **Chromium 内核升级**：从 M132 升级为 M144 版本
+- **安全特性配置**：新增安全配置属性类
 
 ## npm 包名
 

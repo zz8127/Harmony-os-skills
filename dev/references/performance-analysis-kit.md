@@ -72,6 +72,16 @@ AppFreeze 日志中调用栈的堆栈信息增加线程状态信息，便于分�
 
 ---
 
+## API 26 新增（HarmonyOS 26.0.0）
+
+### Release 阶段新增（Beta2 后）
+
+- **JS Crash 检测增强**：新增支持 NativeModuleErrorInfo，可记录最早的 20 条 so 加载失败信息，便于崩溃问题定位
+
+### Beta2 阶段新增（已包含在 Release 中）
+
+- **HiDebug 内存导出监听器**：新增支持注册内存导出监听器，用于导出应用内存快照
+
 ## Kit 导入
 
 ```typescript

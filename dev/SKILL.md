@@ -356,6 +356,17 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release（配套 DevEco Stud
 - **ArkTS/JSVM**：chromium/v8 内核 132→144；JSVM 支持 WASM 解释器，jitless 默认行为变更；async 函数类型判定修复
 - **Ability Kit**：部分公共事件行为变更，增加管控
 
+### Release 阶段新增（Beta2 后，2026-08-29）
+
+| Kit | 变更 |
+|-----|------|
+| Ability Kit | `appMemoryOptimizer` 应用内存优化模块（释放指定文件/模块的文件页缓存） |
+| ArkUI | 动画 C API 支持创建无转场效果动效；系统材质等级枚举与查询接口；窗口管理 C API（多模事件过滤函数获取、画中画自动启动设置）；窗口姿态模式查询与监听（支持识别桌面模式） |
+| ArkTS | 容器类对象跨线程时通过拷贝（序列化）形式传递 |
+| ArkWeb | subframe 错误页启用与状态查询；fetchCookieSync/fetchCookie 同名接口支持隐私模式及第一方 partitioned cookies；C API 同步/异步获取指定 URL cookies |
+| Performance Analysis Kit | JS Crash 检测新增 NativeModuleErrorInfo，可记录最早的 20 条 so 加载失败信息 |
+| ArkGraphics 2D | C API 支持为 OHNativeWindow 设置/获取 3D 元数据属性值 |
+
 ### dev 领域 Kit 变更
 
 | Kit | 变更 |

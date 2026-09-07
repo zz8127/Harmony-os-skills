@@ -33,6 +33,28 @@ ArkUI通过编译器生成特定函数，将UI组件更新和数据变更**细�
 
 ---
 
+## HarmonyOS 26.0.0 新增特性（API 26）
+
+### Release 阶段新增（Beta2 后）
+
+- **无转场效果动效 C API**：在动画接口定义中新增 C API，支持创建无转场效果的动效
+- **系统材质等级**：系统材质效果新增材质等级枚举（表示设备算力等级），提供获取全局材质等级、判断当前设备是否支持沉浸式系统材质 ImmersiveMaterial 的接口
+- **窗口多模事件过滤 C API**：窗口管理新增 C API，用于获取指定窗口注册的多模按键/鼠标/触摸事件的过滤函数
+- **画中画自动启动设置**：窗口管理新增 C API，支持设置在拉起画中画的应用的主窗退至后台时是否自动启动画中画
+- **窗口姿态模式查询与监听**：窗口管理新增支持查询当前窗口是否处于指定的窗口姿态模式（当前支持识别桌面模式），同时提供姿态改变的事件监听
+
+### Beta2 阶段新增（已包含在 Release 中）
+
+- **V2 状态管理组件**：`ChipV2`、`ChipGroupV2`、`CounterV2`、`PopupV2`、`SwipeRefresherV2`、`TreeViewV2`
+- **懒加载布局组件**：`LazyVWaterFlowLayout`、`LazyColumnLayout`、`LazyDynamicLayout`
+- **响应式环境变量**：`WithEnv` 容器与 `@CustomEnv` 自定义环境变量
+- **新组件**：`DatePickerComponent`（日期时间选择）、`SelectionContainer`（跨节点文本选中）
+- **组件生命周期**：新增 `@ComponentActive` / `@ComponentInactive` 装饰器
+- **智慧手势**：新增使能、监听、选中态控制、动态决策能力
+- **文本尾部缩进**：文本类组件新增 `tailIndents` 属性
+
+参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/os-new-feature-2600
+
 ## HarmonyOS 6.1 新增特性（API 23）
 
 ### ArkUI 增强（6.1.0 Release 新增）

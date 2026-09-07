@@ -76,6 +76,17 @@ description: |
 
 ---
 
+## API 26 Release 变更追踪（2026-08-29）
+
+HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release。Beta2 阶段媒体领域变更（Audio Kit 音频设备增强管理器、AVSession Kit 播控布局自定义、Media Kit PCM 处理/广告插播/离线缓存/录屏暂停等）参见根 SKILL.md。Release 阶段（Beta2 后）媒体领域新增：
+
+| Kit | 变更 |
+|-----|------|
+| Audio Kit | 新增 API 支持设置和获取当前录音流的降噪模式（ArkTS API 与 C API） |
+| ArkGraphics 2D | 新增 C API，支持为 OHNativeWindow 设置 3D 元数据属性值，同时提供获取属性值的接口 |
+
+---
+
 ## API 24 Release 变更追踪（2026-05-26）
 
 ### Release 新增（Beta1 后新增）

@@ -48,6 +48,16 @@ ArkGraphics 2D（方舟2D图形服务）主要提供图形绘制与显示相关�
 - NativeVsync：原生垂直同步
 - Drawing（Native）：Native绘制模块
 
+## API 26 新增（HarmonyOS 26.0.0）
+
+### Release 阶段新增（Beta2 后）
+
+- **OHNativeWindow 3D 元数据 C API**：新增 C API，支持为 OHNativeWindow 设置 3D 元数据属性值，同时提供获取属性值的接口
+
+### Beta2 阶段新增（已包含在 Release 中）
+
+- **字体绘制增强**：字体绘制能力新增支持获取文字的轮廓路径，支持字体回退能力
+
 ## 使用场景
 
 - 图像效果处理：使用effectKit模块实现图像效果处理，提升用户浏览体验

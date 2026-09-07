@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-08-31
+> **更新时间**：2026-09-07
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -126,6 +126,7 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **底座升级**：OpenHarmony 升级至 7.0 Release，API 版本 26.0.0；商用版本 HarmonyOS 7.0.0.105 SP6 已面向 Mate 80、Pura 80 等机型推送
 - **版本号格式**：自 API 26.0.0 起采用语义化版本（SemVer）X.Y.Z 格式，取代原 X.Y.Z (N) 格式（X 主版本/Y 次版本/Z 修订版本）
 - **设备占比**：API 6.1.1 (24) 占 84.93%，API 26.0.0（7.0.0）占 4.65%，存量适配仍以 API 24 为主
+- **Release 阶段新增特性**：Beta2 之后 Release 阶段新增 8 个 Kit 的能力（Ability Kit 应用内存优化、ArkUI 窗口管理 C API、ArkWeb cookies 与错误页增强、ArkTS 容器跨线程传递、ArkGraphics 2D 3D 元数据、Audio Kit 录音降噪、Device Security Kit 图片内容证真、Performance Analysis Kit JS Crash 增强），详见下方「Release 阶段新增特性」章节
 
 ### 周检记录（2026-08-31）
 
@@ -142,6 +143,18 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **Kit 列表对比**：官方文档首页 Kit 与现有 references/ 文件完整对应，无新增 Kit
 - **README.md**：版本信息表与版本变更追踪已同步更新为 26.0.0 Release 状态
 
+### 周检记录（2026-09-07）
+
+- **版本检查**：官方版本列表（更新时间 2026-08-29 17:40）确认最新版本仍为 26.0.0 Release（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）
+- **OS 新增和增强特性页面**：更新时间由 2026-08-06 16:31 更新为 **2026-08-29 17:40**，新增「26.0.0 Release 新增和增强特性」章节（页面 URL 为 harmonyos-releases/os-new-feature-2600），本次收录 8 个 Kit 的 Release 阶段新增能力：
+  - 应用框架：Ability Kit（`appMemoryOptimizer` 应用内存优化模块）、ArkUI（无转场动效 C API、系统材质等级、窗口事件过滤 C API、画中画自动启动、窗口姿态模式）、ArkTS（容器类对象跨线程拷贝传递）、ArkWeb（subframe 错误页、隐私模式/partitioned cookies、C API 获取 cookies）
+  - 媒体：Audio Kit（录音流降噪模式设置与获取）
+  - 系统：Device Security Kit（图片内容证真签名检测/验证/信息提取 API）、Performance Analysis Kit（JS Crash 检测 NativeModuleErrorInfo）
+  - 图形：ArkGraphics 2D（OHNativeWindow 3D 元数据属性设置/获取 C API）
+- **Kit 列表对比**：官方文档首页 Kit 与现有 references/ 文件完整对应，无新增 Kit（Mechanic Kit 仍列于官方 SDK 页面系统领域，已收录，无变化）
+- **文档更新**：根 SKILL.md 新增「Release 阶段新增特性」章节并更新 API 26 变更追踪表格；dev/SKILL.md、system/SKILL.md、media/SKILL.md 补充 API 26 Release 阶段变更；更新 8 个 references 文件（app-framework、arkts、ui-development、arkweb、performance-analysis-kit、graphics2d、audio-kit、device-security）补充 API 26 特性章节
+- **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充 Release 阶段特性说明
+
 ---
 
 ## HarmonyOS 26.0.0 新增特性（API 26，Beta2 2026-07-28 / Release 2026-08-29）
@@ -149,6 +162,27 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 ### 版本说明
 
 26.0.0 Beta2 在 Beta1 基础上进一步增强，新增多个基于状态管理（V2）实现的组件；Ability Kit 新增基于 ModularObjectExtensionAbility 的模块化对象，支持应用将自身功能以模块化对象的形式开放给其他应用调用；Basic Services Kit 新增串口通信能力；Remote Communication Kit 新增国密 TLCP 协议和多路传输控制协议（MPTCP）支持；4 个新 Kit（AOD Navigation Kit、Confidential Space Kit、Linx Kit、Service Support Kit）正式加入。26.0.0 于 2026-08-29 正式 Release，上述特性全部包含在 Release 版本中。
+
+### Release 阶段新增特性（Beta2 后，2026-08-29）
+
+Release 阶段在 Beta2 基础上新增以下能力（官方 OS 新增和增强特性页更新时间 2026-08-29 17:40）：
+
+- **Ability Kit**：新增 `appMemoryOptimizer` 模块的接口，提供应用内存优化的能力，包括释放指定文件的文件页缓存、释放指定模块的文件页缓存等
+- **ArkGraphics 2D**：新增 C API，支持为 OHNativeWindow 设置 3D 元数据属性值，同时提供获取属性值的接口
+- **ArkTS**：新增支持容器类对象跨线程时通过拷贝（序列化）形式进行传递
+- **ArkUI**：
+  - 在动画接口定义中新增 C API，支持创建无转场效果的动效
+  - 系统材质效果新增材质等级枚举，表示设备的算力等级；同时提供获取全局材质等级、判断当前设备是否支持沉浸式系统材质 ImmersiveMaterial 的接口
+  - 窗口管理新增 C API，用于获取指定窗口注册的多模按键/鼠标/触摸事件的过滤函数
+  - 窗口管理新增 C API，支持设置在拉起画中画的应用的主窗退至后台时是否自动启动画中画
+  - 窗口管理新增支持查询当前窗口是否处于指定的窗口姿态模式，当前支持识别窗口是否处于桌面模式；同时提供姿态改变的事件监听
+- **ArkWeb**：
+  - 启用 mainframe 错误页功能的接口 `setErrorPageEnabled` 新增同名接口，用于同时启动 subframe 错误页功能，同时提供 subframe 错误页启用状态的查询能力
+  - 获取指定 URL 对应 cookies 的接口 `fetchCookieSync` 和 `fetchCookie` 均新增同名接口，支持获取隐私模式下的 cookies，也支持获取第一方 partitioned cookies
+  - 新增 C API，支持同步和异步方式获取指定 URL 的 cookies
+- **Audio Kit**：新增 API 支持设置和获取当前录音流的降噪模式（ArkTS API 与 C API）
+- **Device Security Kit**：新增图片内容证真能力，包括图片内容证真签名检测 API（检测图片中是否存在内容证真签名）、图片内容证真验证 API（验证图片中内容证真签名）、图片内容证真签名信息提取 API（从验签数据中提取签名信息）
+- **Performance Analysis Kit**：JS Crash 检测新增支持 NativeModuleErrorInfo，可记录最早的 20 条 so 加载失败信息
 
 ### 应用框架
 
@@ -522,19 +556,20 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 
 | 领域 | Kit | 变更 |
 |------|-----|------|
-| 应用框架 | Ability Kit | ModularObjectExtensionAbility 模块化对象（C API）、NativeAbility 数据信息 C API、ExtensionAbility 连接选项 C API、自动填充请求信息、pluginBundleManager 插件管理 |
+| 应用框架 | Ability Kit | ModularObjectExtensionAbility 模块化对象（C API）、NativeAbility 数据信息 C API、ExtensionAbility 连接选项 C API、自动填充请求信息、pluginBundleManager 插件管理；appMemoryOptimizer 应用内存优化（Release） |
 | 应用框架 | Account Kit | 华为账号亲密圈服务 |
 | 应用框架 | Agent Framework Kit | AgentAbilityExtension 智能体间 A2A 协议通信 |
 | 应用框架 | ArkData | 数据共享多值类型配置发布 |
-| 应用框架 | ArkGraphics 2D | 字体绘制获取文字轮廓路径、字体回退 |
-| 应用框架 | ArkUI | V2 状态管理组件（ChipV2/ChipGroupV2/CounterV2/PopupV2/SwipeRefresherV2/TreeViewV2）、智慧手势、懒加载布局组件、WithEnv/@CustomEnv、DatePickerComponent、SelectionContainer、调测标签、系统材质扩展、沉浸式材质 C API、悬浮状态样式、OverlayManager 层级浮层、文本尾部缩进、@ComponentActive/@ComponentInactive、窗口模式设置、闪控球销毁事件 |
-| 应用框架 | ArkTS | setMultithreadingDetectionEnabled 多线程检测可配置参数 |
+| 应用框架 | ArkGraphics 2D | 字体绘制获取文字轮廓路径、字体回退；OHNativeWindow 3D 元数据属性设置/获取 C API（Release） |
+| 应用框架 | ArkUI | V2 状态管理组件（ChipV2/ChipGroupV2/CounterV2/PopupV2/SwipeRefresherV2/TreeViewV2）、智慧手势、懒加载布局组件、WithEnv/@CustomEnv、DatePickerComponent、SelectionContainer、调测标签、系统材质扩展、沉浸式材质 C API、悬浮状态样式、OverlayManager 层级浮层、文本尾部缩进、@ComponentActive/@ComponentInactive、窗口模式设置、闪控球销毁事件；无转场动效 C API、材质等级枚举、窗口事件过滤 C API、画中画自动启动、窗口姿态模式查询与监听（Release） |
+| 应用框架 | ArkTS | setMultithreadingDetectionEnabled 多线程检测可配置参数；容器类对象跨线程拷贝传递（Release） |
+| 应用框架 | ArkWeb | subframe 错误页启用与状态查询、隐私模式/partitioned cookies 获取、C API 同步/异步获取 cookies（Release） |
 | 应用框架 | Core File Kit | 压缩解压缩模块（数据压缩/解压缩） |
 | 应用框架 | UI Design Kit | 颜色选择与收藏管理、HdsSnackBar/HdsListItem/HdsListItemCard 组件样式增强 |
 | 系统 | AOD Navigation Kit | **全新 Kit** — 熄屏导航服务 |
 | 系统 | Basic Services Kit | 串口通信管理（设备列表、读写、流控） |
 | 系统 | Confidential Space Kit | **全新 Kit** — 机密空间服务 |
-| 系统 | Device Security Kit | 通知类审计事件（开关机/接口插拔/账户管理）、阻断类审计事件、默认超时阻断策略、全量查询客户端信息 |
+| 系统 | Device Security Kit | 通知类审计事件（开关机/接口插拔/账户管理）、阻断类审计事件、默认超时阻断策略、全量查询客户端信息；图片内容证真签名检测/验证/信息提取 API（Release） |
 | 系统 | Desktop Extension Kit | 快捷栏能力（查询接入、设置图标和进度条）、状态栏图标悬浮回调 |
 | 系统 | Enterprise Data Guard Kit | 进程管控时长管理 |
 | 系统 | Enterprise Space Kit | 切换工作空间、跨空间消息提醒配置 |
@@ -546,12 +581,12 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 | 系统 | NearLink Kit | 配对/连接状态变化原因详情、扫描过滤条件 |
 | 系统 | Network Kit | WebSocket supportOriginPort |
 | 系统 | Online Authentication Kit | 认证方式切换指示、认证类型列表、credentialDisclosurePropertyList |
-| 系统 | Performance Analysis Kit | HiDebug 内存导出监听器 |
+| 系统 | Performance Analysis Kit | HiDebug 内存导出监听器；JS Crash 检测 NativeModuleErrorInfo（记录最早 20 条 so 加载失败信息）（Release） |
 | 系统 | Pen Kit | 手写笔跟手性加速接口 |
 | 系统 | Remote Communication Kit | 异常明文显示、证书压缩解压、国密 TLCP、MPTCP |
 | 系统 | Service Collaboration Kit | 碰一碰场景 API |
 | 系统 | Service Support Kit | **全新 Kit** — 服务与支持 |
-| 媒体 | Audio Kit | 音频设备增强管理器、C/C++ 音频格式转换 |
+| 媒体 | Audio Kit | 音频设备增强管理器、C/C++ 音频格式转换；录音流降噪模式设置与获取（Release） |
 | 媒体 | AVSession Kit | 播控布局自定义、播放倍速/循环模式/控制类型列表及监听 |
 | 媒体 | Camera Kit | C API 元数据对象扩展 |
 | 媒体 | Media Kit | PCM 数据处理、广告插播、离线缓存下载、录屏暂停恢复、指定应用窗口录屏 |

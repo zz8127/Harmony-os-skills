@@ -48,7 +48,7 @@
 ## 版本变更追踪
 
 - **API 24 (6.1.1 Release)**：已发布。各 Skill 的 SKILL.md 中均含"API 24 Beta1 变更追踪"章节，记录 Ability Kit / ArkUI / ArkTS / ArkWeb / FAST Kit / Content Embed Kit / Enterprise Threat Protection Kit 等变更。
-- **API 26 (26.0.0 Release)**：已于 2026-08-29 正式发布（配套 DevEco Studio 26.0.0.821、HarmonyOS SDK 26.0.0.105、OpenHarmony 7.0；自 API 26 起版本号采用语义化 X.Y.Z 格式）。特性清单与行为变更已纳入根 SKILL.md 与 dev/SKILL.md 的"API 26 变更追踪"章节；targetSdkVersion ≥ 26.0.0 需重点关注默认浏览器权限管控（ohos.permission.DEFAULT_WEB_BROWSER）、Agent Framework Kit 接口变更、JSVM 内核升级（132→144）等针对所有应用的变更。
+- **API 26 (26.0.0 Release)**：已于 2026-08-29 正式发布（配套 DevEco Studio 26.0.0.821、HarmonyOS SDK 26.0.0.105、OpenHarmony 7.0；自 API 26 起版本号采用语义化 X.Y.Z 格式）。特性清单与行为变更已纳入根 SKILL.md 与 dev/SKILL.md 的"API 26 变更追踪"章节；targetSdkVersion ≥ 26.0.0 需重点关注默认浏览器权限管控（ohos.permission.DEFAULT_WEB_BROWSER）、Agent Framework Kit 接口变更、JSVM 内核升级（132→144）等针对所有应用的变更。Release 阶段（Beta2 后）新增的 8 个 Kit 能力（Ability Kit 应用内存优化、ArkUI 窗口管理 C API、ArkWeb cookies 与错误页增强、ArkTS 容器跨线程传递、ArkGraphics 2D 3D 元数据、Audio Kit 录音降噪、Device Security Kit 图片内容证真、Performance Analysis Kit JS Crash 增强）已于 2026-09-07 周检收录。
 
 ## 自动周检
 

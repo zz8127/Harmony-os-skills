@@ -132,6 +132,17 @@ description: |
 
 ---
 
+## API 26 Release 变更追踪（2026-08-29）
+
+HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release。Beta2 阶段系统领域变更（AOD Navigation/Confidential Space/Linx/Service Support 全新 Kit、Device Security 审计事件、FAST Kit 算法能力等）参见根 SKILL.md。Release 阶段（Beta2 后）系统领域新增：
+
+| Kit | 变更 |
+|-----|------|
+| DeviceSecurityKit | 新增图片内容证真能力：签名检测 API（检测图片中是否存在内容证真签名）、验证 API（验证图片中内容证真签名）、签名信息提取 API（从验签数据中提取签名信息） |
+| PerformanceAnalysisKit | JS Crash 检测新增 NativeModuleErrorInfo，可记录最早的 20 条 so 加载失败信息 |
+
+---
+
 ## API 26 Beta1 变更追踪（2026-06-12）
 
 | Kit | 变更 |
