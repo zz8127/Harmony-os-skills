@@ -259,6 +259,20 @@ w.postMessage({ type: 'start', payload: 1000 })
 
 ---
 
+## API 26 新增（HarmonyOS 26.0.0）
+
+### Release 阶段新增（Beta2 后）
+
+- **appMemoryOptimizer 模块**：新增应用内存优化接口，提供释放指定文件的文件页缓存、释放指定模块的文件页缓存等能力，可用于优化应用内存占用
+
+### Beta2 阶段新增（已包含在 Release 中）
+
+- **ModularObjectExtensionAbility 模块化对象**：支持应用将自身功能以模块化对象的形式开放给其他应用调用（含 C API、Taihe IPC 通信、分发器 C API）
+- **pluginBundleManager 插件管理**：包管理新增 `pluginBundleManager` 模块，提供应用对自分发插件的安装、卸载等管理能力
+- **自动填充请求信息定义**：新增自动填充请求信息定义能力
+
+参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/os-new-feature-2600
+
 ## API 23 新增（HarmonyOS 6.1.0）
 
 ### Ability Kit 增强

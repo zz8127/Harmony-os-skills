@@ -40,6 +40,16 @@ ArkTS 是 HarmonyOS 应用开发的官方高级语言，基于 TypeScript 生态
 - 支持 ArkTS 与 TS/JavaScript 高效互操作
 - 适配规则参考：从 TypeScript 到 ArkTS 的适配规则
 
+## API 26 新增（HarmonyOS 26.0.0）
+
+### Release 阶段新增（Beta2 后）
+
+- **容器类对象跨线程拷贝传递**：新增支持容器类对象跨线程时通过拷贝（序列化）形式进行传递，提升并发场景下数据传递的安全性（官方 OS 新增特性页提供对应指南链接）
+
+### Beta2 阶段新增（已包含在 Release 中）
+
+- **多线程检测可配置参数**：`setMultithreadingDetectionEnabled` 接口新增故障类型、采样频率、上报时间间隔等可配置参数
+
 ## npm 包
 
 无独立 npm 包，ArkTS 是语言层面能力，随 HarmonyOS SDK 内置。
