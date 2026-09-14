@@ -1,6 +1,6 @@
 # 打包与上架
 
-> **适用版本**：HarmonyOS 5.0.2+（API 14）及以上，HarmonyOS 6.1 = API 23 稳定，6.0 = API 22 稳定。
+> **适用版本**：HarmonyOS 5.0.2+（API 14）及以上，HarmonyOS 6.1 = API 23 稳定，6.0 = API 22 稳定，26.0.0 = API 26 Release。
 
 ## 上架流程概览
 
@@ -76,6 +76,7 @@ DevEco Studio → Build → Build App Pack(s)
 
 - DevEco Studio **6.1.0**（支持 API 22/23 稳定版）
 - hvigor 构建系统
+- 打包工具（API 26 Release 新增）：支持扫描重复 so 文件，帮助开发者识别包内重复 so 文件，根据实际需求减小包大小；官方指南：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/packing-tool
 
 ---
 
