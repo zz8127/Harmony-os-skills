@@ -366,6 +366,7 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release（配套 DevEco Stud
 | ArkWeb | subframe 错误页启用与状态查询；fetchCookieSync/fetchCookie 同名接口支持隐私模式及第一方 partitioned cookies；C API 同步/异步获取指定 URL cookies |
 | Performance Analysis Kit | JS Crash 检测新增 NativeModuleErrorInfo，可记录最早的 20 条 so 加载失败信息 |
 | ArkGraphics 2D | C API 支持为 OHNativeWindow 设置/获取 3D 元数据属性值 |
+| 工具链（打包工具） | 打包工具新增支持扫描重复 so 文件，帮助开发者识别包内重复 so 文件、根据实际需求减小包大小（官方 OS 特性页 2026-09-09 更新，详见 `references/publish.md`） |
 
 ### dev 领域 Kit 变更
 
