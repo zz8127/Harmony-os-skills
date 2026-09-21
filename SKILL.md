@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-09-14
+> **更新时间**：2026-09-21
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -165,6 +165,13 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **文档更新**：根 SKILL.md「Release 阶段新增特性」章节补充工具条目并更新 API 26 变更追踪表格；dev/SKILL.md「API 26 Release 变更追踪」补充打包工具新能力；`dev/references/publish.md` 构建工具部分补充扫描重复 so 文件说明
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充打包工具特性说明
 
+### 周检记录（2026-09-21）
+
+- **版本检查**：官方版本列表（更新时间 2026-08-29 17:40）确认最新版本仍为 26.0.0 Release（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）
+- **OS 新增和增强特性页面**：更新时间由 2026-09-09 14:41 更新为 **2026-09-15 17:32**，逐项核对 Release / Beta2 / Beta1 三大章节（Release 9 个条目、Beta2 各领域 Kit 特性、Beta1 章节目录），内容与现有文档记录完全一致，本次官方更新无新增特性（疑似链接或措辞微调）
+- **Kit 列表对比**：官方文档首页与 SDK 页面（六大领域 Kit 全列表）逐一对比（SDK 页面：应用框架 15、系统 37、媒体 10、图形 6、应用服务 28、AI 10），均已覆盖，无新增 Kit；文档首页系统领域少列 AOD Navigation / Confidential Space / Linx / Mechanic / Service Support 5 个 Kit、应用框架少列 Content Embed Kit，以 SDK 页面为准；Mechanic Kit、Data Protection Kit（与 Data Loss Prevention Kit 同一服务）状态无变化
+- **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节描述准确，无需修改
+
 ---
 
 ## HarmonyOS 26.0.0 新增特性（API 26，Beta2 2026-07-28 / Release 2026-08-29）
@@ -175,7 +182,7 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 
 ### Release 阶段新增特性（Beta2 后，2026-08-29）
 
-Release 阶段在 Beta2 基础上新增以下能力（官方 OS 新增和增强特性页更新时间 2026-09-09 14:41）：
+Release 阶段在 Beta2 基础上新增以下能力（官方 OS 新增和增强特性页更新时间 2026-09-15 17:32，内容与 2026-09-09 版一致）：
 
 - **Ability Kit**：新增 `appMemoryOptimizer` 模块的接口，提供应用内存优化的能力，包括释放指定文件的文件页缓存、释放指定模块的文件页缓存等
 - **ArkGraphics 2D**：新增 C API，支持为 OHNativeWindow 设置 3D 元数据属性值，同时提供获取属性值的接口
