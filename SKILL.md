@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-09-28
+> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；DevEco Studio Patch 26.0.0.851，2026-09-23；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
+> **更新时间**：2026-10-08
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -47,7 +47,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
-| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29）；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新）** | **2026.08.29** |
+| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29；Patch 26.0.0.851，2026.09.23）；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新）** | **2026.08.29** |
 | **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）；Patch（6.1.1.290，2026.06.30）** | **Release（生产推荐）** | **2026.05.26** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 Release | 稳定 | 2026.01.21 |
@@ -122,11 +122,12 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 
 HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta1/Beta2 全部特性：
 
-- **配套版本**：API 26.0.0、DevEco Studio 26.0.0.821（Release）、HarmonyOS SDK 26.0.0.105（基于 OpenHarmony SDK Ohos_sdk_public 26.0.0.105）；SDK 内置于 DevEco Studio，安装时自动配套
+- **配套版本**：API 26.0.0、DevEco Studio 26.0.0.821（Release；Patch 26.0.0.851，2026-09-23）、HarmonyOS SDK 26.0.0.105（基于 OpenHarmony SDK Ohos_sdk_public 26.0.0.105）；SDK 内置于 DevEco Studio，安装时自动配套
 - **底座升级**：OpenHarmony 升级至 7.0 Release，API 版本 26.0.0；商用版本 HarmonyOS 7.0.0.105 SP6 已面向 Mate 80、Pura 80 等机型推送
 - **版本号格式**：自 API 26.0.0 起采用语义化版本（SemVer）X.Y.Z 格式，取代原 X.Y.Z (N) 格式（X 主版本/Y 次版本/Z 修订版本）
 - **设备占比**：API 6.1.1 (24) 占 84.93%，API 26.0.0（7.0.0）占 4.65%，存量适配仍以 API 24 为主
 - **Release 阶段新增特性**：Beta2 之后 Release 阶段新增 8 个 Kit 的能力（Ability Kit 应用内存优化、ArkUI 窗口管理 C API、ArkWeb cookies 与错误页增强、ArkTS 容器跨线程传递、ArkGraphics 2D 3D 元数据、Audio Kit 录音降噪、Device Security Kit 图片内容证真、Performance Analysis Kit JS Crash 增强），详见下方「Release 阶段新增特性」章节
+- **DevEco Studio Patch（2026-09-23）**：DevEco Studio 26.0.0 Release 发布 Patch 版本（26.0.0.851），官方明确「无新增和增强特性」，仅修复工具链问题（Hvigor 6.26.4→6.26.8、HarmonyOS Emulator 26.0.0.400→26.0.0.402）；API 版本（26.0.0）与 HarmonyOS SDK（26.0.0.105）均无变化，开发者可按需升级以获得更稳定的开发体验
 
 ### 周检记录（2026-08-31）
 
@@ -180,6 +181,17 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
   - 📌 **文档首页 Kit 展示变化**：系统领域本次已列出 AOD Navigation / Confidential Space / Linx / Service Support 4 个 Kit（2026-09-21 周检时该页面缺失），仅 Mechanic Kit 仍未在文档首页展示（以 SDK 页面为准，已收录）；上述 Kit 均已有 references 文件，无需改动
   - Data Protection Kit（SDK 页面）与 Data Loss Prevention Kit（文档首页）为同一服务的不同分类名称，状态无变化
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节描述准确，无需修改
+
+### 周检记录（2026-10-08）
+
+- **版本检查**：官方版本列表（更新时间 2026-08-29 17:40）确认最新版本仍为 **26.0.0 Release**（2026/08/29），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）
+- **DevEco Studio Patch 版本**：官方版本概览页面（更新时间由 2026-09-14 11:07 更新为 **2026-09-23 17:11**）新增 **DevEco Studio 26.0.0 Release (26.0.0.851) Patch 版本（2026-09-23 发布）**
+  - 官方「新增和增强特性」明确标注**无新增和增强特性**，仅修复工具链问题：Hvigor 6.26.4→6.26.8、HarmonyOS Emulator 26.0.0.400→26.0.0.402；API 版本（26.0.0）与 HarmonyOS SDK（26.0.0.105）均无变化
+  - 已同步更新根 SKILL.md（版本说明/版本历史/配套版本/工具链升级）、dev/SKILL.md、README.md、MIGRATION.md 中的 DevEco Studio 版本信息
+- **OS 新增和增强特性页面**：更新时间仍为 **2026-09-15 17:32**，与上次周检一致，Release / Beta2 / Beta1 三大章节内容无变化，无新增特性
+- **Kit 列表对比**：官方文档首页六大领域 Kit（应用框架 15、系统 36、媒体 10、图形 6、应用服务 28、AI 10）与现有 references/ 文件完整对应，无新增 Kit
+  - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
+- **README.md 核对**：版本信息表已更新 DevEco Studio 26.0.0.851 Patch 信息；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充 Patch 说明
 
 ---
 
@@ -324,7 +336,7 @@ Release 阶段在 Beta2 基础上新增以下能力（官方 OS 新增和增强�
 
 ### DevEco Studio 工具链升级
 
-26.0.0 配套 DevEco Studio 26.0.0 Release（26.0.0.821；Beta2 为 26.0.0.621），在 Beta1 基础上进一步增强开发体验。
+26.0.0 配套 DevEco Studio 26.0.0 Release（26.0.0.821；Patch 26.0.0.851，2026-09-23，无新增特性仅修复工具链；Beta2 为 26.0.0.621），在 Beta1 基础上进一步增强开发体验。
 
 ---
 
