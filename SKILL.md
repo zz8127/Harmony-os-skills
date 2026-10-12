@@ -8,7 +8,7 @@ description: |
 # HarmonyOS 技能库
 
 > **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；DevEco Studio Patch 26.0.0.851，2026-09-23；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-10-08
+> **更新时间**：2026-10-12
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -192,6 +192,15 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **Kit 列表对比**：官方文档首页六大领域 Kit（应用框架 15、系统 36、媒体 10、图形 6、应用服务 28、AI 10）与现有 references/ 文件完整对应，无新增 Kit
   - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
 - **README.md 核对**：版本信息表已更新 DevEco Studio 26.0.0.851 Patch 信息；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充 Patch 说明
+
+### 周检记录（2026-10-12）
+
+- **版本检查**：官方版本列表（更新时间由 2026-08-29 17:40 变为 **2026-10-08 18:09**）确认最新版本仍为 **26.0.0 Release**（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）；DevEco Studio 最新仍为 **26.0.0.851 Patch**（2026-09-23），HarmonyOS SDK 26.0.0.105 无变化
+- **官方文档中心 URL 迁移**：版本说明相关页面路径由 `harmonyos-releases/` 迁移至 `doccenter-release-notes/`（如 harmonyos-releases/overview-allversion → doccenter-release-notes/overview-allversion、harmonyos-releases/os-new-feature-2600 → doccenter-release-notes/os-new-feature-2600），旧链接自动跳转仍可访问，版本列表页与 OS 特性页更新时间同步变为 2026-10-08 18:09
+- **OS 新增和增强特性页面**：更新时间由 2026-09-15 17:32 变为 **2026-10-08 18:09**，逐项核对 Release（9 个条目）/ Beta2（应用框架、系统 20、媒体 5、图形 2、应用服务各领域 Kit）/ Beta1（39 个 Kit）三大章节，内容与现有文档记录完全一致，无新增特性（更新时间变化与 URL 迁移相关）
+- **Kit 列表对比**：官方文档首页六大领域 Kit（应用框架 15、系统 36、媒体 10、图形 6、应用服务 28、AI 10）与现有 references/ 文件完整对应，无新增 Kit
+  - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
+- **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节描述准确，无需修改
 
 ---
 
