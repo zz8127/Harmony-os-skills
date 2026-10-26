@@ -8,7 +8,7 @@ description: |
 
 # HarmonyOS 模板与组件库
 
-> **适用版本**：HarmonyOS 6.1 / API 23（稳定）；HarmonyOS 6.0 / API 22（稳定）。兼容 API 14+。
+> **适用版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29，底座 OpenHarmony 7.0）；HarmonyOS 6.1.1 / API 24（Release，存量主力）。兼容 API 14+。
 > **模板市场**：https://developer.huawei.com/consumer/cn/market/prod-list?origin=template
 > **主题图标库**：https://developer.huawei.com/consumer/cn/design/harmonyos-symbol/
 > **主题设计规范**：https://developer.huawei.com/consumer/cn/doc/content/themes-specification-0000001160896163

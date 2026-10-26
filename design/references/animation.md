@@ -1,6 +1,6 @@
 # 动效规范
 
-> **适用版本**：HarmonyOS 6 / HarmonyOS NEXT
+> **适用版本**：HarmonyOS 26.0.0 / API 26（Release）/ HarmonyOS NEXT
 
 ## 动效核心原则
 

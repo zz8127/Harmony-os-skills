@@ -1,6 +1,6 @@
 # 控件设计规范
 
-> **适用版本**：HarmonyOS NEXT 设计指南。兼容 HarmonyOS 6.0+。
+> **适用版本**：HarmonyOS NEXT 设计指南，适用于 HarmonyOS 26.0.0 / API 26（Release）。兼容 HarmonyOS 6.0+。
 
 ## 概述
 

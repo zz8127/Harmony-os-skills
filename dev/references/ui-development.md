@@ -1,6 +1,6 @@
 # UI开发 — ArkUI声明式开发
 
-> **适用版本**：HarmonyOS 5.0.2+（API 14）及以上，HarmonyOS 6.1 = API 23 稳定，6.0 = API 22 稳定。
+> **适用版本**：HarmonyOS 5.0.2+（API 14）及以上；当前最新 HarmonyOS 26.0.0 = API 26（Release），6.1.1 = API 24（存量主力）。
 
 ## 开发范式
 

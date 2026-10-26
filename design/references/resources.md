@@ -1,6 +1,6 @@
 # 设计资源
 
-> **适用版本**：HarmonyOS 6（API 23 稳定 尝鲜）
+> **适用版本**：HarmonyOS 26.0.0 / API 26（Release）
 
 ## 官方设计资源中心
 

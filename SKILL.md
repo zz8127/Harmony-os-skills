@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；DevEco Studio Patch 26.0.0.851，2026-09-23；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-10-19
+> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；底座 OpenHarmony 7.0，商用版 HarmonyOS 7.0.0.105；DevEco Studio Patch 26.0.0.851，2026-09-23；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
+> **更新时间**：2026-10-26
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -58,7 +58,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 5.0.4 | 16 | 5.0.4 Release | 稳定 | 2025.03.29 |
 | 5.0.2 | 14 | 5.0.2 Release | 稳定 | 2025.01.27 |
 
-> ⚠️ **生产环境推荐 API 24**（HarmonyOS 6.1.1 Release，存量设备占比 84.93%）。API 26 已于 2026-08-29 正式 Release（配套 HarmonyOS SDK 26.0.0.105 / OpenHarmony 7.0），新项目可选用；targetSdkVersion ≥ 26.0.0 需关注「针对所有应用的变更」。
+> ⚠️ **官方版本使用建议（2026-10-08）**：**API 26.0.0 为推荐版本**——新开发应用「推荐使用」，已开发应用「推荐升级」。API 24（HarmonyOS 6.1.1 Release）为「按需使用/按需升级」，存量设备占比 84.93%，仍是当前在网主力。API 26 于 2026-08-29 正式 Release（配套 HarmonyOS SDK 26.0.0.105 / OpenHarmony 7.0）；targetSdkVersion ≥ 26.0.0 需关注「针对所有应用的变更」。
 
 ### 6.1.1 Patch 版本说明（2026-06-30）
 
@@ -230,6 +230,16 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
   - 官方版本概览页配套版本表格未列出 DevEco Testing（其为独立测试服务工具，非 DevEco Studio 组件）
   - 已同步更新 `dev/references/testing.md`（新增 DevEco Testing 测试服务小节及官方链接）、`dev/SKILL.md`（导航表格）
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充 DevEco Testing 说明
+
+### 版本基线校正（2026-10-26）
+
+本次为人工全量核对，官方版本未变化（最新仍为 26.0.0 Release，页面更新时间 2026-10-08 18:09，无 26.0.1 / 27.0.0），但发现知识库内部版本声明长期未随周检收敛，予以统一校正：
+
+- **问题**：周检只更新了根 SKILL.md 的版本历史，8 个子技能的「适用版本 / 版本说明」头部仍停留在旧版本——templates、media、samples 为「HarmonyOS 6.1 / API 23」，agc、ai-meta 为「HarmonyOS 6.1.1 / API 24」，system 为「API 26（Beta2）」，design 正文为「API 26 Beta2」，dev 的 frontmatter 为「HarmonyOS 6.1，基于 API 23」
+- **校正**：8 个子技能（dev / system / media / ai-meta / design / agc / samples / templates）的全部版本声明统一为 **HarmonyOS 26.0.0 / API 26（Release）为最新基线，HarmonyOS 6.1.1 / API 24（Release）为存量兼容**，并注明 API 26 底座为 OpenHarmony 7.0
+- **生产口径校正**：原「生产环境推荐 API 24」与官方 2026-10-08 版本使用建议不符——官方对 26.0.0 标注「新开发应用：推荐使用 / 已开发应用：推荐升级」，对 6.1.1(24) 标注「按需使用 / 按需升级」。已改为官方口径，并保留 API 24 存量设备占比 84.93% 的说明
+- **README.md**：基准版本由「HarmonyOS 6.1.0 (API 23)」更正为「HarmonyOS 26.0.0 (API 26)」，徽章同步为 API 24/26
+- **文档数量**：8 个 references/ 目录实际 .md 文件数 dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇，与 README 统计一致，无需调整
 
 ---
 

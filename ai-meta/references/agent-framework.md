@@ -1,6 +1,6 @@
-﻿# 智能体框架（Agent Framework Kit）
+# 智能体框架（Agent Framework Kit）
 
-> **适用版本**：HarmonyOS 6.1 / API 23（稳定）。API 23 新增。
+> **适用版本**：HarmonyOS 26.0.0 / API 26（Release）；API 23 新增。
 > **Kit 导入**：`@kit.AgentFrameworkKit`（HMAF — HarmonyOS Multi-Agent Framework）
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/agent-framework-overview-V5
 

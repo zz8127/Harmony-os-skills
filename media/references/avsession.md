@@ -1,6 +1,6 @@
 # 媒体会话（AVSessionKit）
 
-> **适用版本**：HarmonyOS 6.1 / API 23（稳定）；HarmonyOS 6.0 / API 22（稳定）。兼容 API 14+。
+> **适用版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29，底座 OpenHarmony 7.0）；兼容 HarmonyOS 6.1.1 / API 24（Release）及更低版本。兼容 API 14+。
 
 ## 概述
 
