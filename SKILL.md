@@ -64,7 +64,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），API 版本号仍为 6.1.1(24)。Patch 版本主要修复 DevEco Studio 工具链问题，不涉及 API 能力新增。开发者可按需升级 DevEco Studio 至 Patch 版本以获得更稳定的开发体验。
 
-### 周检记录（2026-07-27）
+### 更新记录（2026-07-27）
 
 - **版本检查**：官方版本列表（更新时间 2026-06-27）确认最新版本仍为 26.0.0 Beta1（2026/06/12），未发布新版本或 Beta2
 - **OS 新增特性页**（更新时间 2026-07-06）：与现有 SKILL.md 内容一致，无新增 Kit 特性
@@ -74,10 +74,10 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 - **设计变更补充**：补全 `design/references/design-changes.md` 中缺失的 7 次变更（2026-03-30 至 2026-06-12 HDC 版本发布），新增 14 篇设计文档及大量沉浸光感、智能座舱相关内容
 - **design/SKILL.md**：更新适用版本至 API 26 Beta1 / API 24 Release，重写设计规范变更追踪章节
 
-### 周检记录（2026-08-03）
+### 更新记录（2026-08-03）
 
 - **版本检查**：官方版本列表（更新时间 2026-06-27）确认最新版本仍为 26.0.0 Beta1（2026/06/12），未发布新版本或 Beta2
-- **Kit 列表对比**：官方首页 Kit 与现有 references/ 文件对比，发现 4 个新 Kit（官方文档更新时间 2026-07-28，在上次周检之后）
+- **Kit 列表对比**：官方首页 Kit 与现有 references/ 文件对比，发现 4 个新 Kit（官方文档更新时间 2026-07-28，在上次核对之后）
   - ✅ **AOD Navigation Kit**（熄屏导航服务）：系统/硬件，低功耗熄屏导航代理，仅支持 Phone
   - ✅ **Confidential Space Kit**（机密空间服务）：系统/安全，机密空间内运行数据应用处理隐私数据，支持 Phone/Tablet/PC/2in1
   - ✅ **Linx Kit**（灵犀加速库）：系统/基础功能，基于灵犀 CPU 核的软硬协同性能优化，支持 Phone/Tablet/PC/2in1/TV/Car
@@ -85,7 +85,7 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
 - **新增参考文件**：`system/references/aod-navigation-kit.md`、`confidential-space-kit.md`、`linx-kit.md`、`service-support-kit.md`
 - **Mechanic Kit**：仍未出现在官方首页 Kit 列表，仅在 API 26 Beta1 API 变更清单中存在，继续待官方文档公开后补充
 
-### 周检记录（2026-08-11）
+### 更新记录（2026-08-11）
 
 - **版本检查**：官方版本列表（更新时间 2026-07-28 19:14）确认新版本 **26.0.0 Beta2** 已于 2026/07/28 发布
   - DevEco Studio 26.0.0 Beta2（26.0.0.621）
@@ -96,11 +96,11 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
   - 系统：Device Security Kit（审计事件扩展）、FAST Kit（高性能排序、多项式求解、系统优化）、MDM Kit（账号管理）、Pen Kit（跟手性加速）、Remote Communication Kit（国密 TLCP、MPTCP）
   - 媒体：Audio Kit（设备增强管理）、AVSession Kit（播控布局自定义）、Media Kit（PCM 处理、广告插播、离线缓存、录屏暂停）
   - 应用服务：Map Kit（折线文字、3D 地球、信号路线）、PDF Kit（自定义渲染、二进制读取、坐标转换）
-  - 4 个新 Kit（AOD Navigation/Confidential Space/Linx/Service Support Kit）在 Beta2 章节正式标记为"新增 Kit"，文件已在上次周检创建，内容与官方说明一致，无需修改
+  - 4 个新 Kit（AOD Navigation/Confidential Space/Linx/Service Support Kit）在 Beta2 章节正式标记为"新增 Kit"，文件已在上次核对时创建，内容与官方说明一致，无需修改
 - **Kit 列表对比**：官方首页 Kit 与现有 references/ 文件完整对应，无新增 Kit 需要建文件
 - **Mechanic Kit**：仍未出现在官方首页 Kit 列表，继续待官方文档公开后补充
 
-### 周检记录（2026-08-17）
+### 更新记录（2026-08-17）
 
 - **版本检查**：官方版本列表（更新时间 2026-07-28 19:14）确认最新版本仍为 26.0.0 Beta2（2026/07/28），未发布新版本
 - **Kit 列表对比**：从官方 SDK 页面（六大领域 Kit 全列表）与现有 references/ 文件逐一对比，各领域 Kit 均已覆盖
@@ -109,12 +109,12 @@ DevEco Studio 6.1.1 Release 于 2026-06-30 发布 Patch 版本（6.1.1.290），
     - 新增参考文件：`system/references/mechanic-kit.md`
 - **README.md 统计修正**：各目录 references/ 实际文件数与 README 记载不符（README 记 121 篇），已按实际重新统计更新：dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 **137 篇**
 
-### 周检记录（2026-08-25）
+### 更新记录（2026-08-25）
 
 - **版本检查**：官方版本列表（更新时间 2026-07-28 19:14）确认最新版本仍为 26.0.0 Beta2（2026/07/28），未发布新版本（无 Beta3 或 Release）
-- **OS 新增特性页面**：更新时间 2026-08-06 16:31，与上次周检记录一致，无新增特性
+- **OS 新增特性页面**：更新时间 2026-08-06 16:31，与上次核对记录一致，无新增特性
 - **Kit 列表对比**：从官方文档首页与 SDK 页面（六大领域 Kit 全列表）逐一对比，各领域 Kit 均已覆盖，无新增 Kit
-  - ✅ **Data Protection Kit**：官方 SDK 页面系统分类列出"Data Protection Kit（数据保护服务）"，经核实其内容即数据防泄漏服务（DLP）文档，与 Data Loss Prevention Kit 为同一服务的不同分类名称；API 导入名仍为 `@kit.DataLossPreventionKit`，现有 `system/references/data-loss-prevention-kit.md` 已覆盖（文件标题即含"数据保护服务"），无需修改 —— 解决 2026-08-03 周检遗留疑问
+  - ✅ **Data Protection Kit**：官方 SDK 页面系统分类列出"Data Protection Kit（数据保护服务）"，经核实其内容即数据防泄漏服务（DLP）文档，与 Data Loss Prevention Kit 为同一服务的不同分类名称；API 导入名仍为 `@kit.DataLossPreventionKit`，现有 `system/references/data-loss-prevention-kit.md` 已覆盖（文件标题即含"数据保护服务"），无需修改 —— 解决 2026-08-03 核对遗留疑问
   - ✅ **Mechanic Kit**：仍列于官方 SDK 页面（系统领域），已收录，无变化
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；API 26 仍为 Beta，版本变更追踪描述准确，无需修改
 
@@ -130,7 +130,7 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **DevEco Studio Patch（2026-09-23）**：DevEco Studio 26.0.0 Release 发布 Patch 版本（26.0.0.851），官方明确「无新增和增强特性」，仅修复工具链问题（Hvigor 6.26.4→6.26.8、HarmonyOS Emulator 26.0.0.400→26.0.0.402）；API 版本（26.0.0）与 HarmonyOS SDK（26.0.0.105）均无变化，开发者可按需升级以获得更稳定的开发体验
 - **DevEco Studio 鸿蒙电脑版公测首发（2026-10-08）**：DevEco Studio（鸿蒙电脑版）26.0.0 Beta1（26.0.0.201）首次发布公测版，提供开发、构建、调试、调优等能力，集成 DevEco Code 工具；配套 HarmonyOS 26.0.0 Release SDK、Hvigor 7.26.8、ohpm 6.0.1，modelVersion 26.0.0，compatibleSdkVersion 最低 5.0.0(12)，compileSdkVersion 26.0.0，targetSdkVersion 5.0.0(12)~26.0.0；命令行工具 codelinter 6.0.140 / hvigorw 7.26.8；获取方式为鸿蒙电脑应用市场 > 我的 > 应用尝鲜；与 Windows/macOS 版相比部分能力存在差异（见官方「工具能力差异」说明）
 
-### 周检记录（2026-08-31）
+### 更新记录（2026-08-31）
 
 - **版本检查**：确认 **26.0.0 已于 2026-08-29 正式 Release**（详见上方「26.0.0 Release 版本说明」）
 - **针对所有应用的变更**（官方变更说明页更新时间 2026-08-19）：
@@ -145,7 +145,7 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **Kit 列表对比**：官方文档首页 Kit 与现有 references/ 文件完整对应，无新增 Kit
 - **README.md**：版本信息表与版本变更追踪已同步更新为 26.0.0 Release 状态
 
-### 周检记录（2026-09-07）
+### 更新记录（2026-09-07）
 
 - **版本检查**：官方版本列表（更新时间 2026-08-29 17:40）确认最新版本仍为 26.0.0 Release（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）
 - **OS 新增和增强特性页面**：更新时间由 2026-08-06 16:31 更新为 **2026-08-29 17:40**，新增「26.0.0 Release 新增和增强特性」章节（页面 URL 为 harmonyos-releases/os-new-feature-2600），本次收录 8 个 Kit 的 Release 阶段新增能力：
@@ -157,7 +157,7 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **文档更新**：根 SKILL.md 新增「Release 阶段新增特性」章节并更新 API 26 变更追踪表格；dev/SKILL.md、system/SKILL.md、media/SKILL.md 补充 API 26 Release 阶段变更；更新 8 个 references 文件（app-framework、arkts、ui-development、arkweb、performance-analysis-kit、graphics2d、audio-kit、device-security）补充 API 26 特性章节
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充 Release 阶段特性说明
 
-### 周检记录（2026-09-14）
+### 更新记录（2026-09-14）
 
 - **版本检查**：官方版本列表（更新时间 2026-08-29 17:40）确认最新版本仍为 26.0.0 Release（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）
 - **OS 新增和增强特性页面**：更新时间由 2026-08-29 17:40 更新为 **2026-09-09 14:41**，26.0.0 Release 章节新增「工具」小节：
@@ -167,34 +167,34 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **文档更新**：根 SKILL.md「Release 阶段新增特性」章节补充工具条目并更新 API 26 变更追踪表格；dev/SKILL.md「API 26 Release 变更追踪」补充打包工具新能力；`dev/references/publish.md` 构建工具部分补充扫描重复 so 文件说明
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充打包工具特性说明
 
-### 周检记录（2026-09-21）
+### 更新记录（2026-09-21）
 
 - **版本检查**：官方版本列表（更新时间 2026-08-29 17:40）确认最新版本仍为 26.0.0 Release（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）
 - **OS 新增和增强特性页面**：更新时间由 2026-09-09 14:41 更新为 **2026-09-15 17:32**，逐项核对 Release / Beta2 / Beta1 三大章节（Release 9 个条目、Beta2 各领域 Kit 特性、Beta1 章节目录），内容与现有文档记录完全一致，本次官方更新无新增特性（疑似链接或措辞微调）
 - **Kit 列表对比**：官方文档首页与 SDK 页面（六大领域 Kit 全列表）逐一对比（SDK 页面：应用框架 15、系统 37、媒体 10、图形 6、应用服务 28、AI 10），均已覆盖，无新增 Kit；文档首页系统领域少列 AOD Navigation / Confidential Space / Linx / Mechanic / Service Support 5 个 Kit、应用框架少列 Content Embed Kit，以 SDK 页面为准；Mechanic Kit、Data Protection Kit（与 Data Loss Prevention Kit 同一服务）状态无变化
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节描述准确，无需修改
 
-### 周检记录（2026-09-28）
+### 更新记录（2026-09-28）
 
 - **版本检查**：官方版本概览页面（更新时间 2026-09-14 11:07）确认最新版本仍为 **26.0.0 Release**（2026/08/29），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）；配套信息无变化（DevEco Studio 26.0.0.821、HarmonyOS SDK 26.0.0.105 / OpenHarmony 7.0）
-- **OS 新增和增强特性页面**：更新时间仍为 **2026-09-15 17:32**，与上次周检一致，Release / Beta2 / Beta1 三大章节内容无变化，无新增特性
+- **OS 新增和增强特性页面**：更新时间仍为 **2026-09-15 17:32**，与上次核对一致，Release / Beta2 / Beta1 三大章节内容无变化，无新增特性
 - **Kit 列表对比**：官方 SDK 页面六大领域 Kit（应用框架 15、系统 37、媒体 10、图形 6、应用服务 28、AI 10）与现有 references/ 文件完整对应，无新增 Kit
-  - 📌 **文档首页 Kit 展示变化**：系统领域本次已列出 AOD Navigation / Confidential Space / Linx / Service Support 4 个 Kit（2026-09-21 周检时该页面缺失），仅 Mechanic Kit 仍未在文档首页展示（以 SDK 页面为准，已收录）；上述 Kit 均已有 references 文件，无需改动
+  - 📌 **文档首页 Kit 展示变化**：系统领域本次已列出 AOD Navigation / Confidential Space / Linx / Service Support 4 个 Kit（2026-09-21 核对时该页面缺失），仅 Mechanic Kit 仍未在文档首页展示（以 SDK 页面为准，已收录）；上述 Kit 均已有 references 文件，无需改动
   - Data Protection Kit（SDK 页面）与 Data Loss Prevention Kit（文档首页）为同一服务的不同分类名称，状态无变化
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节描述准确，无需修改
 
-### 周检记录（2026-10-08）
+### 更新记录（2026-10-08）
 
 - **版本检查**：官方版本列表（更新时间 2026-08-29 17:40）确认最新版本仍为 **26.0.0 Release**（2026/08/29），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）
 - **DevEco Studio Patch 版本**：官方版本概览页面（更新时间由 2026-09-14 11:07 更新为 **2026-09-23 17:11**）新增 **DevEco Studio 26.0.0 Release (26.0.0.851) Patch 版本（2026-09-23 发布）**
   - 官方「新增和增强特性」明确标注**无新增和增强特性**，仅修复工具链问题：Hvigor 6.26.4→6.26.8、HarmonyOS Emulator 26.0.0.400→26.0.0.402；API 版本（26.0.0）与 HarmonyOS SDK（26.0.0.105）均无变化
   - 已同步更新根 SKILL.md（版本说明/版本历史/配套版本/工具链升级）、dev/SKILL.md、README.md、MIGRATION.md 中的 DevEco Studio 版本信息
-- **OS 新增和增强特性页面**：更新时间仍为 **2026-09-15 17:32**，与上次周检一致，Release / Beta2 / Beta1 三大章节内容无变化，无新增特性
+- **OS 新增和增强特性页面**：更新时间仍为 **2026-09-15 17:32**，与上次核对一致，Release / Beta2 / Beta1 三大章节内容无变化，无新增特性
 - **Kit 列表对比**：官方文档首页六大领域 Kit（应用框架 15、系统 36、媒体 10、图形 6、应用服务 28、AI 10）与现有 references/ 文件完整对应，无新增 Kit
   - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
 - **README.md 核对**：版本信息表已更新 DevEco Studio 26.0.0.851 Patch 信息；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充 Patch 说明
 
-### 周检记录（2026-10-12）
+### 更新记录（2026-10-12）
 
 - **版本检查**：官方版本列表（更新时间由 2026-08-29 17:40 变为 **2026-10-08 18:09**）确认最新版本仍为 **26.0.0 Release**（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）；DevEco Studio 最新仍为 **26.0.0.851 Patch**（2026-09-23），HarmonyOS SDK 26.0.0.105 无变化
 - **官方文档中心 URL 迁移**：版本说明相关页面路径由 `harmonyos-releases/` 迁移至 `doccenter-release-notes/`（如 harmonyos-releases/overview-allversion → doccenter-release-notes/overview-allversion、harmonyos-releases/os-new-feature-2600 → doccenter-release-notes/os-new-feature-2600），旧链接自动跳转仍可访问，版本列表页与 OS 特性页更新时间同步变为 2026-10-08 18:09
@@ -203,7 +203,7 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
   - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节描述准确，无需修改
 
-### 周检记录（2026-10-19）
+### 更新记录（2026-10-19）
 
 - **版本检查**：官方版本列表（更新时间 2026-10-08 18:09）确认最新版本仍为 **26.0.0 Release**（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）；HarmonyOS SDK 26.0.0.105 无变化
 - **DevEco Studio 鸿蒙电脑版公测首发（本次新收录）**：官方版本概览页面（更新时间 2026-10-08 18:09）显示 **DevEco Studio（鸿蒙电脑版）26.0.0 Beta1（26.0.0.201）于 2026-10-08 首次发布公测版**
@@ -217,13 +217,13 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
   - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
 - **README.md 核对**：文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本信息表与版本变更追踪章节已同步补充鸿蒙电脑版 DevEco Studio 公测信息
 
-### 周检记录（2026-10-26）
+### 更新记录（2026-10-26）
 
 - **版本检查**：官方版本列表（更新时间 2026-10-08 18:09）确认最新版本仍为 **26.0.0 Release**（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）；HarmonyOS SDK 26.0.0.105 无变化
 - **OS 新增和增强特性页面**：更新时间仍为 **2026-10-08 18:09**，Release 章节条目（Ability Kit、ArkGraphics 2D、ArkTS、ArkUI、ArkWeb、Audio Kit、Device Security Kit、Performance Analysis Kit、工具）逐项核对与现有文档一致，无新增特性，无 26.0.1 / 27.0.0 等新版本章节
 - **Kit 列表对比**：官方文档首页六大领域 Kit（应用框架 15、系统 36、媒体 10、图形 6、应用服务 28、AI 10）与现有 references/ 文件完整对应，无新增 Kit
   - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
-- **DevEco Testing 26.0.0（本次新收录）**：官方版本说明导航中 DevEco Testing（开发套件测试服务工具，含 DevEco Testing Hyper、上架预检、性能/稳定性/UX/安全/功耗/功能体验基础质量测试、应用探索测试、回归测试及设备投屏、UIViewer 实用工具）有独立的「新增和增强特性」页面（更新时间 2026-10-08 18:09），此前周检未收录
+- **DevEco Testing 26.0.0（本次新收录）**：官方版本说明导航中 DevEco Testing（开发套件测试服务工具，含 DevEco Testing Hyper、上架预检、性能/稳定性/UX/安全/功耗/功能体验基础质量测试、应用探索测试、回归测试及设备投屏、UIViewer 实用工具）有独立的「新增和增强特性」页面（更新时间 2026-10-08 18:09），此前未收录
   - 26.0.0 Release（26.0.0.500）：上架预检兼容性、稳定性、UX 测试支持平板设备
   - Beta2（26.0.0.400）：上架预检效率提升（综合预检检测时长 8 小时降至 6 小时）、内存泄露检测支持 Kotlin、支持命令行执行测试服务
   - Beta1（26.0.0.300）：稳定性检测增强（指定入口定向激发、覆盖更全的内存泄漏检测）、UX 检测支持直板机/折叠屏多设备布局对比
@@ -233,9 +233,9 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 
 ### 版本基线校正（2026-10-26）
 
-本次为人工全量核对，官方版本未变化（最新仍为 26.0.0 Release，页面更新时间 2026-10-08 18:09，无 26.0.1 / 27.0.0），但发现知识库内部版本声明长期未随周检收敛，予以统一校正：
+本次为人工全量核对，官方版本未变化（最新仍为 26.0.0 Release，页面更新时间 2026-10-08 18:09，无 26.0.1 / 27.0.0），但发现知识库内部版本声明长期未同步，予以统一校正：
 
-- **问题**：周检只更新了根 SKILL.md 的版本历史，8 个子技能的「适用版本 / 版本说明」头部仍停留在旧版本——templates、media、samples 为「HarmonyOS 6.1 / API 23」，agc、ai-meta 为「HarmonyOS 6.1.1 / API 24」，system 为「API 26（Beta2）」，design 正文为「API 26 Beta2」，dev 的 frontmatter 为「HarmonyOS 6.1，基于 API 23」
+- **问题**：此前的更新只维护了根 SKILL.md 的版本历史，8 个子技能的「适用版本 / 版本说明」头部仍停留在旧版本——templates、media、samples 为「HarmonyOS 6.1 / API 23」，agc、ai-meta 为「HarmonyOS 6.1.1 / API 24」，system 为「API 26（Beta2）」，design 正文为「API 26 Beta2」，dev 的 frontmatter 为「HarmonyOS 6.1，基于 API 23」
 - **校正**：8 个子技能（dev / system / media / ai-meta / design / agc / samples / templates）的全部版本声明统一为 **HarmonyOS 26.0.0 / API 26（Release）为最新基线，HarmonyOS 6.1.1 / API 24（Release）为存量兼容**，并注明 API 26 底座为 OpenHarmony 7.0
 - **生产口径校正**：原「生产环境推荐 API 24」与官方 2026-10-08 版本使用建议不符——官方对 26.0.0 标注「新开发应用：推荐使用 / 已开发应用：推荐升级」，对 6.1.1(24) 标注「按需使用 / 按需升级」。已改为官方口径，并保留 API 24 存量设备占比 84.93% 的说明
 - **README.md**：基准版本由「HarmonyOS 6.1.0 (API 23)」更正为「HarmonyOS 26.0.0 (API 26)」，徽章同步为 API 24/26
