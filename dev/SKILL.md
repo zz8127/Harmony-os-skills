@@ -39,7 +39,7 @@ description: |
 - [打包上架](references/publish.md) — 签名配置、App Pack打包、AGC上架流程
 - [数据持久化](references/arkdata.md) — ArkData：RDB/Preferences/分布式数据/UDMF
 - [通知服务](references/notification.md) — Notification Kit：本地通知/通知渠道/WantAgent
-- [应用测试](references/testing.md) — Hypium框架：单元测试/UI测试/专项测试
+- [应用测试](references/testing.md) — Hypium框架：单元测试/UI测试/专项测试/DevEco Testing测试服务(API 26)
 - [Web开发](references/arkweb.md) — ArkWeb：WebView/JSBridge/安全控制
 - [应用架构与质量](references/architecture.md) — 分层架构/模块化/性能优化/安全编码
 - [其他参考](references/other.md) — 网络请求、数据存储、生命周期、常见问题

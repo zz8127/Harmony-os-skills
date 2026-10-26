@@ -1,4 +1,4 @@
-﻿# 应用测试
+# 应用测试
 
 > **适用版本**：HarmonyOS 6.1 / API 23（稳定）；HarmonyOS 6.0 / API 22（稳定）。兼容 API 14+。
 
@@ -533,6 +533,20 @@ DevEco Testing 工具提供稳定性测试能力，支持服务卡片式操作�
 
 DevEco Studio Profiler 也提供可视化性能分析工具。
 
+### DevEco Testing 测试服务
+
+DevEco Testing 是 HarmonyOS 开发套件中的测试服务工具（独立于 DevEco Studio），包含 DevEco Testing Hyper（超轻量级自动化测试框架）、上架预检、性能测试（性能基础质量/场景化性能/性能指标监控）、稳定性测试（稳定性基础质量/内存泄漏）、UX 测试（多设备布局对比/UX 基础质量）、安全基础质量测试、功耗基础质量测试、功能体验基础质量测试、应用探索测试、回归测试，以及实用工具（设备投屏、UIViewer）。
+
+**26.0.0 版本演进**：
+
+| 版本 | 新增和增强特性 |
+|------|--------------|
+| 26.0.0 Release（26.0.0.500） | 上架预检兼容性、稳定性、UX 测试支持平板设备 |
+| Beta2（26.0.0.400） | 上架预检效率提升（综合预检检测时长 8 小时降至 6 小时）；内存泄露检测支持 Kotlin；支持命令行执行测试服务（场景化性能、性能基础质量、稳定性基础质量、应用上架预检） |
+| Beta1（26.0.0.300） | 稳定性检测增强（支持指定入口定向激发稳定性问题、覆盖更全的内存泄漏检测）；UX 检测支持直板机、折叠屏多设备布局对比检测 |
+
+> 官方版本概览页配套版本表格未列出 DevEco Testing，其为独立的测试服务工具，版本说明位于版本说明导航的独立页面。
+
 ---
 
 ## 官方参考链接
@@ -543,5 +557,6 @@ DevEco Studio Profiler 也提供可视化性能分析工具。
 - @ohos/hypium ohpm 包：https://ohpm.openharmony.cn/#/cn/detail/@ohos%2Fhypium
 - @ohos.UiTest API 参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-uitest
 - DevEco Studio 测试指导：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-instrument-test
+- DevEco Testing 新增和增强特性（26.0.0）：https://developer.huawei.com/consumer/cn/doc/doccenter-release-notes/deveco-testing-releasenotes-2600
 - aa test 命令指南：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/aa-tool
 - AGC 云测试：https://developer.huawei.com/consumer/cn/service/josp/agc/

@@ -217,6 +217,20 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
   - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
 - **README.md 核对**：文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本信息表与版本变更追踪章节已同步补充鸿蒙电脑版 DevEco Studio 公测信息
 
+### 周检记录（2026-10-26）
+
+- **版本检查**：官方版本列表（更新时间 2026-10-08 18:09）确认最新版本仍为 **26.0.0 Release**（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 Beta 等）；HarmonyOS SDK 26.0.0.105 无变化
+- **OS 新增和增强特性页面**：更新时间仍为 **2026-10-08 18:09**，Release 章节条目（Ability Kit、ArkGraphics 2D、ArkTS、ArkUI、ArkWeb、Audio Kit、Device Security Kit、Performance Analysis Kit、工具）逐项核对与现有文档一致，无新增特性，无 26.0.1 / 27.0.0 等新版本章节
+- **Kit 列表对比**：官方文档首页六大领域 Kit（应用框架 15、系统 36、媒体 10、图形 6、应用服务 28、AI 10）与现有 references/ 文件完整对应，无新增 Kit
+  - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录，以 SDK 页面为准）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
+- **DevEco Testing 26.0.0（本次新收录）**：官方版本说明导航中 DevEco Testing（开发套件测试服务工具，含 DevEco Testing Hyper、上架预检、性能/稳定性/UX/安全/功耗/功能体验基础质量测试、应用探索测试、回归测试及设备投屏、UIViewer 实用工具）有独立的「新增和增强特性」页面（更新时间 2026-10-08 18:09），此前周检未收录
+  - 26.0.0 Release（26.0.0.500）：上架预检兼容性、稳定性、UX 测试支持平板设备
+  - Beta2（26.0.0.400）：上架预检效率提升（综合预检检测时长 8 小时降至 6 小时）、内存泄露检测支持 Kotlin、支持命令行执行测试服务
+  - Beta1（26.0.0.300）：稳定性检测增强（指定入口定向激发、覆盖更全的内存泄漏检测）、UX 检测支持直板机/折叠屏多设备布局对比
+  - 官方版本概览页配套版本表格未列出 DevEco Testing（其为独立测试服务工具，非 DevEco Studio 组件）
+  - 已同步更新 `dev/references/testing.md`（新增 DevEco Testing 测试服务小节及官方链接）、`dev/SKILL.md`（导航表格）
+- **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致；文档统计（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇）与实际文件数一致；版本变更追踪章节已同步补充 DevEco Testing 说明
+
 ---
 
 ## HarmonyOS 26.0.0 新增特性（API 26，Beta2 2026-07-28 / Release 2026-08-29）
