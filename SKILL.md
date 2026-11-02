@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；底座 OpenHarmony 7.0，商用版 HarmonyOS 7.0.0.105；DevEco Studio Patch 26.0.0.851，2026-09-23；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-10-26
+> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；底座 OpenHarmony 7.0，商用版 HarmonyOS 7.0.0.105；DevEco Studio Patch 26.0.0.865，2026-10-31（上一 Patch 26.0.0.851，2026-09-23）；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
+> **更新时间**：2026-11-02
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -47,7 +47,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
-| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29；Patch 26.0.0.851，2026.09.23；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026.10.08）；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新）** | **2026.08.29** |
+| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29；Patch 26.0.0.851，2026.09.23；Patch 26.0.0.865，2026.10.31；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026.10.08）；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新）** | **2026.08.29** |
 | **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）；Patch（6.1.1.290，2026.06.30）** | **Release（生产推荐）** | **2026.05.26** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 Release | 稳定 | 2026.01.21 |
@@ -241,6 +241,18 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **README.md**：基准版本由「HarmonyOS 6.1.0 (API 23)」更正为「HarmonyOS 26.0.0 (API 26)」，徽章同步为 API 24/26
 - **文档数量**：8 个 references/ 目录实际 .md 文件数 dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4，共 137 篇，与 README 统计一致，无需调整
 
+### 更新记录（2026-11-02）
+
+- **版本检查**：官方版本列表（更新时间 2026-10-08 18:09）确认最新版本仍为 **26.0.0 Release**（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 等）；HarmonyOS SDK 26.0.0.105 / OpenHarmony 7.0 无变化
+- **DevEco Studio Patch（本次新收录）**：官方版本概览与 DevEco Studio「新增和增强特性」页面更新时间更新为 **2026-10-31 11:23**，新增 **DevEco Studio 26.0.0 Release (26.0.0.865) Patch 版本（2026-10-31 发布）**
+  - 官方明确标注**无新增和增强特性**，仅修复工具链问题：Hvigor 6.26.8→6.26.9、Command Line 26.0.0.865；HarmonyOS Emulator（26.0.0.402）、ohpm（26.0.0.630）、Node.js（24.14.1）、modelVersion（26.0.0）无变化
+  - API 版本（26.0.0）与 HarmonyOS SDK（26.0.0.105）均无变化，开发者可按需升级以获得更稳定的开发体验
+  - 已同步更新根 SKILL.md（版本说明/版本历史/工具链升级）、dev/SKILL.md、README.md、templates/references/deveco-templates.md、MIGRATION.md
+- **OS 新增和增强特性页面**：更新时间仍为 **2026-10-08 18:09**，Release 章节条目（Ability Kit、ArkGraphics 2D、ArkTS、ArkUI、ArkWeb、Audio Kit、Device Security Kit、Performance Analysis Kit、工具）逐项核对与现有文档一致，无新增特性
+- **Kit 列表对比**：官方文档首页六大领域 Kit 与现有 references/ 文件完整对应，无新增 Kit；Mechanic Kit 仍未发布公开指南页，维持待收录状态
+- **版本声明一致性检查**：根 SKILL.md 版本/更新时间行、8 个子技能 SKILL.md 版本声明、references/ 适用版本头部均为「26.0.0 / API 26（Release）为最新基线、6.1.1 / API 24（Release）为存量兼容」；未发现「生产环境推荐 API 24」或旧版本残留
+- **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致，徽章 API 24/26、文档统计 137 篇与实际文件数一致
+
 ---
 
 ## HarmonyOS 26.0.0 新增特性（API 26，Beta2 2026-07-28 / Release 2026-08-29）
@@ -384,7 +396,7 @@ Release 阶段在 Beta2 基础上新增以下能力（官方 OS 新增和增强�
 
 ### DevEco Studio 工具链升级
 
-26.0.0 配套 DevEco Studio 26.0.0 Release（26.0.0.821；Patch 26.0.0.851，2026-09-23，无新增特性仅修复工具链；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08，集成 DevEco Code 工具，配套 Hvigor 7.26.8 / ohpm 6.0.1；Beta2 为 26.0.0.621），在 Beta1 基础上进一步增强开发体验。
+26.0.0 配套 DevEco Studio 26.0.0 Release（26.0.0.821；Patch 26.0.0.851，2026-09-23；Patch 26.0.0.865，2026-10-31，均为无新增特性仅修复工具链；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08，集成 DevEco Code 工具，配套 Hvigor 7.26.8 / ohpm 6.0.1；Beta2 为 26.0.0.621），在 Beta1 基础上进一步增强开发体验。
 
 ---
 

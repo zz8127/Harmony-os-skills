@@ -41,14 +41,14 @@
 
 | 项目 | 版本 | 说明 | 日期 |
 |------|------|------|------|
-| HarmonyOS | 26.0.0 (Release) | API 26（DevEco Studio 26.0.0.851 Patch，2026-09-23；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08；SDK 26.0.0.105 / OpenHarmony 7.0），最新版本 | 2026-10-08 |
+| HarmonyOS | 26.0.0 (Release) | API 26（DevEco Studio 26.0.0.865 Patch，2026-10-31；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08；SDK 26.0.0.105 / OpenHarmony 7.0），最新版本 | 2026-11-02 |
 | HarmonyOS | 6.1.1 (Release) | API 24（DevEco Studio 6.1.1.290），存量设备主力（占比 84.93%），官方标注「按需使用/按需升级」 | 2026-06-30 |
 | HarmonyOS | 6.1.0 (稳定) | API 23（DevEco Studio 6.1.0.830），历史稳定版本 | 2026-04-20 |
 
 ## 版本变更追踪
 
 - **API 24 (6.1.1 Release)**：已发布。各 Skill 的 SKILL.md 中均含"API 24 Beta1 变更追踪"章节，记录 Ability Kit / ArkUI / ArkTS / ArkWeb / FAST Kit / Content Embed Kit / Enterprise Threat Protection Kit 等变更。
-- **API 26 (26.0.0 Release)**：已于 2026-08-29 正式发布（配套 DevEco Studio 26.0.0.821、HarmonyOS SDK 26.0.0.105、OpenHarmony 7.0；自 API 26 起版本号采用语义化 X.Y.Z 格式）。特性清单与行为变更已纳入根 SKILL.md 与 dev/SKILL.md 的"API 26 变更追踪"章节；targetSdkVersion ≥ 26.0.0 需重点关注默认浏览器权限管控（ohos.permission.DEFAULT_WEB_BROWSER）、Agent Framework Kit 接口变更、JSVM 内核升级（132→144）等针对所有应用的变更。Release 阶段（Beta2 后）新增的 8 个 Kit 能力（Ability Kit 应用内存优化、ArkUI 窗口管理 C API、ArkWeb cookies 与错误页增强、ArkTS 容器跨线程传递、ArkGraphics 2D 3D 元数据、Audio Kit 录音降噪、Device Security Kit 图片内容证真、Performance Analysis Kit JS Crash 增强）已于 2026-09-07 收录；官方 OS 特性页 2026-09-09 更新增补的打包工具能力（扫描重复 so 文件、减小包大小，见 dev/references/publish.md）已于 2026-09-14 收录；DevEco Studio 26.0.0.851 Patch（2026-09-23）无新增特性，仅修复工具链（Hvigor 6.26.8 / Emulator 26.0.0.402），已于 2026-10-08 收录；DevEco Studio（鸿蒙电脑版）26.0.0 Beta1（26.0.0.201）于 2026-10-08 公测首发（集成 DevEco Code 工具，配套 Hvigor 7.26.8 / ohpm 6.0.1，经鸿蒙电脑应用市场获取），已于 2026-10-19 收录；开发套件测试服务工具 DevEco Testing 26.0.0（Release 26.0.0.500：上架预检兼容性、稳定性、UX 测试支持平板设备等，见 dev/references/testing.md）已于 2026-10-26 收录。
+- **API 26 (26.0.0 Release)**：已于 2026-08-29 正式发布（配套 DevEco Studio 26.0.0.821、HarmonyOS SDK 26.0.0.105、OpenHarmony 7.0；自 API 26 起版本号采用语义化 X.Y.Z 格式）。特性清单与行为变更已纳入根 SKILL.md 与 dev/SKILL.md 的"API 26 变更追踪"章节；targetSdkVersion ≥ 26.0.0 需重点关注默认浏览器权限管控（ohos.permission.DEFAULT_WEB_BROWSER）、Agent Framework Kit 接口变更、JSVM 内核升级（132→144）等针对所有应用的变更。Release 阶段（Beta2 后）新增的 8 个 Kit 能力（Ability Kit 应用内存优化、ArkUI 窗口管理 C API、ArkWeb cookies 与错误页增强、ArkTS 容器跨线程传递、ArkGraphics 2D 3D 元数据、Audio Kit 录音降噪、Device Security Kit 图片内容证真、Performance Analysis Kit JS Crash 增强）已于 2026-09-07 收录；官方 OS 特性页 2026-09-09 更新增补的打包工具能力（扫描重复 so 文件、减小包大小，见 dev/references/publish.md）已于 2026-09-14 收录；DevEco Studio 26.0.0.851 Patch（2026-09-23）无新增特性，仅修复工具链（Hvigor 6.26.8 / Emulator 26.0.0.402），已于 2026-10-08 收录；DevEco Studio（鸿蒙电脑版）26.0.0 Beta1（26.0.0.201）于 2026-10-08 公测首发（集成 DevEco Code 工具，配套 Hvigor 7.26.8 / ohpm 6.0.1，经鸿蒙电脑应用市场获取），已于 2026-10-19 收录；开发套件测试服务工具 DevEco Testing 26.0.0（Release 26.0.0.500：上架预检兼容性、稳定性、UX 测试支持平板设备等，见 dev/references/testing.md）已于 2026-10-26 收录；DevEco Studio 26.0.0.865 Patch（2026-10-31）无新增特性，仅 Hvigor 6.26.8→6.26.9，已于 2026-11-02 收录。
 - **版本基线校正（2026-10-26）**：官方最新版本仍为 26.0.0 Release（页面更新时间 2026-10-08，无 26.0.1 / 27.0.0）。本次全量核对发现各子技能「适用版本」头部仍停留在旧版本（6.1 / API 23、6.1.1 / API 24、API 26 Beta2），已统一校正为「26.0.0 Release 为最新基线、6.1.1 / API 24 为存量兼容」，并将「生产环境推荐 API 24」更正为官方口径「26.0.0：新应用推荐使用 / 存量应用推荐升级」。
 
 ## 参与贡献

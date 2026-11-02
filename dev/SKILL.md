@@ -15,6 +15,7 @@ description: |
 > 2026年8月29日 HarmonyOS 开发套件 26.0.0 正式 Release（API 26，配套 DevEco Studio 26.0.0.821 / SDK 26.0.0.105 / OpenHarmony 7.0），详见「API 26 变更追踪」。
 > 2026年9月23日 DevEco Studio 发布 26.0.0.851 Patch 版本（无新增特性，仅修复工具链），API / SDK 版本无变化。
 > 2026年10月8日 DevEco Studio（鸿蒙电脑版）26.0.0 Beta1（26.0.0.201）首次发布公测版，集成 DevEco Code 工具，配套 Hvigor 7.26.8 / ohpm 6.0.1，获取方式为鸿蒙电脑应用市场 > 我的 > 应用尝鲜。
+> 2026年10月31日 DevEco Studio 发布 26.0.0.865 Patch 版本（无新增特性，仅修复工具链，Hvigor 6.26.8→6.26.9），API / SDK 版本无变化。
 > 历史版本：HarmonyOS 5.x = API 12/13/14/16。
 
 ## 扩展技能（独立 Skill）
@@ -81,7 +82,7 @@ description: |
 | **6.0.2** | **22** | **6.0.2 Release** | **稳定** | **2026.01.21** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）** | **Release（存量主力）** | **2026.05.26** |
-| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821；Patch 26.0.0.851，2026.09.23）** | **Release（最新，官方推荐）** | **2026.08.29** |
+| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821；Patch 26.0.0.851，2026.09.23；Patch 26.0.0.865，2026.10.31）** | **Release（最新，官方推荐）** | **2026.08.29** |
 
 > ⚠️ **官方版本使用建议（2026-10-08）**：**API 26.0.0 为推荐版本**（新开发应用推荐使用、已开发应用推荐升级，底座 OpenHarmony 7.0）。API 24（HarmonyOS 6.1.1 Release）为存量主力（占比 84.93%），官方标注「按需使用/按需升级」；API 23 仍可用于存量维护。
 
@@ -352,7 +353,7 @@ let params = router.getParams() as Record<string, number>
 
 ## API 26 Release 变更追踪（2026-08-29）
 
-HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release（配套 DevEco Studio 26.0.0.821、HarmonyOS SDK 26.0.0.105、OpenHarmony 7.0；2026-09-23 发布 DevEco Studio 26.0.0.851 Patch，无新增特性仅修复工具链，API / SDK 版本无变化；2026-10-08 DevEco Studio 鸿蒙电脑版 26.0.0 Beta1（26.0.0.201）公测首发，配套 HarmonyOS 26.0.0 Release SDK、Hvigor 7.26.8、ohpm 6.0.1，与 Windows/macOS 版部分能力存在差异）。本节仅列出与开发规范（dev/）领域相关的变更，完整清单参见根 SKILL.md。
+HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release（配套 DevEco Studio 26.0.0.821、HarmonyOS SDK 26.0.0.105、OpenHarmony 7.0；2026-09-23 发布 DevEco Studio 26.0.0.851 Patch，2026-10-31 发布 26.0.0.865 Patch，均无新增特性仅修复工具链，API / SDK 版本无变化；2026-10-08 DevEco Studio 鸿蒙电脑版 26.0.0 Beta1（26.0.0.201）公测首发，配套 HarmonyOS 26.0.0 Release SDK、Hvigor 7.26.8、ohpm 6.0.1，与 Windows/macOS 版部分能力存在差异）。本节仅列出与开发规范（dev/）领域相关的变更，完整清单参见根 SKILL.md。
 
 ### 针对所有应用的变更
 
