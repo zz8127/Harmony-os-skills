@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；底座 OpenHarmony 7.0，商用版 HarmonyOS 7.0.0.105；DevEco Studio Patch 26.0.0.865，2026-10-31（上一 Patch 26.0.0.851，2026-09-23）；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08；Beta2，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-11-02
+> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；底座 OpenHarmony 7.0，商用版 HarmonyOS 7.0.0.105；DevEco Studio Patch 26.0.0.865，2026-10-31（上一 Patch 26.0.0.851，2026-09-23）；鸿蒙电脑版 Beta2 26.0.0.220，2026-11-06（Beta1 26.0.0.201 公测首发，2026-10-08）；Windows/macOS Beta2 26.0.0.621，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
+> **更新时间**：2026-11-09
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -47,7 +47,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
-| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29；Patch 26.0.0.851，2026.09.23；Patch 26.0.0.865，2026.10.31；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026.10.08）；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新）** | **2026.08.29** |
+| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29；Patch 26.0.0.851，2026.09.23；Patch 26.0.0.865，2026.10.31；鸿蒙电脑版 Beta2 26.0.0.220，2026.11.06（Beta1 26.0.0.201 公测首发，2026.10.08））；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新）** | **2026.08.29** |
 | **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）；Patch（6.1.1.290，2026.06.30）** | **Release（生产推荐）** | **2026.05.26** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 Release | 稳定 | 2026.01.21 |
@@ -253,6 +253,20 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
 - **版本声明一致性检查**：根 SKILL.md 版本/更新时间行、8 个子技能 SKILL.md 版本声明、references/ 适用版本头部均为「26.0.0 / API 26（Release）为最新基线、6.1.1 / API 24（Release）为存量兼容」；未发现「生产环境推荐 API 24」或旧版本残留
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致，徽章 API 24/26、文档统计 137 篇与实际文件数一致
 
+### 更新记录（2026-11-09）
+
+- **版本检查**：官方版本列表（更新时间 2026-10-08 18:09）确认最新版本仍为 **26.0.0 Release**（2026/08/28），未发布新版本（无 26.0.1 / 27.0.0 等）；HarmonyOS SDK 26.0.0.105 / OpenHarmony 7.0 无变化；官方使用建议不变（26.0.0：新开发应用推荐使用 / 已开发应用推荐升级；6.1.1(24)：按需使用 / 按需升级）
+- **OS 新增和增强特性页面**：更新时间仍为 **2026-10-08 18:09**，Release 章节条目（Ability Kit、ArkGraphics 2D、ArkTS、ArkUI、ArkWeb、Audio Kit、Device Security Kit、Performance Analysis Kit、工具）逐项核对与现有文档一致，无新增特性
+- **Kit 列表对比**：官方文档首页六大领域 Kit（应用框架 15、系统 36、媒体 10、图形 6、应用服务 28、AI 10）与现有 references/ 文件完整对应，无新增 Kit
+  - Mechanic Kit 仍未在文档首页展示（SDK 页面已收录）；Data Protection Kit 与 Data Loss Prevention Kit 为同一服务的不同分类名称，状态无变化
+- **DevEco Studio 鸿蒙电脑版 Beta2（本次新收录）**：官方版本概览与鸿蒙电脑版「新增和增强特性」页面更新时间更新为 **2026-11-06 17:55**，新增 **DevEco Studio 26.0.0 Beta2（26.0.0.220）**（2026-11-06 发布）
+  - 新增和增强特性：创建工程时工程模板新增 Car / Wearable / TV 设备类型；使用本地真机运行应用时支持通过无线连接方式进行调试
+  - 配套关系：HarmonyOS 26.0.0 Release SDK、Hvigor 7.26.11（Beta1 为 7.26.8）、ohpm 6.0.1、modelVersion 26.0.0、Command Line 26.0.0.220、codelinter 6.0.140；compatibleSdkVersion 最低 5.0.0(12)，compileSdkVersion 26.0.0，targetSdkVersion 5.0.0(12)~26.0.0
+  - Windows/macOS 版最新仍为 26.0.0.865 Patch（2026-10-31），API 版本（26.0.0）与 HarmonyOS SDK（26.0.0.105）均无变化
+  - 已同步更新根 SKILL.md（版本说明/版本历史/DevEco Studio 工具链升级）、dev/SKILL.md、templates/references/deveco-templates.md、README.md
+- **版本声明一致性检查**：根 SKILL.md 版本/更新时间行、8 个子技能 SKILL.md 版本声明均为「26.0.0 / API 26（Release）为最新基线、6.1.1 / API 24（Release）为存量兼容」；补正 9 个 references 文件头部残留的「HarmonyOS 6.1 / API 23」旧版本行（image-kit、crypto-architecture、live-view-kit、pdf-kit、map-kit、ui-design-kit、scan-kit、telephony-kit、share-kit），统一为 26.0.0 基线声明；未发现「生产环境推荐 API 24」残留
+- **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致，徽章 API 24/26、文档统计 137 篇与实际文件数一致（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4）
+
 ---
 
 ## HarmonyOS 26.0.0 新增特性（API 26，Beta2 2026-07-28 / Release 2026-08-29）
@@ -396,7 +410,7 @@ Release 阶段在 Beta2 基础上新增以下能力（官方 OS 新增和增强�
 
 ### DevEco Studio 工具链升级
 
-26.0.0 配套 DevEco Studio 26.0.0 Release（26.0.0.821；Patch 26.0.0.851，2026-09-23；Patch 26.0.0.865，2026-10-31，均为无新增特性仅修复工具链；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08，集成 DevEco Code 工具，配套 Hvigor 7.26.8 / ohpm 6.0.1；Beta2 为 26.0.0.621），在 Beta1 基础上进一步增强开发体验。
+26.0.0 配套 DevEco Studio 26.0.0 Release（26.0.0.821；Patch 26.0.0.851，2026-09-23；Patch 26.0.0.865，2026-10-31，均为无新增特性仅修复工具链；鸿蒙电脑版 Beta1 26.0.0.201 公测首发，2026-10-08；鸿蒙电脑版 Beta2 26.0.0.220，2026-11-06，工程模板新增 Car/Wearable/TV 设备类型、本地真机支持无线连接调试，配套 Hvigor 7.26.11；Windows/macOS Beta2 为 26.0.0.621），在 Beta1 基础上进一步增强开发体验。
 
 ---
 

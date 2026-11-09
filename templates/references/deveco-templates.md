@@ -109,7 +109,7 @@ entry/src/main/cpp/
 | 5.0.4 | API 16 | 老版本 |
 | 3.1.1 | API 9 | 老版本 |
 
-> ⚠️ 建议使用 DevEco Studio 26.0.0（Patch 26.0.0.865）新建工程，确保 SDK 为最新 Release 版本。
+> ⚠️ 建议使用 DevEco Studio 26.0.0（Patch 26.0.0.865）新建工程，确保 SDK 为最新 Release 版本。DevEco Studio（鸿蒙电脑版）Beta2（26.0.0.220，2026-11-06）工程模板新增 Car / Wearable / TV 设备类型，本地真机运行支持无线连接调试。
 
 ---
 
