@@ -7,8 +7,8 @@ description: |
 
 # HarmonyOS 技能库
 
-> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；底座 OpenHarmony 7.0，商用版 HarmonyOS 7.0.0.105；DevEco Studio Patch 26.0.0.865，2026-10-31（上一 Patch 26.0.0.851，2026-09-23）；鸿蒙电脑版 Beta2 26.0.0.220，2026-11-06（Beta1 26.0.0.201 公测首发，2026-10-08）；Windows/macOS Beta2 26.0.0.621，2026-07-28）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
-> **更新时间**：2026-11-09
+> **版本**：HarmonyOS 26.0.0 / API 26（Release，2026-08-29；底座 OpenHarmony 7.0，商用版 HarmonyOS 7.0.0.105；DevEco Studio Patch 26.0.0.865，2026-10-31（上一 Patch 26.0.0.851，2026-09-23）；鸿蒙电脑版 Beta2 26.0.0.220，2026-11-06（Beta1 26.0.0.201 公测首发，2026-10-08）；Windows/macOS Beta2 26.0.0.621，2026-07-28）；HarmonyOS 26.0.1 / API 26.0.1（Beta1，2026-11-10；DevEco Studio 26.0.1.290；SDK 26.0.1 Beta1 基于 OpenHarmony SDK 26.0.1.120；增量尝鲜版本，Beta 版工具开发的应用不能上架应用市场）；HarmonyOS 6.1.1 / API 24（Release，2026-05-26；Patch 6.1.1.290，2026-06-30）
+> **更新时间**：2026-11-16
 > **官方文档**：https://developer.huawei.com/consumer/cn/doc/
 
 ---
@@ -35,7 +35,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 领域 | 覆盖 Kit | 核心能力 |
 |------|---------|---------|
 | 应用框架 | AbilityKit、ArkUI、ArkData、ArkTS、ArkWeb、FormKit、AccessibilityKit、IMEKit、IPCKit、LocalizationKit、DataAugmentationKit、BackgroundTasksKit、CoreFileKit、PenKit、UIDesignKit、AccountKit、FileManagerServiceKit、DesktopExtensionKit | Stage模型、UIAbility、ArkTS声明式UI、数据管理、卡片、无障碍、输入法、IPC、国际化、数据增强、后台任务、文件管理、手写笔、华为账号、文件管理服务、桌面拓展 |
-| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、**NetworkBoostKit**、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit**、**PerformanceAnalysisKit**、**TelephonyKit**、**AODNavigationKit**、**ConfidentialSpaceKit**、**LinxKit**、**ServiceSupportKit**、**MechanicKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、**网络加速**、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证**、**性能分析**、**电话蜂窝**、**熄屏导航**、**机密空间**、**灵犀加速**、**服务与支持**、**机械设备管理** |
+| 系统 | ConnectivityKit、LocationKit、SensorServiceKit、NetworkKit、**NetworkBoostKit**、AssetStoreKit、CarKit、FfrtKit、NearLinkKit、DriverDevelopmentKit、WearEngineKit、UniversalKeystoreKit、CryptoArchitectureKit、BasicServicesKit、DistributedKit、ServiceCollaborationKit、TestKit、EnterpriseThreatProtectionKit、FASTKit、HealthServiceKit、WeatherServiceKit、**InputKit**、**MultimodalAwarenessKit**、**MDMKit**、**DataLossPreventionKit**、**DeviceCertificateKit**、**OnlineAuthenticationKit**、**RemoteCommunicationKit**、**EnterpriseDataGuardKit**、**EnterpriseSpaceKit**、**UserAuthenticationKit**、**PerformanceAnalysisKit**、**TelephonyKit**、**AODNavigationKit**、**ConfidentialSpaceKit**、**LinxKit**、**ServiceSupportKit**、**MechanicKit**、**EnterpriseFoundationKit** | 蓝牙/Wi-Fi/NFC/星闪、定位、传感器、网络、**网络加速**、安全存储、车机、并发调度、驱动开发、穿戴、加解密、分布式、协同、测试、企业威胁防护、算法加速、运动健康、天气、**多模输入**、**多模态融合感知**、**企业设备管理**、**数据防泄漏**、**设备证书**、**在线认证**、**远场通信**、**企业数据保护**、**企业数字空间**、**用户认证**、**性能分析**、**电话蜂窝**、**熄屏导航**、**机密空间**、**灵犀加速**、**服务与支持**、**机械设备管理**、**企业办公服务** |
 | 媒体 | CameraKit、MediaKit、AVSessionKit、AudioKit、AVCodecKit、DRMKit、RingtoneKit、ImageKit、MediaLibraryKit、**ScanKit** | 相机、音视频、播控、音频管理、编解码、版权保护、铃声、图片、相册、**统一扫码** |
 | 图形 | ArkGraphics 2D、ArkGraphics 3D、SpatialReconKit、GraphicsAccelerateKit、XEngineKit、AREngine | 2D/3D绘制、空间建模、图形加速、GPU引擎、AR |
 | 应用服务 | PushKit、AccountKit、AdsKit、IAPKit、PaymentKit、WalletKit、AppGalleryKit、**AppLinkingKit**、CalendarKit、ContactsKit、PreviewKit、ReaderKit、ScenarioFusionKit、CallServiceKit、LiveViewKit、LocationKit、MapKit、ShareKit、NotificationKit、**CloudFoundationKit**、**PDFKit**、HealthServiceKit、WeatherServiceKit、GameServiceKit、GameControllerKit、ScreenTimeGuardKit | 推送、账号、广告、支付、钱包、应用市场、**应用链接**、日历、联系人、预览、阅读、场景融合、通话、实况窗、地图、分享、通知、**云开发**、**PDF处理**、健康、天气、游戏 |
@@ -47,7 +47,8 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 
 | HarmonyOS 版本 | API 版本 | DevEco Studio | 性质 | 发布日期 |
 |---------------|---------|--------------|------|---------|
-| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29；Patch 26.0.0.851，2026.09.23；Patch 26.0.0.865，2026.10.31；鸿蒙电脑版 Beta2 26.0.0.220，2026.11.06（Beta1 26.0.0.201 公测首发，2026.10.08））；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新）** | **2026.08.29** |
+| **26.0.1** | **26.0.1** | **26.0.1 Beta1（26.0.1.290，2026.11.10）** | **Beta（增量尝鲜）** | **2026.11.10** |
+| **26.0.0** | **26** | **26.0.0 Release（26.0.0.821，2026.08.29；Patch 26.0.0.851，2026.09.23；Patch 26.0.0.865，2026.10.31；鸿蒙电脑版 Beta2 26.0.0.220，2026.11.06（Beta1 26.0.0.201 公测首发，2026.10.08））；Beta2（26.0.0.621，2026.07.28）；Beta1（26.0.0.461，2026.06.12）** | **Release（最新稳定，推荐）** | **2026.08.29** |
 | **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）；Patch（6.1.1.290，2026.06.30）** | **Release（生产推荐）** | **2026.05.26** |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | 6.0.2 | 22 | 6.0.2 Release | 稳定 | 2026.01.21 |
@@ -58,7 +59,7 @@ HarmonyOS SDK 开放 API 总数 **50000+**，覆盖六大领域：
 | 5.0.4 | 16 | 5.0.4 Release | 稳定 | 2025.03.29 |
 | 5.0.2 | 14 | 5.0.2 Release | 稳定 | 2025.01.27 |
 
-> ⚠️ **官方版本使用建议（2026-10-08）**：**API 26.0.0 为推荐版本**——新开发应用「推荐使用」，已开发应用「推荐升级」。API 24（HarmonyOS 6.1.1 Release）为「按需使用/按需升级」，存量设备占比 84.93%，仍是当前在网主力。API 26 于 2026-08-29 正式 Release（配套 HarmonyOS SDK 26.0.0.105 / OpenHarmony 7.0）；targetSdkVersion ≥ 26.0.0 需关注「针对所有应用的变更」。
+> ⚠️ **官方版本使用建议（2026-11-10）**：**API 26.0.0 为推荐版本**——新开发应用「推荐使用」，已开发应用「推荐升级」。**API 26.0.1（26.0.1 Beta1）** 为增量尝鲜版本，官方标注「按需使用 / 按需升级」，Beta 版 DevEco Studio 开发的应用不能上架应用市场。API 24（HarmonyOS 6.1.1 Release）为「按需使用/按需升级」，存量设备占比 84.93%，仍是当前在网主力。API 26 于 2026-08-29 正式 Release（配套 HarmonyOS SDK 26.0.0.105 / OpenHarmony 7.0）；targetSdkVersion ≥ 26.0.0 需关注「针对所有应用的变更」。
 
 ### 6.1.1 Patch 版本说明（2026-06-30）
 
@@ -266,6 +267,87 @@ HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release 发布，包含 Beta
   - 已同步更新根 SKILL.md（版本说明/版本历史/DevEco Studio 工具链升级）、dev/SKILL.md、templates/references/deveco-templates.md、README.md
 - **版本声明一致性检查**：根 SKILL.md 版本/更新时间行、8 个子技能 SKILL.md 版本声明均为「26.0.0 / API 26（Release）为最新基线、6.1.1 / API 24（Release）为存量兼容」；补正 9 个 references 文件头部残留的「HarmonyOS 6.1 / API 23」旧版本行（image-kit、crypto-architecture、live-view-kit、pdf-kit、map-kit、ui-design-kit、scan-kit、telephony-kit、share-kit），统一为 26.0.0 基线声明；未发现「生产环境推荐 API 24」残留
 - **README.md 核对**：版本信息表与根 SKILL.md 版本历史一致，徽章 API 24/26、文档统计 137 篇与实际文件数一致（dev 35、system 51、media 11、ai-meta 6、design 14、agc 8、samples 8、templates 4）
+
+### 更新记录（2026-11-16）
+
+- **版本检查（本次为新版本发布）**：官方版本列表确认新增 **26.0.1 Beta1**（API 26.0.1，2026/11/10 发布），配套 DevEco Studio 26.0.1 Beta1（26.0.1.290）、HarmonyOS SDK 26.0.1 Beta1（基于 OpenHarmony SDK Ohos_sdk_public 26.0.1.120）。官方标注「按需使用 / 按需升级」，仅供应新增特性尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。26.0.0 Release 仍为最新稳定推荐版本（Windows/macOS 最新 26.0.0.865 Patch，鸿蒙电脑版 Beta2 26.0.0.220，SDK 26.0.0.105 / OpenHarmony 7.0 均无变化）
+- **OS 新增和增强特性（26.0.1 Beta1）**：新增「26.0.1 Beta1」章节，覆盖 35 个 Kit 的新增/增强能力，详见下方「HarmonyOS 26.0.1 新增特性」章节
+- **新增 Kit**：**Enterprise Foundation Kit（企业办公服务）** —— 面向企业应用的 2in1 能力，开放企业场景下的用户数据与应用沙箱数据备份/还原，支撑批量部署。已新建 `system/references/enterprise-foundation-kit.md`，并在 system/SKILL.md 导航与根 SKILL.md 系统领域 Kit 列表中登记
+- **文档补充**：为 dev / system / media / ai-meta / agc 五个领域的 29 个 references 文件新增「26.0.1 Beta1 新增（2026-11-10）」小节（ArkTS、ArkUI、Ability Kit、Core File Kit、PDF Kit、Localization Kit、Performance Analysis Kit、File Manager Service Kit、Call Service Kit、UI Design Kit、MDM Kit、Basic Services Kit、Background Tasks Kit、Device Security Kit、Device Certificate Kit、Enterprise Data Guard Kit、Health Service Kit、Weather Service Kit、Input Kit、Wear Engine Kit、FAST Kit、Image Kit、Media Kit、ArkGraphics 2D、Spatial Recon Kit、Intents Kit、Core Speech Kit、CANN Kit、IAP Kit、AppGallery Kit、Data Protection Kit 等）
+- **子技能同步**：dev/SKILL.md（版本表新增 26.0.1 行、版本说明、API 26.0.1 变更追踪）、system/SKILL.md（26.0.1 变更追踪 + 企业办公服务导航）、media/SKILL.md、ai-meta/SKILL.md、agc/SKILL.md 均新增 26.0.1 变更追踪章节；templates/references/deveco-templates.md 补充 DevEco Studio 26.0.1 Beta1 模板配套
+- **版本声明一致性检查**：根 SKILL.md 版本行/更新时间行已更新为 2026-11-16；8 个子技能「适用版本 / 版本说明」仍为「26.0.0 / API 26（Release）为最新基线、6.1.1 / API 24（Release）为存量兼容」，与官方口径一致（26.0.1 为 Beta 尝鲜，不作为基线）；未发现「生产环境推荐 API 24」等旧表述
+- **README.md 核对**：徽章与版本信息表已同步 26.0.1 Beta1；文档统计由 137 篇更新为 138 篇（system 51→52）
+
+---
+
+## HarmonyOS 26.0.1 新增特性（API 26.0.1 Beta1，2026-11-10）
+
+### 版本说明
+
+26.0.1 是 26.0.0 的增量版本，仅供对新增特性有需求的开发者尝鲜使用；官方使用建议为「按需使用 / 按需升级」，Beta 版 DevEco Studio 开发的应用不能上架应用市场。配套 API 26.0.1、DevEco Studio 26.0.1 Beta1（26.0.1.290）、HarmonyOS SDK 26.0.1 Beta1（基于 OpenHarmony SDK Ohos_sdk_public 26.0.1.120）；开发态 modelVersion 26.0.1，compileSdkVersion 26.0.1，compatibleSdkVersion 最低 4.0.0(10)，targetSdkVersion 4.0.0(10)~26.0.1；工具链 Hvigor 6.26.20、ohpm 26.0.1.220、HarmonyOS Emulator 26.0.1.100、codelinter 6.0.240、hstack 6.1.0、Node.js 24.14.1。
+
+### 应用框架
+
+- **Ability Kit**：新增应用自身子进程信息查询（`childProcessManager.getChildProcessInfos`、`ApplicationContext.getUIAbilityChildProcessInfos` 及对应 C API，返回子进程 PID、父进程 PID 和进程名；覆盖不带页面的子进程与 UIAbility 子进程）；新增子进程信息读取与释放 C API；应用快启管理新增 `hyperSnapManager.getLastError`，获取指定场景下当前应用最后一次快启错误信息
+- **ArkTS**：新增 `JSON.parseSendable`，解析 JSON 字符串时生成可跨线程共享的 Sendable 对象（适用于包含大量数字键的 JSON）；容器集 Map 新增 `containsValue`、`put`、`putAll`、`remove`
+- **ArkUI**：
+  - LazyForEach 新增 onDataReloaded 的同名接口，支持配置更新过程中是否复用旧子组件
+  - 窗口管理新增窗口焦点状态 `WindowFocusState`、调整主窗 Z 序的位置参数 `WindowPositionParams`
+  - Navigation 新增 `preloadPath` 预加载 NavDestination；NavigationConfiguration 新增 `clearContentStackOnPrimaryNavigation`（左起右清栈）
+  - SubHeader / SubHeaderV2 支持设置尾部图标
+  - 动画 C API 新增属性动画、关键帧动画、路径动画、动画组的句柄定义
+  - TabContent 新增 `tabBarVisibility`；Text C API 新增 LineSpacingOptions（`onlyBetweenLines`）
+- **ArkGraphics 2D**：文字绘制 C API 新增多个支持字体回退的文本对象创建接口
+- **Background Tasks Kit**：新增更新包含数据传输类型的长时任务通知（`backgroundTaskManager.updateDataTransferProgress`）
+- **Basic Services Kit**：设备管理 C API 新增 USB 管理（管理 USB 设备驱动）；新增板级硬件信息查询（CPU/主板/BIOS）；账号管理新增系统账号授权管理
+- **Core File Kit**：新增卷（Volume）管理模块（外置存储磁盘设备与卷设备信息查询）；云盘管理新增带占位符同步根的注册与查询 C API
+- **File Manager Service Kit**：新增自定义文件角标与右键菜单项；新增 C 接口将云盘同步根文件夹添加到文件管理应用侧边栏、设置同步文件夹图标
+- **Localization Kit**：新增字体管理模块（第三方字体的安装、卸载、查询与字体服务状态监听）
+- **PDF Kit**：新增自由绘制曲线与橡皮擦擦除；新增同时添加多个不同颜色的临时高亮矩形
+- **UI Design Kit**：HdsColorPicker 新增显示状态控制及状态变化回调
+- **Performance Analysis Kit**：hidebug C API 增强（hiprofiler 混合类型采集、2D 采集异步嵌套层数与栈深配置、DMABUF 资源类型、分配释放栈消减去重）；新增 external_log 日志管理者注册接口
+
+### 系统
+
+- **MDM Kit**：新增打印机 IP 白名单策略（设备/用户视角）、精确定时器管理、锁屏弱密码库、应用待机资源豁免、卡片发布到桌面
+- **Device Security Kit**：新增自定义 DLP 文件访问与光盘刻录拦截通知类审计事件；新增侧载安全管控（查询是否允许加载外部二进制文件、拉起外部二进制源开关设置弹窗）
+- **Device Certificate Kit**：新增 UkeyAuthExtensionAbility 及其上下文 UkeyAuthExtensionContext，用于自定义 UKey 认证 UI
+- **Enterprise Data Guard Kit**：新增删除策略、进程 UID 可信任列表管理、加密 U 盘管理、数据盘企业恢复密钥、企业账号验证用户身份
+- **Enterprise Foundation Kit【全新 Kit】**：企业办公服务，提供企业场景下的用户数据与应用沙箱数据备份/还原，支撑教学、办公等场景的批量部署（仅 PC/2in1，需 `ohos.permission.ENTERPRISE_MANAGE_BACKUP`）
+- **Data Protection Kit**：新增隐私计算能力（隐私目标生成、隐私搜索、搜索结果检索）
+- **User Authentication Kit**：新增用户识别能力，可查询最新识别结果或订阅结果变化，判断当前使用者是否与已登录系统用户匹配
+- **Input Kit**：新增鼠标光标与光标类型外设管理；KeyCode 新增云台设备按键定义
+- **Health Service Kit**：Lite Wearable 新增笼式网球/滑雪/户外跑步/户外骑行/自由训练/普拉提运动类型；新增运动数据交互 C API；Wearable 新增运动类型与训练负荷等数据开放
+- **Wear Engine Kit**：新增穿戴表盘能力（表盘配置下发与预览）
+- **Weather Service Kit**：新增朝霞晚霞天气数据
+- **FAST Kit**：新增支持 Car 设备
+
+### 媒体与图形
+
+- **Image Kit**：ImageReceiver 新增 `setMemoryName`，为接收的图像缓冲区设置内存标识符
+- **Media Kit**：屏幕录制 C API 新增支持创建虚拟扩展屏幕并录制其内容
+- **Spatial Recon Kit**：新增端云重建鉴权签名（为待重建 mp4 派生云侧验签凭证）、3DGS 大场景分档渲染（`TiledGSRenderPreference`）、3DGS 漫游碰撞检测（`CameraCollisionDetector`）
+- **XEngine Kit**：新增支持 Car 设备
+- **Map Kit**：新增支持设置 3D 地球球体中线距离屏幕的比例值
+
+### AI 与应用服务
+
+- **Intents Kit**：新增应用注册热词并处理执行回调，智慧语音助手可响应更多操控应用界面可见 UI 元素的语音指令（可视可说）
+- **Core Speech Kit**：新增文本转语音暂停/继续播报接口
+- **CANN Kit**：新增支持 Car 设备
+- **Call Service Kit**：新增外设 VoIP 通话控制（远端设备控制本机 VoIP 接听/挂断）；支持隐私查询企业服务信息，企业服务信息新增外卖服务类型数据
+- **IAP Kit**：新增支付优惠查询（`iap.queryPaymentPromotions`），用户购买前可预览实际优惠
+- **AppGallery Kit**：应用市场推荐、产品特性按需分发、生态查询服务、应用市场更新、应用归因、隐私管理、图标管理能力新增支持 Car 设备
+- **Game Service Kit**：实况窗后台保活支持本地调试；新增游戏触控区域设置；基础游戏服务支持 Car 设备
+- **Graphics Accelerate Kit**：游戏资源加速新增资源包后台下载开关的查询与设置
+
+### 工具链（DevEco Studio 26.0.1 Beta1）
+
+- 支持开发 API 26.0.1 工程；支持批量导入和批量移除 CMake 工程构建生成的 so 库
+- 签名信息默认存放至工程 `.sign/sign-config.json5`（与 build-profile.json5 同名方案时优先）
+- 三折叠品类新增 Mate XT2 模拟器；Phone 模拟器支持 HiCar 投屏；模拟器支持共享内存输出画面帧；Lite Wearable 应用可推包到双模式 Wearable 设备
+- Code Linter 新增检查规则；string 资源可视化编辑支持多选、复制粘贴与批量删除
+- ArkTS Snapshot 与 Allocation 内存分析增强；Command Line 集成 codescanner（资源泄漏检查）、api-compat（API 行为变更查询）、appanalyzer（应用体检）；ohpm publish 支持 `--readme`
 
 ---
 

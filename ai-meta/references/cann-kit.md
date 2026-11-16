@@ -270,6 +270,14 @@ async function releaseResources(session: cann.InferenceSession, model: cann.Mode
 
 ---
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **设备支持扩展**：CANN Kit 新增支持 Car 设备
+
+---
+
 ## 官方参考
 
 - **CANN Kit 概述**：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cann-kit-overview-V5

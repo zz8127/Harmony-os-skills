@@ -85,6 +85,16 @@ Spatial Recon Kit 集成了 3DGS（3D Gaussian Splatting）模型的渲染、运
 
 详情请参考官方文档。
 
+### 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+| 新增能力 | 说明 |
+|---|---|
+| 端云重建鉴权签名 | 新增端云重建鉴权签名接口，为待重建的 mp4 视频文件派生云侧验签凭证（C API `HMS_SpatialRecon_DeriveFileVerifyKey`） |
+| 分档渲染 | 新增分档渲染接口，为 3DGS 大场景提供渲染质量等级配置能力（`TiledGSRenderPreference`） |
+| 碰撞检测 | 新增碰撞检测接口，为 3DGS 大场景漫游提供碰撞检测能力（`CameraCollisionDetector`） |
+
 ### 官方链接
 
 - [Spatial Recon Kit 简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/spatial-recon-introduction)
@@ -181,6 +191,12 @@ XEngine Kit 提供基于马良 GPU 的性能提升方案，包括超分、自适
 ### 权限要求
 
 无特殊权限要求，但需查询设备 Syscap 支持情况。
+
+### 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **设备支持扩展**：XEngine Kit 新增支持 Car 设备
 
 ### 官方链接
 

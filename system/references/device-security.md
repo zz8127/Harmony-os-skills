@@ -63,6 +63,13 @@ let isDebug = await security.isDebugMode();
 - **审计事件扩展**：新增设备开关机、音频接口插拔、视频接口插拔、账户管理等通知类审计事件；新增应用进程执行、文件读结束的阻断类审计事件
 - **审计策略增强**：新增支持审计阻断类事件设置默认超时阻断策略、全量查询阻断类/通知类客户端信息
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **审计事件扩展**：新增自定义 DLP 文件访问、光盘刻录拦截的通知类审计事件
+- **侧载安全管控**：支持查询设备是否允许加载外部二进制文件，以及打开外部二进制源控制开关的设置弹窗，以请求用户修改开关状态
+
 ## 官方参考
 
 - DeviceSecurityKit：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/device-security-overview-V5

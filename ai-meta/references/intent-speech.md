@@ -111,6 +111,20 @@ recognizer.startListening({
 
 ---
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+### Intents Kit — 可视可说能力扩展
+
+- **热词注册与执行回调**：新增支持应用注册热词并处理执行回调，使智慧语音助手能够响应用户更多操控应用界面可见 UI 元素的语音指令，帮助应用拓展「可视可说」能力的可用范围
+
+### Core Speech Kit — 播报控制
+
+- **文本转语音暂停/继续**：新增文本转语音暂停/继续播报接口，支持控制文本播报的暂停和恢复
+
+---
+
 ## 官方参考
 
 - IntentsKit 概述：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/intents-introduction-V5

@@ -87,6 +87,12 @@ FAST Kit（算法加速服务）以理论计算机为基础，面向开发者提
 - 仅支持中国境内（香港特别行政区、澳门特别行政区、中国台湾除外）
 - 支持模拟器（与真机存在通用差异）
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **设备支持**：新增支持 Car 设备
+
 ## 官方链接
 
 - [FAST Kit 简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/fast-introduction)

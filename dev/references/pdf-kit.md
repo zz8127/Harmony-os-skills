@@ -143,6 +143,13 @@ struct PdfViewerPage {
 
 访问文件时需要对应文件读取权限。
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+- **手写绘制与擦除（`enablePen`）**：新增在 PDF 界面中自由绘制曲线，以及使用橡皮擦擦除曲线的能力
+- **多色临时高亮（`setHighlightRectsWithColors`）**：新增在 PDF 界面中同时添加多个不同颜色的临时高亮矩形的能力
+
 ## 官方参考
 
 - [PDF Kit 开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/pdf-kit-overview-0000001820880921)

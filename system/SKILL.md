@@ -38,6 +38,7 @@ description: |
 | 企业 | [MDM企业设备管理](references/mdm-kit.md) | 企业设备管理/远程配置/策略管控 |
 | 企业 | [企业数据保护](references/enterprise-data-guard-kit.md) | 文件分级/外发管控/水印保护 |
 | 企业 | [企业数字空间](references/enterprise-space-kit.md) | 空间互传/策略管控/灵活配置 |
+| 企业 | [企业办公服务](references/enterprise-foundation-kit.md) | 应用沙箱/用户数据备份还原、批量部署（26.0.1 新增） |
 | 安全 | [数据防泄漏](references/data-loss-prevention-kit.md) | 文件权限/加密存储/授权访问 |
 | 安全 | [设备证书](references/device-certificate-kit.md) | 证书解析/验证/管理 |
 | 安全 | [在线认证](references/online-authentication-kit.md) | FIDO/通行密钥/免密认证 |
@@ -129,6 +130,28 @@ description: |
 | 后台任务 | `ohos.permission.KEEP_BACKGROUND_RUNNING` |
 
 > 注意：从 HarmonyOS NEXT 起，部分权限从 user-grant 改为 system-grant，具体以官方文档为准。
+
+---
+
+## API 26.0.1 Beta1 变更追踪（2026-11-10）
+
+26.0.1 为 26.0.0 的增量版本，仅供尝鲜使用；Beta 版 DevEco Studio 开发的应用不能上架应用市场。系统领域变更：
+
+| Kit | 变更 |
+|-----|------|
+| Basic Services Kit | 设备管理 C API 新增 USB 管理（管理 USB 设备驱动）；新增板级硬件信息查询（CPU/主板/BIOS）；账号管理新增系统账号授权管理 |
+| Background Tasks Kit | 支持更新包含数据传输类型的长时任务通知（`updateDataTransferProgress`） |
+| Device Security Kit | 新增自定义 DLP 文件访问、光盘刻录拦截通知类审计事件；新增侧载安全管控（查询是否允许加载外部二进制文件、拉起外部二进制源开关设置弹窗） |
+| Device Certificate Kit | 新增 UkeyAuthExtensionAbility 及 UkeyAuthExtensionContext，用于自定义 UKey 认证 UI |
+| Enterprise Data Guard Kit | 新增删除策略、进程 UID 可信任列表管理、加密 U 盘管理、数据盘企业恢复密钥、企业账号验证用户身份 |
+| **Enterprise Foundation Kit** | **全新 Kit**：企业办公服务，开放企业场景下的应用沙箱数据与用户数据备份/还原（2in1，需 `ohos.permission.ENTERPRISE_MANAGE_BACKUP`） |
+| FAST Kit | 新增支持 Car 设备 |
+| Health Service Kit | Lite Wearable 新增笼式网球/滑雪/户外跑步/户外骑行/自由训练/普拉提运动类型；新增运动数据交互 C API；Wearable 新增运动类型与训练负荷数据 |
+| Input Kit | 新增鼠标光标与光标类型外设管理；KeyCode 新增云台设备按键定义 |
+| MDM Kit | 新增打印机 IP 白名单、精确定时器、锁屏弱密码库、待机资源豁免、卡片发布到桌面 |
+| User Authentication Kit | 新增用户识别能力（判断当前使用者是否与已登录系统用户匹配） |
+| Wear Engine Kit | 新增穿戴表盘能力（表盘配置下发与预览） |
+| Weather Service Kit | 新增朝霞晚霞天气数据 |
 
 ---
 

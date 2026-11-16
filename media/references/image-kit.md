@@ -160,6 +160,12 @@ async function packToFile(pixelMap: image.PixelMap, filePath: string): Promise<v
 
 访问文件时需要对应文件读写权限。
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **接收缓冲区内存标识**：ImageReceiver 类新增支持为接收的图像缓冲区设置内存标识符（`setMemoryName`），便于在内存调试或问题定位时识别相关缓冲区
+
 ## 官方参考
 
 - [Image Kit 开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/image-overview-0000001774121218)

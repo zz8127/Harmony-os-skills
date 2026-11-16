@@ -28,6 +28,13 @@ Data Loss Prevention Kit（数据防泄漏服务，简称 DLP）是系统提供�
 
 本 Kit 暂不支持模拟器。
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+26.0.1 为 26.0.0 的增量版本，仅供尝鲜使用；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **隐私计算能力（Data Protection Kit 分类）**：新增隐私保护的数据比对与检索能力，包括隐私目标生成、隐私搜索、搜索结果检索。
+- 官方指南：https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/privacy-computation-guidelines
+
 ## 相关 Kit
 
 - Device Certificate Kit：设备证书服务

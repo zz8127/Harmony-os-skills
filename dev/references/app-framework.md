@@ -273,6 +273,22 @@ w.postMessage({ type: 'start', payload: 1000 })
 
 参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/os-new-feature-2600
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+### 应用自身子进程信息查询
+
+- **ArkTS 接口**：新增 `childProcessManager.getChildProcessInfos`、`ApplicationContext.getUIAbilityChildProcessInfos` 及对应 C API，返回子进程 PID、父进程 PID 和进程名
+- **覆盖范围**：
+  - 不带页面的子进程：通过 startChildProcess（非 SELF_FORK 模式）、startArkChildProcess、startNativeChildProcess 创建
+  - UIAbility 子进程：通过 startSelfUIAbilityInChildProcess 启动，或 startAbility 且 processMode 设为 NEW_PROCESS_ATTACH_TO_PARENT
+- **C API**：新增子进程信息读取与释放能力，支持按索引获取子进程信息、获取子进程 PID、父进程 PID、进程名，以及释放子进程信息集合
+
+### 应用快启管理
+
+- **hyperSnapManager.getLastError**：获取指定场景下当前应用的最后一次快启错误信息
+
 ## API 23 新增（HarmonyOS 6.1.0）
 
 ### Ability Kit 增强

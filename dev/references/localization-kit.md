@@ -47,6 +47,12 @@ Localization Kit（本地化开发服务）提供应用国际化和本地化能�
 
 - 支持模拟器
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+- **字体管理模块**：新增字体管理能力，支持第三方字体的安装、卸载、查询，以及字体服务状态监听
+
 ## 官方链接
 
 - [国际化和本地化概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/i18n-l10n)

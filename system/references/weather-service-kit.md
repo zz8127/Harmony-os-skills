@@ -68,6 +68,14 @@ Weather Service Kit（天气服务）是鸿蒙生态下的一个数据提供服�
 
 ---
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **朝霞晚霞**：新增朝霞晚霞天气数据
+
+---
+
 ## 官方链接
 
 - [Weather Service Kit 简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/weather-service-introduction)

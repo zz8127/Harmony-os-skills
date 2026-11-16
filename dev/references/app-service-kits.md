@@ -322,3 +322,14 @@ Call Service Kit是HarmonyOS为开发者提供的应用内通话管理服务，�
 - [Call Service Kit简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/call-introduction)
 - [开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/call-preparations)
 - [来电场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/incoming-calls)
+
+---
+
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+### Call Service Kit
+
+- **外设 VoIP 通话控制**：新增外设 VoIP 通话控制能力，可在远端设备（如第三方穿戴设备）上控制本设备 VoIP 通话的接听、挂断等操作
+- **企业服务信息增强**：新增支持隐私查询企业服务信息；企业服务信息新增外卖服务类型及数据

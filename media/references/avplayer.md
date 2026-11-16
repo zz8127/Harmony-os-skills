@@ -127,6 +127,16 @@ let latency = audioRenderer.getLatency()
 
 ---
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+### Media Kit — 屏幕录制
+
+- **虚拟扩展屏幕录制**：屏幕录制的 C API 能力新增支持创建虚拟扩展屏幕，并对其内容进行录制
+
+---
+
 ## 官方参考
 
 - AVPlayer 开发：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/avplayer-guidelines-V5

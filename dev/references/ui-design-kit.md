@@ -347,6 +347,12 @@ struct ColorPickerPage {
 |------|------|
 | 无特殊权限 | UI 组件库无需额外权限 |
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+- **HdsColorPicker 显示状态控制**：颜色选择器组件新增显示状态控制及状态变化回调能力
+
 ## 官方参考
 
 - [UI Design Kit 开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-kit-overview-0000001820880929)

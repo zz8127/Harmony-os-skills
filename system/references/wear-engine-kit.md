@@ -78,6 +78,12 @@ Wear Engine 将手机上的生态应用和服务延展到智能穿戴设备，�
 - Phone、Tablet 设备仅支持中国境内（香港特别行政区、澳门特别行政区、中国台湾除外）
 - 暂不支持模拟器
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **穿戴表盘**：新增支持穿戴表盘能力，可将构造好的表盘配置添加到穿戴设备，并生成对应的预览展示效果
+
 ## 官方链接
 
 - [Wear Engine Kit 业务简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/we-business_introduction)

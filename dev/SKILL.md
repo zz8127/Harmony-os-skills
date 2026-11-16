@@ -17,6 +17,7 @@ description: |
 > 2026年10月8日 DevEco Studio（鸿蒙电脑版）26.0.0 Beta1（26.0.0.201）首次发布公测版，集成 DevEco Code 工具，配套 Hvigor 7.26.8 / ohpm 6.0.1，获取方式为鸿蒙电脑应用市场 > 我的 > 应用尝鲜。
 > 2026年10月31日 DevEco Studio 发布 26.0.0.865 Patch 版本（无新增特性，仅修复工具链，Hvigor 6.26.8→6.26.9），API / SDK 版本无变化。
 > 2026年11月6日 DevEco Studio（鸿蒙电脑版）发布 26.0.0 Beta2（26.0.0.220）：工程模板新增 Car / Wearable / TV 设备类型，本地真机运行支持无线连接调试；配套 Hvigor 7.26.11、Command Line 26.0.0.220，API / SDK 版本无变化。
+> 2026年11月10日 HarmonyOS 26.0.1 Beta1 发布（API 26.0.1，DevEco Studio 26.0.1 Beta1 / 26.0.1.290，HarmonyOS SDK 26.0.1 Beta1 基于 OpenHarmony SDK 26.0.1.120）：26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
 > 历史版本：HarmonyOS 5.x = API 12/13/14/16。
 
 ## 扩展技能（独立 Skill）
@@ -84,8 +85,9 @@ description: |
 | **6.1.0** | **23** | **6.1.0 Release（6.1.0.830）** | **稳定** | **2026.04.20** |
 | **6.1.1** | **24** | **6.1.1 Release（6.1.1.280）** | **Release（存量主力）** | **2026.05.26** |
 | **26.0.0** | **26** | **26.0.0 Release（26.0.0.821；Patch 26.0.0.851，2026.09.23；Patch 26.0.0.865，2026.10.31）** | **Release（最新，官方推荐）** | **2026.08.29** |
+| 26.0.1 | 26.0.1 | 26.0.1 Beta1（26.0.1.290） | Beta（增量尝鲜） | 2026.11.10 |
 
-> ⚠️ **官方版本使用建议（2026-10-08）**：**API 26.0.0 为推荐版本**（新开发应用推荐使用、已开发应用推荐升级，底座 OpenHarmony 7.0）。API 24（HarmonyOS 6.1.1 Release）为存量主力（占比 84.93%），官方标注「按需使用/按需升级」；API 23 仍可用于存量维护。
+> ⚠️ **官方版本使用建议（2026-10-08）**：**API 26.0.0 为推荐版本**（新开发应用推荐使用、已开发应用推荐升级，底座 OpenHarmony 7.0）。API 24（HarmonyOS 6.1.1 Release）为存量主力（占比 84.93%），官方标注「按需使用/按需升级」；API 23 仍可用于存量维护。26.0.1 Beta1 为增量尝鲜版本，官方标注「按需使用/按需升级」，Beta 版 DevEco Studio 开发的应用不能上架应用市场。
 
 ---
 
@@ -349,6 +351,29 @@ let params = router.getParams() as Record<string, number>
 | ArkTS | 虚拟机维测能力增强、taskpool 任务超时设置 |
 | ArkWeb | 下载任务回调增强、URL 白名单和安全控制接口 |
 | DevEco Studio | Hot Reload 增强（支持 C++ 和资源文件）、AppFreeze 日志解析、ComMemory 模板 |
+
+---
+
+## API 26.0.1 Beta1 变更追踪（2026-11-10）
+
+26.0.1 为 26.0.0 的增量版本，仅供尝鲜使用；Beta 版 DevEco Studio 开发的应用不能上架应用市场。开发规范（dev/）领域变更：
+
+| Kit / 工具 | 变更 |
+|-----------|------|
+| Ability Kit | 新增应用自身子进程信息查询（`childProcessManager.getChildProcessInfos`、`ApplicationContext.getUIAbilityChildProcessInfos` 及 C API，返回子进程 PID、父进程 PID、进程名）；新增子进程信息读取与释放 C API；应用快启管理新增 `hyperSnapManager.getLastError` |
+| ArkTS | 新增 `JSON.parseSendable`（解析 JSON 生成可跨线程共享的 Sendable 对象）；容器集 Map 新增 `containsValue`、`put`、`putAll`、`remove` |
+| ArkUI | LazyForEach 新增 onDataReloaded 同名接口（配置是否复用旧子组件）；窗口管理新增 `WindowFocusState`、`WindowPositionParams`；Navigation 新增 `preloadPath` 预加载 NavDestination、NavigationConfiguration 新增 `clearContentStackOnPrimaryNavigation`（左起右清栈）；SubHeader/SubHeaderV2 支持尾部图标；动画 C API 新增属性/关键帧/路径动画与动画组句柄；TabContent 新增 `tabBarVisibility`；Text C API 新增 LineSpacingOptions（`onlyBetweenLines`） |
+| ArkGraphics 2D | 文字绘制 C API 新增多个支持字体回退的文本对象创建接口 |
+| Core File Kit | 新增卷（Volume）管理模块（外置存储磁盘设备与卷设备信息查询）；云盘管理新增带占位符同步根的注册与查询 C API |
+| File Manager Service Kit | 新增自定义文件角标与右键菜单项；新增 C 接口将云盘同步根文件夹添加到文件管理应用侧边栏、设置同步文件夹图标 |
+| Localization Kit | 新增字体管理模块（第三方字体安装、卸载、查询与服务状态监听） |
+| PDF Kit | 新增自由绘制曲线与橡皮擦擦除；新增同时添加多个不同颜色的临时高亮矩形 |
+| Performance Analysis Kit | hidebug C API 增强（hiprofiler 混合类型采集、2D 采集异步嵌套与栈深配置、DMABUF 资源类型、栈消减去重）；新增 external_log 日志管理者注册接口 |
+| UI Design Kit | HdsColorPicker 新增显示状态控制及状态变化回调 |
+| Call Service Kit | 新增外设 VoIP 通话控制（远端设备控制本机 VoIP 接听/挂断）；支持隐私查询企业服务信息，新增外卖服务类型数据 |
+| 工具链（DevEco Studio 26.0.1 Beta1） | 支持开发 API 26.0.1 工程；批量导入/移除 CMake 工程生成的 so 库；签名信息默认存放 `.sign/sign-config.json5`（与 build-profile.json5 同名方案时优先）；三折叠新增 Mate XT2 模拟器；Phone 模拟器支持 HiCar 投屏；模拟器支持共享内存输出画面帧；支持关闭 ArkTS 反向调试；命令行仪器测试支持指定设备；Command Line 集成 codescanner / api-compat / appanalyzer；ohpm publish 支持 `--readme` |
+
+配套工具链：HarmonyOS Emulator 26.0.1.100、Hvigor 6.26.20、ohpm 26.0.1.220、codelinter 6.0.240、hstack 6.1.0、Node.js 24.14.1、modelVersion 26.0.1；compatibleSdkVersion 最低 4.0.0(10)，compileSdkVersion 26.0.1，targetSdkVersion 4.0.0(10)~26.0.1。
 
 ---
 

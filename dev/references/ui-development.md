@@ -55,6 +55,18 @@ ArkUI通过编译器生成特定函数，将UI组件更新和数据变更**细�
 
 参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/os-new-feature-2600
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+- **LazyForEach 组件复用配置**：`onDataReloaded` 新增同名接口，支持配置是否允许在更新过程中复用旧的子组件
+- **窗口焦点状态与 Z 序参数**：窗口管理新增窗口焦点状态变化信息 `WindowFocusState`，以及调整主窗口 Z 序时使用的位置参数 `WindowPositionParams`
+- **Navigation 预加载与清栈**：新增 `preloadPath` 接口，支持预加载指定的 NavDestination 页面；NavigationConfiguration 新增 `clearContentStackOnPrimaryNavigation` 属性，支持左起右清栈效果
+- **子标题尾部图标**：子标题组件 SubHeader 与 SubHeaderV2 新增支持设置尾部图标
+- **动画句柄定义 C API**：动画组件的 C API 新增属性动画、关键帧动画、路径动画、动画组的句柄定义
+- **TabContent 页签可见性**：新增 `tabBarVisibility` 属性，支持设置页签在不同样式页签栏中的可见性
+- **文本行间距 C API**：Text 组件的 C API 新增支持创建文本行间距选项对象，并通过其 `onlyBetweenLines` 参数设置首行上方和尾行下方是否有额外行间距
+
 ## HarmonyOS 6.1 新增特性（API 23）
 
 ### ArkUI 增强（6.1.0 Release 新增）

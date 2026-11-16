@@ -49,3 +49,9 @@ Device Certificate Kit 不具备生成或签发证书及证书吊销列表的能
 |-----|------|
 | @ohos.deviceCertificate | 证书算法库 |
 | @ohos.certManager | 证书管理 |
+
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **UKey 认证界面定制**：新增 `UkeyAuthExtensionAbility` 及其上下文 `UkeyAuthExtensionContext`，用于自定义 UKey 认证时的 UI 显示

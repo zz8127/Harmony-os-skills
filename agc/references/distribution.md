@@ -150,6 +150,26 @@ AppGallery Connect 应用分发是华为应用市场（AppGallery）的开发者
 
 ---
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。配套 DevEco Studio 26.0.1 Beta1 (26.0.1.290)、HarmonyOS SDK 26.0.1 Beta1（Ohos_sdk_public 26.0.1.120）。
+
+### AppGallery Kit 能力新增支持 Car 设备
+
+以下 AppGallery Kit 能力新增支持 Car 设备：
+
+| 能力 | 设备支持变化 |
+|------|-------------|
+| 应用市场推荐 | 新增支持 Car |
+| 产品特性按需分发 | 新增支持 Car |
+| 生态查询服务 | 新增支持 Car |
+| 应用市场更新功能 | 新增支持 Car |
+| 应用归因服务 | 新增支持 Car |
+| 隐私管理服务 | 新增支持 Car |
+| 图标管理服务 | 新增支持 Car |
+
+---
+
 ## 官方参考
 
 - 应用分发概述：https://developer.huawei.com/consumer/cn/doc/app/agc-help-app-0000002235710234

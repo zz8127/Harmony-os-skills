@@ -58,6 +58,12 @@ ArkGraphics 2D（方舟2D图形服务）主要提供图形绘制与显示相关�
 
 - **字体绘制增强**：字体绘制能力新增支持获取文字的轮廓路径，支持字体回退能力
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **文字绘制支持字体回退的文本对象创建**：文字绘制能力的 C API 新增多个创建文本对象的接口，这些接口支持字体回退（`OH_Drawing_TextBlobCreateFromTextWithFallback`、`OH_Drawing_TextBlobCreateFromPosTextWithFallback`、`OH_Drawing_TextBlobCreateFromStringWithFallback`）
+
 ## 使用场景
 
 - 图像效果处理：使用effectKit模块实现图像效果处理，提升用户浏览体验

@@ -114,6 +114,18 @@ FaceAR 和 BodyAR 此前已支持，详见 media/references/ar-engine.md。
 
 ---
 
+## API 26.0.1 Beta1 变更追踪（2026-11-10）
+
+26.0.1 为 26.0.0 的增量版本，仅供尝鲜使用；Beta 版 DevEco Studio 开发的应用不能上架应用市场。AI 与元服务领域变更：
+
+| Kit | 变更 |
+|-----|------|
+| Intents Kit | 新增应用注册热词并处理执行回调，智慧语音助手可响应用户更多操控应用界面可见 UI 元素的语音指令，拓展「可视可说」能力范围 |
+| Core Speech Kit | 新增文本转语音暂停/继续播报接口，支持控制文本播报的暂停和恢复 |
+| CANN Kit | 新增支持 Car 设备 |
+
+---
+
 ## API 24 Release 变更追踪（2026-05-26）
 
 ### Release 新增（Beta1 后新增）

@@ -76,6 +76,20 @@ description: |
 
 ---
 
+## API 26.0.1 Beta1 变更追踪（2026-11-10）
+
+26.0.1 为 26.0.0 的增量版本，仅供尝鲜使用；Beta 版 DevEco Studio 开发的应用不能上架应用市场。媒体/图形领域变更：
+
+| Kit | 变更 |
+|-----|------|
+| Image Kit | ImageReceiver 新增 `setMemoryName`，为接收的图像缓冲区设置内存标识符，便于内存调试与问题定位 |
+| Media Kit | 屏幕录制 C API 新增支持创建虚拟扩展屏幕并对其内容进行录制 |
+| ArkGraphics 2D | 文字绘制 C API 新增支持字体回退的文本对象创建接口（`OH_Drawing_TextBlobCreateFromTextWithFallback` 等） |
+| Spatial Recon Kit | 新增端云重建鉴权签名（为待重建 mp4 派生云侧验签凭证）、3DGS 大场景分档渲染（`TiledGSRenderPreference`）、3DGS 漫游碰撞检测（`CameraCollisionDetector`） |
+| XEngine Kit | 新增支持 Car 设备 |
+
+---
+
 ## API 26 Release 变更追踪（2026-08-29）
 
 HarmonyOS 开发套件 26.0.0 于 2026-08-29 正式 Release。Beta2 阶段媒体领域变更（Audio Kit 音频设备增强管理器、AVSession Kit 播控布局自定义、Media Kit PCM 处理/广告插播/离线缓存/录屏暂停等）参见根 SKILL.md。Release 阶段（Beta2 后）媒体领域新增：

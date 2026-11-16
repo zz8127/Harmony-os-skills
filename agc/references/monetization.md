@@ -247,6 +247,20 @@ AppGallery Kit 提供应用市场业务的对外开放能力，支持应用的�
 
 ---
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。配套 DevEco Studio 26.0.1 Beta1 (26.0.1.290)、HarmonyOS SDK 26.0.1 Beta1（Ohos_sdk_public 26.0.1.120）。
+
+### IAP Kit 支付优惠查询
+
+新增支付优惠查询能力 `iap.queryPaymentPromotions`，支持用户在购买前预览实际可享受的优惠，让用户在支付前即可感知优惠力度，提升应用下单转化率。
+
+| 能力 | 说明 | 价值 |
+|------|------|------|
+| 支付优惠查询 | 购买前查询当前可享受的支付优惠信息 | 下单页展示真实优惠，减少用户犹豫，提升转化率 |
+
+---
+
 ## 官方参考
 
 - 应用内支付：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-kit

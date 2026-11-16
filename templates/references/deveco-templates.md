@@ -103,13 +103,16 @@ entry/src/main/cpp/
 
 | DevEco Studio | 对应模板 SDK | 说明 |
 |---------------|-------------|------|
-| **26.0.0** | **API 26（Release）** | **当前最新版** |
+| **26.0.0** | **API 26（Release）** | **当前最新稳定版（推荐）** |
+| 26.0.1 Beta1 | API 26.0.1 | 增量尝鲜版本（Beta），开发的应用不能上架应用市场 |
 | 6.1.1 | API 24 | 存量主力（按需使用/按需升级） |
 | 6.1.0 | API 23 | 历史稳定版 |
 | 5.0.4 | API 16 | 老版本 |
 | 3.1.1 | API 9 | 老版本 |
 
 > ⚠️ 建议使用 DevEco Studio 26.0.0（Patch 26.0.0.865）新建工程，确保 SDK 为最新 Release 版本。DevEco Studio（鸿蒙电脑版）Beta2（26.0.0.220，2026-11-06）工程模板新增 Car / Wearable / TV 设备类型，本地真机运行支持无线连接调试。
+>
+> 尝鲜可选 DevEco Studio 26.0.1 Beta1（26.0.1.290，2026-11-10）：支持开发 API 26.0.1 工程，配套 Hvigor 6.26.20、ohpm 26.0.1.220、modelVersion 26.0.1；新增 Mate XT2（三折叠）模拟器、Phone 模拟器 HiCar 投屏；签名信息默认落盘至 `.sign/sign-config.json5`（与 build-profile.json5 同名方案时优先）。
 
 ---
 

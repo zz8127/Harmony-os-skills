@@ -44,3 +44,10 @@ Phone、Tablet、PC/2in1
 |-----|------|
 | @ohos.multimodalInput | 多模输入基础能力 |
 | @ohos.input_event_client | 输入事件客户端 |
+
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+- **鼠标光标管理**：新增支持对鼠标光标和光标类型外设的管理功能
+- **云台按键定义**：KeyCode 定义中新增云台设备的相关按键定义（ArkTS API 与 C API）

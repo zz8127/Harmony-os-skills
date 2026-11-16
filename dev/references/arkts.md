@@ -50,6 +50,13 @@ ArkTS 是 HarmonyOS 应用开发的官方高级语言，基于 TypeScript 生态
 
 - **多线程检测可配置参数**：`setMultithreadingDetectionEnabled` 接口新增故障类型、采样频率、上报时间间隔等可配置参数
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+- **JSON.parseSendable**：解析 JSON 字符串时生成可跨线程共享的 Sendable 对象，适用于包含大量数字键的 JSON 字符串等场景
+- **Map 容器增强**：ArkTS 容器集 `Map` 类新增 `containsValue`（判断是否存在指定键值对映射关系）、`put`、`putAll`（更新映射关系）、`remove`（删除指定键值对映射）
+
 ## npm 包
 
 无独立 npm 包，ArkTS 是语言层面能力，随 HarmonyOS SDK 内置。

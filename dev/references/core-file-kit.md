@@ -72,6 +72,13 @@ Core File Kit 为开发者提供一套访问和管理应用文件和用户文件
 
 - **Ability Kit**：用户文件访问框架依赖 Ability Kit 提供的 Extension 基础能力，受 Ability Kit 服务调度管理
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+- **卷（Volume）管理模块（volumeManager）**：新增卷管理模块，提供外置存储磁盘设备和卷设备信息查询能力
+- **云盘管理 C API**：新增注册带占位符信息的同步根（适用于将本地目录设为云盘同步目录并标记是否支持占位符的场景），以及获取所有带占位符的同步根
+
 ## 官方链接
 
 - [Core File Kit 简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/core-file-kit-intro)

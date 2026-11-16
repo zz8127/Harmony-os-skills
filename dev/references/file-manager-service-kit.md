@@ -53,6 +53,15 @@ File Manager Service Kit（文件管理服务）为开发者提供文件管理�
 
 ---
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 为 26.0.0 的增量版本（Beta1，2026-11-10），仅供尝鲜；知识库基线仍为 HarmonyOS 26.0.0 / API 26（Release）。
+
+| 能力 | 说明 |
+|------|------|
+| 自定义文件角标与右键菜单项 | 新增自定义文件角标和右键菜单项的能力 |
+| 云盘同步根接入侧边栏（C 接口） | 支持将云盘同步根文件夹添加到文件管理应用侧边栏，以及设置同步文件夹图标 |
+
 ## 官方链接
 
 - [File Manager Service Kit 简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/filemanagerservice-introduction)

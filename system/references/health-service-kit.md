@@ -79,6 +79,22 @@ Health Service Kit（运动健康服务）是为华为生态应用打造的基�
 
 ---
 
+## 26.0.1 Beta1 新增（2026-11-10）
+
+> 26.0.1 是 26.0.0 的增量版本，仅供尝鲜；Beta 版 DevEco Studio 开发的应用不能上架应用市场。
+
+### Lite Wearable
+
+- 新增支持笼式网球、滑雪、户外跑步、户外骑行、自由训练和普拉提运动类型，并同步开放对应锻炼记录数据
+- 新增 C API，提供应用与 Lite Wearable 设备进行运动数据交互的能力（如实时传输心率、卡路里等运动数据）
+
+### Wearable
+
+- 新增支持笼式网球、滑雪、自由训练和普拉提运动类型，并开放对应锻炼记录数据
+- 户外跑步、户外骑行锻炼记录新增训练负荷等数据开放
+
+---
+
 ## 官方链接
 
 - [Health Service Kit 简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-service-kit-ability)
